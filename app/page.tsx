@@ -25,7 +25,7 @@ export default function HomePage() {
               Tools that just work
             </h1>
             <p className="mt-5 text-lg sm:text-xl text-zinc-600 dark:text-zinc-400">
-              Fast, free, and no BS. Utilities for developers and creators.
+              Fast, free utilities for developers and creators. No signup required.
             </p>
           </div>
 

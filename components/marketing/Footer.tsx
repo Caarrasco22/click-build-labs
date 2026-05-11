@@ -24,8 +24,8 @@ export function Footer() {
               </span>
             </div>
             <p className="text-sm text-zinc-500 dark:text-zinc-400 max-w-xs">
-              Free online tools for developers and creators. No signup, no ads,
-              no tracking.
+              Free online tools for developers and creators. No signup required,
+              all processing happens in your browser.
             </p>
           </div>
 
@@ -78,7 +78,7 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-zinc-200 pt-8 sm:flex-row">
           <p className="text-xs text-zinc-400 dark:text-zinc-500">
-            Built with care. No tracking.
+            Built with care. Client-side processing.
           </p>
 
           <div className="flex items-center gap-4">

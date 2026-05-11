@@ -4,7 +4,7 @@ import { createPageMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = createPageMetadata(
   'Privacy Policy',
-  'Privacy policy for Click & Build Labs. We respect your privacy and do not collect personal data.',
+  'Privacy policy for Click & Build Labs. We respect your privacy and handle your data transparently.',
   '/privacy'
 );
 
@@ -18,20 +18,23 @@ export default function PrivacyPage() {
       <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
         <section>
           <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
-            Information We Collect
+            How We Process Data
           </h2>
           <p className="mt-2">
-            We do not collect personal information. All tool processing happens
-            entirely in your browser - no data is sent to our servers.
+            All tool processing happens entirely in your browser. No data you enter
+            is transmitted to our servers. Your text, passwords, UUIDs, and any
+            other input never leaves your device.
           </p>
         </section>
 
         <section>
           <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
-            Cookies
+            Cookies and Local Storage
           </h2>
           <p className="mt-2">
-            We do not use cookies. No tracking, no analytics, no third-party scripts.
+            We do not use persistent cookies. We may use session storage to remember
+            your preferences (such as dark mode settings). No tracking cookies or
+            analytics cookies are used.
           </p>
         </section>
 
@@ -40,9 +43,23 @@ export default function PrivacyPage() {
             Third-Party Services
           </h2>
           <p className="mt-2">
-            We may use third-party services like Google AdSense to display
-            advertisements. These services may collect information according
-            to their own privacy policies.
+            We may display advertisements through third-party networks like Google AdSense.
+            These services may collect standard usage data according to their own privacy
+            policies. We recommend reviewing the privacy policies of these services.
+          </p>
+          <p className="mt-2">
+            We may also use analytics tools to understand how visitors use our site.
+            This helps us improve our tools and user experience.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+            Data We Collect
+          </h2>
+          <p className="mt-2">
+            We do not collect, store, or log any personal data you process through
+            our tools. Any data you process is handled entirely client-side in your browser.
           </p>
         </section>
 
@@ -51,7 +68,8 @@ export default function PrivacyPage() {
             Data Security
           </h2>
           <p className="mt-2">
-            Since we do not collect any data, there is nothing to secure on our servers.
+            Since we do not collect your processed data, there is nothing stored
+            on our servers to secure. Your data is processed locally on your device.
           </p>
         </section>
 
@@ -60,7 +78,7 @@ export default function PrivacyPage() {
             Contact
           </h2>
           <p className="mt-2">
-            For privacy concerns, please contact us via our GitHub repository.
+            For privacy concerns or questions, please contact us via our GitHub repository.
           </p>
         </section>
       </div>
