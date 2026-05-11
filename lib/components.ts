@@ -49,6 +49,16 @@ export const TOOL_COMPONENTS = {
   'bmi-calculator': lazy(() => import('@/components/tools/BmiCalculator').then((m) => ({ default: m.BmiCalculator }))),
   'loan-calculator': lazy(() => import('@/components/tools/LoanCalculator').then((m) => ({ default: m.LoanCalculator }))),
   'tip-calculator': lazy(() => import('@/components/tools/TipCalculator').then((m) => ({ default: m.TipCalculator }))),
+  'date-calculator': lazy(() => import('@/components/tools/DateCalculator').then((m) => ({ default: m.DateCalculator }))),
+  'business-days-calculator': lazy(() => import('@/components/tools/BusinessDaysCalculator').then((m) => ({ default: m.BusinessDaysCalculator }))),
+  'days-until-calculator': lazy(() => import('@/components/tools/DaysUntilCalculator').then((m) => ({ default: m.DaysUntilCalculator }))),
+  'week-number-calculator': lazy(() => import('@/components/tools/WeekNumberCalculator').then((m) => ({ default: m.WeekNumberCalculator }))),
+  'time-duration-calculator': lazy(() => import('@/components/tools/TimeDurationCalculator').then((m) => ({ default: m.TimeDurationCalculator }))),
+  'add-subtract-time-calculator': lazy(() => import('@/components/tools/AddSubtractTimeCalculator').then((m) => ({ default: m.AddSubtractTimeCalculator }))),
+  'countdown-calculator': lazy(() => import('@/components/tools/CountdownCalculator').then((m) => ({ default: m.CountdownCalculator }))),
+  'unix-time-now': lazy(() => import('@/components/tools/UnixTimeNow').then((m) => ({ default: m.UnixTimeNow }))),
+  'time-zone-converter': lazy(() => import('@/components/tools/TimeZoneConverter').then((m) => ({ default: m.TimeZoneConverter }))),
+  'calendar-week-calculator': lazy(() => import('@/components/tools/CalendarWeekCalculator').then((m) => ({ default: m.CalendarWeekCalculator }))),
 } as const;
 
 export type ToolSlug = keyof typeof TOOL_COMPONENTS;

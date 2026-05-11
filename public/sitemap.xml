@@ -251,6 +251,56 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://clickbuildlabs.com/tools/date-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/business-days-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/days-until-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/week-number-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/time-duration-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/add-subtract-time-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/countdown-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/unix-time-now/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/time-zone-converter/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/calendar-week-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://clickbuildlabs.com/categories/developer/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>

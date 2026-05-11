@@ -1454,6 +1454,256 @@ export const tools: Tool[] = [
       { question: 'Is my data sent to servers?', answer: 'No. All calculations happen locally in your browser.' },
     ],
   },
+  {
+    slug: 'date-calculator',
+    name: 'Date Calculator',
+    shortDescription: 'Add or subtract days, weeks, months, or years',
+    description:
+      'Calculate a new date by adding or subtracting days, weeks, months, or years from a starting date. Free, fast, and client-side.',
+    category: 'calculators',
+    tags: ['date calculator', 'add days', 'subtract dates', 'date math', 'days calculator'],
+    icon: 'calendar',
+    featured: false,
+    popular: false,
+    relatedTools: ['days-until-calculator', 'week-number-calculator', 'date-difference-calculator'],
+    seo: {
+      title: 'Date Calculator - Free Online Add/Subtract Days Calculator',
+      description:
+        'Calculate a new date by adding or subtracting days, weeks, months, or years. Free online date calculator.',
+      keywords: ['date calculator', 'add days', 'subtract dates', 'date math', 'days calculator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What units can I add or subtract?', answer: 'You can add or subtract days, weeks, months, or years from any date.' },
+      { question: 'Does it handle month boundaries correctly?', answer: 'Yes. When adding months, the day is adjusted if that month has fewer days.' },
+      { question: 'Is my date sent to servers?', answer: 'No. All calculations happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'business-days-calculator',
+    name: 'Business Days Calculator',
+    shortDescription: 'Calculate working days between two dates',
+    description:
+      'Calculate the number of business days (Monday to Friday) between two dates. Excludes weekends. Free and client-side.',
+    category: 'calculators',
+    tags: ['business days', 'working days', 'weekdays', 'business days calculator', 'working days calculator'],
+    icon: 'briefcase',
+    featured: false,
+    popular: false,
+    relatedTools: ['date-calculator', 'days-until-calculator', 'date-difference-calculator'],
+    seo: {
+      title: 'Business Days Calculator - Free Online Working Days Calculator',
+      description:
+        'Calculate the number of business days (Monday to Friday) between two dates. Free online business days calculator.',
+      keywords: ['business days calculator', 'working days calculator', 'weekdays calculator', 'business days'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Are weekends excluded?', answer: 'Yes. Only Monday through Friday are counted as business days.' },
+      { question: 'Are holidays excluded?', answer: 'No. This tool does not use external APIs for holidays. Only weekends are excluded.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All calculations happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'days-until-calculator',
+    name: 'Days Until Calculator',
+    shortDescription: 'Count days until a future date',
+    description:
+      'See how many days, weeks, and months remain until a target date. Free, fast, and client-side.',
+    category: 'calculators',
+    tags: ['days until', 'countdown', 'days remaining', 'future date', 'days calculator'],
+    icon: 'calendar',
+    featured: false,
+    popular: false,
+    relatedTools: ['date-calculator', 'countdown-calculator', 'week-number-calculator'],
+    seo: {
+      title: 'Days Until Calculator - Free Online Countdown to Date',
+      description:
+        'See how many days, weeks, and months remain until any future date. Free online days until calculator.',
+      keywords: ['days until calculator', 'days countdown', 'days remaining', 'future date countdown'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What happens if the date has passed?', answer: 'The tool will indicate that the date has already passed.' },
+      { question: 'Can I see weeks and months too?', answer: 'Yes. The tool shows approximate weeks and months as well as exact days.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All calculations happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'week-number-calculator',
+    name: 'Week Number Calculator',
+    shortDescription: 'Find ISO week number for any date',
+    description:
+      'Find the ISO week number and year for any date. Shows the day of the week and explains the ISO week system. Free and client-side.',
+    category: 'calculators',
+    tags: ['week number', 'iso week', 'week of year', 'calendar week', 'week calculator'],
+    icon: 'calendar',
+    featured: false,
+    popular: false,
+    relatedTools: ['date-calculator', 'calendar-week-calculator', 'days-until-calculator'],
+    seo: {
+      title: 'Week Number Calculator - Free Online ISO Week Calculator',
+      description:
+        'Find the ISO week number and year for any date. Free online week number calculator.',
+      keywords: ['week number calculator', 'iso week', 'week of year', 'calendar week'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What is an ISO week?', answer: 'ISO weeks start on Monday. The first week of the year is the week containing the first Thursday.' },
+      { question: 'Can the week number differ from the calendar year?', answer: 'Yes. Some dates at the start or end of a year may belong to a different ISO year than the calendar year.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All calculations happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'time-duration-calculator',
+    name: 'Time Duration Calculator',
+    shortDescription: 'Calculate duration between two times',
+    description:
+      'Calculate the duration between a start time and end time. Handles crossing midnight. Shows hours, minutes, and total minutes. Free and client-side.',
+    category: 'calculators',
+    tags: ['time duration', 'duration calculator', 'hours calculator', 'time difference', 'elapsed time'],
+    icon: 'clock',
+    featured: false,
+    popular: false,
+    relatedTools: ['add-subtract-time-calculator', 'time-zone-converter', 'unix-time-now'],
+    seo: {
+      title: 'Time Duration Calculator - Free Online Hours and Minutes Calculator',
+      description:
+        'Calculate the duration between two times. Handles crossing midnight. Shows hours, minutes, and total minutes.',
+      keywords: ['time duration calculator', 'hours calculator', 'time difference', 'elapsed time calculator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What time formats are supported?', answer: 'Times must be entered in 24-hour format (HH:MM).' },
+      { question: 'Does it handle crossing midnight?', answer: 'Yes. If the end time is earlier than the start time, the tool assumes the end time is on the next day.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All calculations happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'add-subtract-time-calculator',
+    name: 'Add/Subtract Time Calculator',
+    shortDescription: 'Add or subtract hours and minutes',
+    description:
+      'Add or subtract hours and minutes from a starting time. Shows the result in 24-hour format. Free and client-side.',
+    category: 'calculators',
+    tags: ['add time', 'subtract time', 'time calculator', 'hours and minutes', 'time math'],
+    icon: 'clock',
+    featured: false,
+    popular: false,
+    relatedTools: ['time-duration-calculator', 'time-zone-converter', 'unix-time-now'],
+    seo: {
+      title: 'Add/Subtract Time Calculator - Free Online Time Calculator',
+      description:
+        'Add or subtract hours and minutes from a starting time. Free online add/subtract time calculator.',
+      keywords: ['add time calculator', 'subtract time', 'time calculator', 'hours and minutes'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What format should I use?', answer: 'Enter times in 24-hour format (HH:MM).' },
+      { question: 'What happens if the result goes past midnight?', answer: 'The time wraps around correctly, showing the time on the next day.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All calculations happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'countdown-calculator',
+    name: 'Countdown Calculator',
+    shortDescription: 'Live countdown to a target date and time',
+    description:
+      'Show a live countdown to any future date and time. Displays days, hours, minutes, and seconds. Updates every second. Free and client-side.',
+    category: 'calculators',
+    tags: ['countdown', 'countdown timer', 'days countdown', 'time remaining', 'event countdown'],
+    icon: 'timer',
+    featured: false,
+    popular: false,
+    relatedTools: ['days-until-calculator', 'date-calculator', 'unix-time-now'],
+    seo: {
+      title: 'Countdown Calculator - Free Online Live Countdown Timer',
+      description:
+        'Show a live countdown to any future date and time. Displays days, hours, minutes, and seconds. Free online countdown calculator.',
+      keywords: ['countdown calculator', 'countdown timer', 'days countdown', 'time remaining'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Does it update in real-time?', answer: 'Yes. The countdown updates every second automatically.' },
+      { question: 'What happens when the countdown reaches zero?', answer: 'The tool will indicate that the target date and time have passed.' },
+      { question: 'Is the countdown persistent?', answer: 'No. Refreshing the page resets the countdown. This is a client-side calculation only.' },
+    ],
+  },
+  {
+    slug: 'unix-time-now',
+    name: 'Unix Time Now',
+    shortDescription: 'Show current Unix timestamp instantly',
+    description:
+      'Display the current Unix timestamp in seconds and milliseconds, plus local and UTC time. Click to refresh. Free and client-side.',
+    category: 'calculators',
+    tags: ['unix timestamp', 'epoch', 'current time', 'unix time now', 'timestamp now'],
+    icon: 'clock',
+    featured: false,
+    popular: false,
+    relatedTools: ['timestamp-converter', 'time-zone-converter', 'unix-time-now'],
+    seo: {
+      title: 'Unix Time Now - Free Current Unix Timestamp Display',
+      description:
+        'Display the current Unix timestamp in seconds and milliseconds. Shows local time and UTC. Free and instant.',
+      keywords: ['unix timestamp now', 'current timestamp', 'epoch now', 'unix time'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What is a Unix timestamp?', answer: 'A Unix timestamp is the number of seconds (or milliseconds) since January 1, 1970 UTC.' },
+      { question: 'What is the difference between seconds and milliseconds?', answer: 'Unix timestamps are typically in seconds, but many systems use milliseconds for more precision.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All timestamps are generated locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'time-zone-converter',
+    name: 'Time Zone Converter',
+    shortDescription: 'Convert time between different time zones',
+    description:
+      'Convert time from one time zone to another. Supports UTC, Europe, America, Asia, and Australia. Uses browser APIs. Free and client-side.',
+    category: 'calculators',
+    tags: ['time zone converter', 'timezone conversion', 'convert time', 'utc converter', 'world clock'],
+    icon: 'globe',
+    featured: false,
+    popular: false,
+    relatedTools: ['add-subtract-time-calculator', 'time-duration-calculator', 'unix-time-now'],
+    seo: {
+      title: 'Time Zone Converter - Free Online Time Zone Conversion',
+      description:
+        'Convert time from one time zone to another. Supports UTC, Europe, America, Asia, and Australia time zones.',
+      keywords: ['time zone converter', 'timezone conversion', 'utc converter', 'world clock converter'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What time zones are supported?', answer: 'UTC, Europe/Madrid, Europe/London, America/New_York, America/Los_Angeles, Asia/Tokyo, and Australia/Sydney.' },
+      { question: 'Does it handle daylight saving time?', answer: 'Yes. The browser handles DST transitions automatically.' },
+      { question: 'Is my data sent to servers?', answer: 'No. Time zone conversions use the browser built-in Intl API.' },
+    ],
+  },
+  {
+    slug: 'calendar-week-calculator',
+    name: 'Calendar Week Calculator',
+    shortDescription: 'Find start and end date of an ISO week',
+    description:
+      'Enter a year and ISO week number to see the Monday and Sunday dates of that week. Free and client-side.',
+    category: 'calculators',
+    tags: ['calendar week', 'iso week', 'week date', 'week calculator', 'week finder'],
+    icon: 'calendar',
+    featured: false,
+    popular: false,
+    relatedTools: ['week-number-calculator', 'date-calculator', 'days-until-calculator'],
+    seo: {
+      title: 'Calendar Week Calculator - Free ISO Week Date Finder',
+      description:
+        'Find the Monday and Sunday dates for any ISO week number. Enter year and week to see the date range.',
+      keywords: ['calendar week calculator', 'iso week dates', 'week finder', 'week start end'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What is an ISO week?', answer: 'ISO weeks start on Monday. Week 1 is the week containing the first Thursday of the year.' },
+      { question: 'What format is the output?', answer: 'The output shows the Monday date and Sunday date of the selected week.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All calculations happen locally in your browser.' },
+    ],
+  },
 ];
 
 export function getToolBySlug(slug: string): Tool | undefined {
