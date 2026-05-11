@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /api/ /_next/
+
+Sitemap: https://clickbuildlabs.com/sitemap.xml

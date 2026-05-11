@@ -9,7 +9,7 @@ import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { ToolCard } from '@/components/tools/ToolCard';
 import { AdSlot } from '@/components/ads/AdSlot';
-import { getToolBySlug, getRelatedTools, CATEGORY_LABELS } from '@/lib/registry';
+import { getToolBySlug, getRelatedTools, CATEGORY_LABELS, tools } from '@/lib/registry';
 import { TOOL_COMPONENTS, hasToolComponent } from '@/lib/components';
 import { createToolJsonLd, createBreadcrumbJsonLd } from '@/lib/seo';
 
@@ -26,6 +26,12 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
 
 interface ToolPageProps {
   params: Promise<{ slug: string }>;
+}
+
+export async function generateStaticParams() {
+  return tools.map((tool) => ({
+    slug: tool.slug,
+  }));
 }
 
 export async function generateMetadata({ params }: ToolPageProps): Promise<Metadata> {
