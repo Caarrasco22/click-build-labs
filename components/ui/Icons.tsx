@@ -47,6 +47,7 @@ export function getCategoryIcon(category: ToolCategory) {
     utility: 'wrench',
     converter: 'refresh',
     generator: 'zap',
+    calculators: 'zap',
   };
   return icons[category] || 'code';
 }

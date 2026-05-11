@@ -7,9 +7,23 @@ import { tools } from '@/lib/registry';
 import { ToolsFilterClient } from './ToolsFilterClient';
 
 export const metadata: Metadata = {
-  title: 'All Free Online Tools | Click & Build Labs',
-  description:
-    'Browse all free online tools: formatters, converters, generators, and utilities. No signup required.',
+  title: 'All Free Online Tools & Utilities',
+  description: 'Browse all free online tools: formatters, converters, generators, calculators, and utilities for developers and creators. No signup required.',
+  openGraph: {
+    title: 'All Tools | Click & Build Labs',
+    description: 'Browse all free online tools: formatters, converters, generators, calculators, and utilities.',
+    siteName: 'Click & Build Labs',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary',
+    title: 'All Tools | Click & Build Labs',
+    description: 'Browse all free online tools: formatters, converters, generators, calculators, and utilities.',
+  },
+  alternates: {
+    canonical: 'https://clickbuildlabs.com/tools',
+  },
 };
 
 function ToolsLoading() {

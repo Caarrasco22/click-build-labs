@@ -4,7 +4,8 @@ export type ToolCategory =
   | 'dev'
   | 'utility'
   | 'converter'
-  | 'generator';
+  | 'generator'
+  | 'calculators';
 
 export type AdPosition = 'top' | 'inline' | 'bottom';
 

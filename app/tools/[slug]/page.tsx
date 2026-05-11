@@ -11,7 +11,7 @@ import { ToolCard } from '@/components/tools/ToolCard';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { getToolBySlug, getRelatedTools, CATEGORY_LABELS, tools } from '@/lib/registry';
 import { TOOL_COMPONENTS, hasToolComponent } from '@/lib/components';
-import { createToolJsonLd, createBreadcrumbJsonLd } from '@/lib/seo';
+import { createToolJsonLd, createBreadcrumbJsonLd, createFaqJsonLd } from '@/lib/seo';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   hash: Hash,
@@ -122,6 +122,7 @@ export default async function ToolPage({ params }: ToolPageProps) {
     { name: 'Tools', url: 'https://clickbuildlabs.com/tools' },
     { name: tool.name, url: `https://clickbuildlabs.com/tools/${tool.slug}` },
   ]);
+  const faqJsonLd = tool.faqs && tool.faqs.length > 0 ? createFaqJsonLd(tool.faqs) : null;
 
   const Icon = iconMap[tool.icon] || Code;
 
@@ -135,6 +136,12 @@ export default async function ToolPage({ params }: ToolPageProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
+      {faqJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        />
+      )}
 
       <Container className="py-10">
         <nav className="flex items-center gap-1.5 text-sm text-zinc-500 mb-8">

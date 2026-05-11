@@ -39,6 +39,16 @@ export const TOOL_COMPONENTS = {
   'data-storage-converter': lazy(() => import('@/components/tools/DataStorageConverter').then((m) => ({ default: m.DataStorageConverter }))),
   'angle-converter': lazy(() => import('@/components/tools/AngleConverter').then((m) => ({ default: m.AngleConverter }))),
   'fuel-consumption-converter': lazy(() => import('@/components/tools/FuelConsumptionConverter').then((m) => ({ default: m.FuelConsumptionConverter }))),
+  'discount-calculator': lazy(() => import('@/components/tools/DiscountCalculator').then((m) => ({ default: m.DiscountCalculator }))),
+  'vat-calculator': lazy(() => import('@/components/tools/VatCalculator').then((m) => ({ default: m.VatCalculator }))),
+  'profit-margin-calculator': lazy(() => import('@/components/tools/ProfitMarginCalculator').then((m) => ({ default: m.ProfitMarginCalculator }))),
+  'rule-of-three-calculator': lazy(() => import('@/components/tools/RuleOfThreeCalculator').then((m) => ({ default: m.RuleOfThreeCalculator }))),
+  'average-calculator': lazy(() => import('@/components/tools/AverageCalculator').then((m) => ({ default: m.AverageCalculator }))),
+  'age-calculator': lazy(() => import('@/components/tools/AgeCalculator').then((m) => ({ default: m.AgeCalculator }))),
+  'date-difference-calculator': lazy(() => import('@/components/tools/DateDifferenceCalculator').then((m) => ({ default: m.DateDifferenceCalculator }))),
+  'bmi-calculator': lazy(() => import('@/components/tools/BmiCalculator').then((m) => ({ default: m.BmiCalculator }))),
+  'loan-calculator': lazy(() => import('@/components/tools/LoanCalculator').then((m) => ({ default: m.LoanCalculator }))),
+  'tip-calculator': lazy(() => import('@/components/tools/TipCalculator').then((m) => ({ default: m.TipCalculator }))),
 } as const;
 
 export type ToolSlug = keyof typeof TOOL_COMPONENTS;

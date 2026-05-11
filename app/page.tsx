@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
 import { Badge } from '@/components/ui/Badge';
@@ -5,7 +6,10 @@ import { Card } from '@/components/ui/Card';
 import { ToolCard } from '@/components/tools/ToolCard';
 import { SearchBar } from '@/components/tools/SearchBar';
 import { tools, getFeaturedTools, getPopularTools, TOOL_CATEGORIES, CATEGORY_LABELS } from '@/lib/registry';
+import { createHomeMetadata } from '@/lib/seo';
 import { ArrowRight, Zap, Shield, Code2, Layers, Sparkles } from 'lucide-react';
+
+export const metadata: Metadata = createHomeMetadata();
 
 export default function HomePage() {
   const featuredTools = getFeaturedTools();
@@ -77,9 +81,9 @@ export default function HomePage() {
               </div>
               <div>
                 <p className="text-2xl font-semibold text-zinc-900 dark:text-zinc-50">
-                  0
+                  Browser
                 </p>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400">Tracking</p>
+                <p className="text-sm text-zinc-500 dark:text-zinc-400">Processing</p>
               </div>
             </div>
           </div>

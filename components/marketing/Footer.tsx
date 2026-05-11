@@ -9,6 +9,15 @@ function GitHubIcon({ className }: { className?: string }) {
   );
 }
 
+const CATEGORIES = [
+  { slug: 'dev', label: 'Developer Tools' },
+  { slug: 'converter', label: 'Converters' },
+  { slug: 'calculator', label: 'Calculators' },
+  { slug: 'generator', label: 'Generators' },
+  { slug: 'text', label: 'Text Tools' },
+  { slug: 'utility', label: 'Utilities' },
+];
+
 export function Footer() {
   return (
     <footer className="mt-auto border-t border-zinc-200 dark:border-zinc-800">
@@ -24,14 +33,31 @@ export function Footer() {
               </span>
             </div>
             <p className="text-sm text-zinc-500 dark:text-zinc-400 max-w-xs">
-              Free online tools for developers and creators. No signup required,
-              all processing happens in your browser.
+              Free online tools for developers and creators. All processing
+              happens in your browser. No signup required.
             </p>
           </div>
 
           <div>
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-50 mb-3">
-              Tools
+              Categories
+            </h3>
+            <nav className="flex flex-col gap-2">
+              {CATEGORIES.map((cat) => (
+                <Link
+                  key={cat.slug}
+                  href={`/tools?category=${cat.slug}`}
+                  className="text-sm text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-300"
+                >
+                  {cat.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          <div>
+            <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-50 mb-3">
+              Resources
             </h3>
             <nav className="flex flex-col gap-2">
               <Link
@@ -40,26 +66,6 @@ export function Footer() {
               >
                 All Tools
               </Link>
-              <Link
-                href="/tools?category=dev"
-                className="text-sm text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-300"
-              >
-                Developer
-              </Link>
-              <Link
-                href="/tools?category=generator"
-                className="text-sm text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-300"
-              >
-                Generators
-              </Link>
-            </nav>
-          </div>
-
-          <div>
-            <h3 className="text-sm font-semibold text-zinc-900 dark:text-zinc-50 mb-3">
-              Company
-            </h3>
-            <nav className="flex flex-col gap-2">
               <Link
                 href="/privacy"
                 className="text-sm text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-300"
@@ -78,7 +84,7 @@ export function Footer() {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-4 border-t border-zinc-200 pt-8 sm:flex-row">
           <p className="text-xs text-zinc-400 dark:text-zinc-500">
-            Built with care. Client-side processing.
+            Free online tools. No signup required.
           </p>
 
           <div className="flex items-center gap-4">
