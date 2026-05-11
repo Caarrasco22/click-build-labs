@@ -1954,6 +1954,406 @@ export const tools: Tool[] = [
       { question: 'Is my data sent to servers?', answer: 'No. All calculations happen locally in your browser.' },
     ],
   },
+  {
+    slug: 'gpa-calculator',
+    name: 'GPA Calculator',
+    shortDescription: 'Calculate Grade Point Average',
+    description:
+      'Calculate your GPA from course grades and credit hours. Supports both 4.0 and 4.3 scales. Free, fast, and client-side.',
+    category: 'calculators',
+    tags: ['gpa calculator', 'grade point average', 'calculate gpa', 'gpa', 'academic calculator'],
+    icon: 'graduation-cap',
+    featured: false,
+    popular: true,
+    relatedTools: ['grade-calculator', 'percentage-calculator', 'average-calculator'],
+    seo: {
+      title: 'GPA Calculator - Free Online Grade Point Average Calculator',
+      description:
+        'Calculate your GPA from grades and credit hours. Supports 4.0 and 4.3 scales. Free online GPA calculator.',
+      keywords: ['gpa calculator', 'grade point average', 'calculate gpa', 'academic gpa', 'college gpa'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What GPA scales are supported?', answer: 'We support both the standard 4.0 scale and the 4.3 scale (where A+ = 4.3).' },
+      { question: 'How is GPA calculated?', answer: 'GPA = Sum of (Grade Points × Credit Hours) / Total Credit Hours.' },
+      { question: 'Is this calculation official?', answer: 'No. This tool provides estimates only. Your institution official GPA may differ.' },
+    ],
+  },
+  {
+    slug: 'grade-calculator',
+    name: 'Grade Calculator',
+    shortDescription: 'Calculate weighted grades and needed scores',
+    description:
+      'Calculate your current grade from weighted assessments and see what score you need on remaining work to reach a target grade.',
+    category: 'calculators',
+    tags: ['grade calculator', 'weighted grade', 'grade average', 'final grade', 'academic calculator'],
+    icon: 'file-text',
+    featured: false,
+    popular: false,
+    relatedTools: ['gpa-calculator', 'percentage-calculator', 'average-calculator'],
+    seo: {
+      title: 'Grade Calculator - Free Online Weighted Grade Calculator',
+      description:
+        'Calculate your current weighted grade and see what you need on remaining assessments to reach your target grade.',
+      keywords: ['grade calculator', 'weighted grade', 'final grade calculator', 'academic calculator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How are weighted grades calculated?', answer: 'Each assessment contributes proportionally to your final grade based on its weight percentage.' },
+      { question: 'Can I see what I need on remaining work?', answer: 'Yes. Enter your target grade and the calculator will show the average needed on remaining assessments.' },
+      { question: 'Is this for any grading system?', answer: 'Yes. Enter your scores as percentages and weights as percentages of your total grade.' },
+    ],
+  },
+  {
+    slug: 'scientific-calculator',
+    name: 'Scientific Calculator',
+    shortDescription: 'Advanced calculator with trigonometry and functions',
+    description:
+      'A full-featured scientific calculator with trigonometric functions, logarithms, exponents, memory, and parentheses. Free and client-side.',
+    category: 'calculators',
+    tags: ['scientific calculator', 'trigonometry', 'logarithm', 'exponent', 'math calculator'],
+    icon: 'calculator',
+    featured: false,
+    popular: true,
+    relatedTools: ['fraction-calculator', 'equation-solver', 'percentage-calculator'],
+    seo: {
+      title: 'Scientific Calculator - Free Online Trigonometry and Logarithm Calculator',
+      description:
+        'Advanced scientific calculator with sin, cos, tan, log, ln, sqrt, exponents, and more. Free online calculator.',
+      keywords: ['scientific calculator', 'trigonometry calculator', 'logarithm calculator', 'math calculator', 'online calculator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What functions are available?', answer: 'Trigonometric (sin, cos, tan), logarithms (log, ln), roots (sqrt), exponents (x²), absolute value (abs), and exponential (exp).' },
+      { question: 'Does it use degrees or radians?', answer: 'Trigonometric functions use degrees by default.' },
+      { question: 'Can I use memory?', answer: 'Yes. MC, MR, M+, and M- buttons let you store and recall numbers.' },
+    ],
+  },
+  {
+    slug: 'fraction-calculator',
+    name: 'Fraction Calculator',
+    shortDescription: 'Add, subtract, multiply, and divide fractions',
+    description:
+      'Perform arithmetic operations on fractions with automatic simplification. Add, subtract, multiply, divide, and convert to decimals.',
+    category: 'calculators',
+    tags: ['fraction calculator', 'add fractions', 'subtract fractions', 'multiply fractions', 'divide fractions'],
+    icon: 'divide',
+    featured: false,
+    popular: false,
+    relatedTools: ['scientific-calculator', 'percentage-calculator', 'equation-solver'],
+    seo: {
+      title: 'Fraction Calculator - Free Online Add Subtract Multiply Divide Fractions',
+      description:
+        'Add, subtract, multiply, and divide fractions instantly with automatic simplification. Free online fraction calculator.',
+      keywords: ['fraction calculator', 'add fractions', 'subtract fractions', 'multiply fractions', 'divide fractions'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What operations are supported?', answer: 'Addition, subtraction, multiplication, and division of two fractions.' },
+      { question: 'Are results simplified?', answer: 'Yes. Results are automatically simplified to their simplest form.' },
+      { question: 'Can I see the decimal equivalent?', answer: 'Yes. The decimal equivalent is shown along with the fraction result.' },
+    ],
+  },
+  {
+    slug: 'number-base-converter',
+    name: 'Number Base Converter',
+    shortDescription: 'Convert between binary, octal, decimal, and hexadecimal',
+    description:
+      'Convert numbers between binary (base 2), octal (base 8), decimal (base 10), and hexadecimal (base 16). Shows decimal equivalent.',
+    category: 'calculators',
+    tags: ['number base converter', 'binary converter', 'hexadecimal converter', 'base converter', 'binary to decimal'],
+    icon: 'hash',
+    featured: false,
+    popular: false,
+    relatedTools: ['scientific-calculator', 'equation-solver', 'percentage-calculator'],
+    seo: {
+      title: 'Number Base Converter - Free Binary Octal Decimal Hexadecimal Converter',
+      description:
+        'Convert between binary, octal, decimal, and hexadecimal number systems. Free online base converter.',
+      keywords: ['number base converter', 'binary converter', 'hexadecimal converter', 'base conversion', 'decimal to binary'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What bases are supported?', answer: 'Binary (2), Octal (8), Decimal (10), and Hexadecimal (16).' },
+      { question: 'What characters does hexadecimal use?', answer: 'Hexadecimal uses 0-9 and A-F (e.g., A = 10, F = 15).' },
+      { question: 'Is my data sent to servers?', answer: 'No. All conversions happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'equation-solver',
+    name: 'Equation Solver',
+    shortDescription: 'Solve linear and quadratic equations',
+    description:
+      'Solve linear equations (ax + b = c) and quadratic equations (ax² + bx + c = 0). Shows step-by-step solution.',
+    category: 'calculators',
+    tags: ['equation solver', 'solve equation', 'linear equation', 'quadratic equation', 'algebra solver'],
+    icon: 'x-circle',
+    featured: false,
+    popular: false,
+    relatedTools: ['scientific-calculator', 'fraction-calculator', 'percentage-calculator'],
+    seo: {
+      title: 'Equation Solver - Free Online Linear and Quadratic Equation Solver',
+      description:
+        'Solve linear and quadratic equations instantly with step-by-step solutions. Free online equation solver.',
+      keywords: ['equation solver', 'solve equation', 'linear equation solver', 'quadratic equation solver', 'algebra calculator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What equations can it solve?', answer: 'Linear equations (ax + b = c) and quadratic equations (ax² + bx + c = 0).' },
+      { question: 'Does it show steps?', answer: 'Yes. The solution shows step-by-step breakdown of how to solve the equation.' },
+      { question: 'What if there are no real solutions?', answer: 'For quadratics with negative discriminant, complex solutions are shown (e.g., 2 + 3i).' },
+    ],
+  },
+  {
+    slug: 'final-grade-calculator',
+    name: 'Final Grade Calculator',
+    shortDescription: 'Calculate what you need on your final exam',
+    description:
+      'Calculate the score you need on your final exam to achieve your desired overall grade. Enter current grade, target grade, and final exam weight.',
+    category: 'calculators',
+    tags: ['final grade calculator', 'final exam score', 'what do I need', 'target grade', 'final exam calculator'],
+    icon: 'target',
+    featured: false,
+    popular: true,
+    relatedTools: ['grade-calculator', 'percentage-grade-calculator', 'gpa-calculator'],
+    seo: {
+      title: 'Final Grade Calculator - Free Online What Do I Need on My Final Calculator',
+      description:
+        'Calculate what score you need on your final exam to achieve your target grade. Free online final grade calculator.',
+      keywords: ['final grade calculator', 'what do I need on my final', 'final exam score calculator', 'target grade calculator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How is the needed final score calculated?', answer: 'The formula is: Needed = (Target - Current×(1-Weight)) / Weight.' },
+      { question: 'What if I need more than 100%?', answer: 'If you need over 100%, the target grade is not achievable with a perfect final exam score.' },
+      { question: 'Is this official academic advice?', answer: 'No. This is an estimation tool for planning purposes only.' },
+    ],
+  },
+  {
+    slug: 'percentage-grade-calculator',
+    name: 'Percentage Grade Calculator',
+    shortDescription: 'Convert points to percentage and letter grade',
+    description:
+      'Calculate your percentage score from points earned versus points total. Shows percentage and estimated letter grade.',
+    category: 'calculators',
+    tags: ['percentage grade', 'points to percentage', 'grade calculator', 'score percentage', 'letter grade'],
+    icon: 'percent',
+    featured: false,
+    popular: false,
+    relatedTools: ['grade-calculator', 'final-grade-calculator', 'average-calculator'],
+    seo: {
+      title: 'Percentage Grade Calculator - Free Points to Percentage Converter',
+      description:
+        'Convert points earned and total points to percentage score with letter grade. Free online percentage grade calculator.',
+      keywords: ['percentage grade calculator', 'points to percentage', 'grade calculator', 'score percentage'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How is the percentage calculated?', answer: 'Percentage = (Points Earned / Points Total) × 100.' },
+      { question: 'What letter grade scale is used?', answer: 'Standard A-F scale where A+ is 97%+, A is 93-96%, A- is 90-92%, and so on.' },
+      { question: 'Can I use decimals?', answer: 'Yes. Both points earned and total can be decimal numbers.' },
+    ],
+  },
+  {
+    slug: 'study-time-calculator',
+    name: 'Study Time Calculator',
+    shortDescription: 'Plan your study schedule',
+    description:
+      'Plan how many hours per day you need to study based on total hours needed and days available. Helps with study planning.',
+    category: 'calculators',
+    tags: ['study time calculator', 'study planning', 'hours per day', 'study schedule', 'learning planner'],
+    icon: 'clock',
+    featured: false,
+    popular: false,
+    relatedTools: ['reading-speed-calculator', 'gpa-calculator', 'days-until-calculator'],
+    seo: {
+      title: 'Study Time Calculator - Free Online Study Planning Calculator',
+      description:
+        'Calculate how many hours per day you need to study. Free online study time planning calculator.',
+      keywords: ['study time calculator', 'study planning', 'hours per day', 'study schedule planner'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How is the calculation done?', answer: 'If you enter days available, it calculates hours/day = Total Hours / Days.' },
+      { question: 'Can I set a specific hours per day?', answer: 'Yes. Enter hours per day to see how many days you need.' },
+      { question: 'Is this for any subject?', answer: 'Yes. Enter your total study hours goal regardless of subject.' },
+    ],
+  },
+  {
+    slug: 'reading-speed-calculator',
+    name: 'Reading Speed Calculator',
+    shortDescription: 'Calculate words per minute and reading time',
+    description:
+      'Calculate your reading speed in words per minute (WPM) and estimate how long it will take to read any text.',
+    category: 'calculators',
+    tags: ['reading speed calculator', 'words per minute', 'wpm', 'reading time', 'reading speed test'],
+    icon: 'book-open',
+    featured: false,
+    popular: false,
+    relatedTools: ['essay-word-count-planner', 'study-time-calculator', 'word-counter'],
+    seo: {
+      title: 'Reading Speed Calculator - Free Words Per Minute (WPM) Calculator',
+      description:
+        'Calculate your reading speed in WPM and estimate reading time for any text. Free online reading speed calculator.',
+      keywords: ['reading speed calculator', 'words per minute', 'wpm calculator', 'reading time calculator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How is WPM calculated?', answer: 'WPM = Words Read / Minutes spent reading.' },
+      { question: 'What is a good reading speed?', answer: 'Average adult reading speed is 200-250 WPM. Fast readers reach 300+ WPM.' },
+      { question: 'Can I estimate time for a specific book?', answer: 'Yes. Enter the word count of any text to estimate reading time based on your speed.' },
+    ],
+  },
+  {
+    slug: 'essay-word-count-planner',
+    name: 'Essay Word Count Planner',
+    shortDescription: 'Plan word count distribution for essays',
+    description:
+      'Plan how to distribute your target word count across essay sections like introduction, body paragraphs, and conclusion.',
+    category: 'calculators',
+    tags: ['essay word count', 'word count planner', 'essay planning', 'word count distribution', 'essay structure'],
+    icon: 'file-text',
+    featured: false,
+    popular: false,
+    relatedTools: ['reading-speed-calculator', 'word-counter', 'study-time-calculator'],
+    seo: {
+      title: 'Essay Word Count Planner - Free Word Count Distribution Calculator',
+      description:
+        'Plan your essay word count distribution across sections. Free online word count planner for essays.',
+      keywords: ['essay word count planner', 'word count distribution', 'essay planning', 'word count calculator', 'essay structure'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Can I customize section distribution?', answer: 'Yes. Switch to custom mode to enter different word counts for each section.' },
+      { question: 'What sections are included?', answer: 'Introduction, 3 Body Paragraphs, and Conclusion by default.' },
+      { question: 'Can I add more sections?', answer: 'The equal distribution splits evenly. For custom sections, enter your own values.' },
+    ],
+  },
+  {
+    slug: 'multiplication-table-generator',
+    name: 'Multiplication Table Generator',
+    shortDescription: 'Generate multiplication tables',
+    description:
+      'Generate multiplication tables for any number from 1 to any range. Useful for learning and practicing multiplication.',
+    category: 'calculators',
+    tags: ['multiplication table', 'times table', 'multiply', 'math tables', 'multiplication practice'],
+    icon: 'grid',
+    featured: false,
+    popular: true,
+    relatedTools: ['prime-number-checker', 'equation-solver', 'scientific-calculator'],
+    seo: {
+      title: 'Multiplication Table Generator - Free Online Times Table Generator',
+      description:
+        'Generate multiplication tables for any number. Free online times table generator for learning.',
+      keywords: ['multiplication table generator', 'times table', 'multiply table', 'multiplication practice', 'math tables'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What numbers can I generate tables for?', answer: 'Any positive integer. For very large numbers, the table may be long.' },
+      { question: 'What range can I set?', answer: 'Set any range from 1 to 100 or more. Default is 1 to 10.' },
+      { question: 'Can I copy the table?', answer: 'Yes. Click the Copy button to copy the entire table to clipboard.' },
+    ],
+  },
+  {
+    slug: 'prime-number-checker',
+    name: 'Prime Number Checker',
+    shortDescription: 'Check if a number is prime',
+    description:
+      'Check if any number is prime or composite. Shows divisors if not prime. Handles 0, 1, and negative numbers correctly.',
+    category: 'calculators',
+    tags: ['prime number', 'prime checker', 'is prime', 'prime factorization', 'composite number'],
+    icon: 'hash',
+    featured: false,
+    popular: true,
+    relatedTools: ['multiplication-table-generator', 'equation-solver', 'scientific-calculator'],
+    seo: {
+      title: 'Prime Number Checker - Free Online Is Prime Calculator',
+      description:
+        'Check if a number is prime or composite. Shows divisors for composite numbers. Free online prime checker.',
+      keywords: ['prime number checker', 'is prime', 'prime number calculator', 'prime factorization'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What is a prime number?', answer: 'A prime number is greater than 1 with no divisors other than 1 and itself.' },
+      { question: 'Does it handle 0 and 1?', answer: 'Yes. 0 and 1 are correctly identified as not prime by definition.' },
+      { question: 'Does it show all divisors?', answer: 'It shows sample divisors up to half the number, not the complete factorization.' },
+    ],
+  },
+  {
+    slug: 'roman-numeral-converter',
+    name: 'Roman Numeral Converter',
+    shortDescription: 'Convert between Roman and Arabic numerals',
+    description:
+      'Convert Roman numerals to Arabic numbers and vice versa. Supports numbers from 1 to 3999 with validation.',
+    category: 'calculators',
+    tags: ['roman numerals', 'roman numeral converter', 'arabic to roman', 'roman numbers', 'roman converter'],
+    icon: 'type',
+    featured: false,
+    popular: false,
+    relatedTools: ['number-base-converter', 'percentage-grade-calculator', 'equation-solver'],
+    seo: {
+      title: 'Roman Numeral Converter - Free Online Roman to Arabic Converter',
+      description:
+        'Convert between Roman numerals (I, V, X, L, C, D, M) and Arabic numbers. Free online Roman numeral converter.',
+      keywords: ['roman numeral converter', 'roman to arabic', 'arabic to roman', 'roman numbers converter'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What range of numbers is supported?', answer: 'Roman numerals from 1 (I) to 3999 (MMMCMXCIX).' },
+      { question: 'Can I convert in both directions?', answer: 'Yes. Select Number to Roman or Roman to Number mode.' },
+      { question: 'What if I enter an invalid Roman numeral?', answer: 'The tool shows an error message for invalid Roman numeral format.' },
+    ],
+  },
+  {
+    slug: 'percentage-error-calculator',
+    name: 'Percentage Error Calculator',
+    shortDescription: 'Calculate experimental error percentage',
+    description:
+      'Calculate absolute error and percentage error between experimental and theoretical values. Used in science experiments.',
+    category: 'calculators',
+    tags: ['percentage error', 'absolute error', 'experimental error', 'measurement error', 'science calculator'],
+    icon: 'alert-triangle',
+    featured: false,
+    popular: false,
+    relatedTools: ['percentage-calculator', 'percentage-grade-calculator', 'scientific-calculator'],
+    seo: {
+      title: 'Percentage Error Calculator - Free Online Experimental Error Calculator',
+      description:
+        'Calculate absolute error and percentage error between measured and theoretical values. Free online percentage error calculator.',
+      keywords: ['percentage error calculator', 'absolute error', 'experimental error', 'measurement error', 'science calculator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How is percentage error calculated?', answer: 'Percent Error = |Experimental - Theoretical| / |Theoretical| × 100%.' },
+      { question: 'What is absolute error?', answer: 'Absolute error is the absolute difference between experimental and theoretical values.' },
+      { question: 'When is this used?', answer: 'Commonly used in physics and chemistry to compare measured results to accepted values.' },
+    ],
+  },
+  {
+    slug: 'unit-circle-helper',
+    name: 'Unit Circle Helper',
+    shortDescription: 'Find sin, cos, tan for common angles',
+    description:
+      'Select common angles on the unit circle to see exact values for sin, cos, and tan. Shows radians and clarifies undefined values.',
+    category: 'calculators',
+    tags: ['unit circle', 'trigonometry', 'sin cos tan', 'unit circle calculator', 'radians'],
+    icon: 'circle',
+    featured: false,
+    popular: false,
+    relatedTools: ['scientific-calculator', 'percentage-calculator', 'equation-solver'],
+    seo: {
+      title: 'Unit Circle Helper - Free Online Trigonometry Values Calculator',
+      description:
+        'Get exact sin, cos, tan values for common angles on the unit circle. Shows radians and undefined values.',
+      keywords: ['unit circle helper', 'trigonometry calculator', 'sin cos tan table', 'unit circle values', 'radians to degrees'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What angles are included?', answer: '0°, 30°, 45°, 60°, 90°, 120°, 135°, 150°, 180°, 210°, 225°, 240°, 270°, 300°, 315°, 330°, 360°.' },
+      { question: 'Why is tan sometimes undefined?', answer: 'Tangent is sin/cos. When cos is 0 (at 90° and 270°), tan is undefined (division by zero).' },
+      { question: 'Are the values exact?', answer: 'Yes. For common angles, values are shown in exact form like √3/2 or 1/2.' },
+    ],
+  },
 ];
 
 export function getToolBySlug(slug: string): Tool | undefined {

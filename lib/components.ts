@@ -69,6 +69,22 @@ export const TOOL_COMPONENTS = {
   'hourly-to-salary-calculator': lazy(() => import('@/components/tools/HourlyToSalaryCalculator').then((m) => ({ default: m.HourlyToSalaryCalculator }))),
   'salary-to-hourly-calculator': lazy(() => import('@/components/tools/SalaryToHourlyCalculator').then((m) => ({ default: m.SalaryToHourlyCalculator }))),
   'unit-rate-calculator': lazy(() => import('@/components/tools/UnitRateCalculator').then((m) => ({ default: m.UnitRateCalculator }))),
+  'gpa-calculator': lazy(() => import('@/components/tools/GpaCalculator').then((m) => ({ default: m.GpaCalculator }))),
+  'grade-calculator': lazy(() => import('@/components/tools/GradeCalculator').then((m) => ({ default: m.GradeCalculator }))),
+  'scientific-calculator': lazy(() => import('@/components/tools/ScientificCalculator').then((m) => ({ default: m.ScientificCalculator }))),
+  'fraction-calculator': lazy(() => import('@/components/tools/FractionCalculator').then((m) => ({ default: m.FractionCalculator }))),
+  'number-base-converter': lazy(() => import('@/components/tools/NumberBaseConverter').then((m) => ({ default: m.NumberBaseConverter }))),
+  'equation-solver': lazy(() => import('@/components/tools/EquationSolver').then((m) => ({ default: m.EquationSolver }))),
+  'final-grade-calculator': lazy(() => import('@/components/tools/FinalGradeCalculator').then((m) => ({ default: m.FinalGradeCalculator }))),
+  'percentage-grade-calculator': lazy(() => import('@/components/tools/PercentageGradeCalculator').then((m) => ({ default: m.PercentageGradeCalculator }))),
+  'study-time-calculator': lazy(() => import('@/components/tools/StudyTimeCalculator').then((m) => ({ default: m.StudyTimeCalculator }))),
+  'reading-speed-calculator': lazy(() => import('@/components/tools/ReadingSpeedCalculator').then((m) => ({ default: m.ReadingSpeedCalculator }))),
+  'essay-word-count-planner': lazy(() => import('@/components/tools/EssayWordCountPlanner').then((m) => ({ default: m.EssayWordCountPlanner }))),
+  'multiplication-table-generator': lazy(() => import('@/components/tools/MultiplicationTableGenerator').then((m) => ({ default: m.MultiplicationTableGenerator }))),
+  'prime-number-checker': lazy(() => import('@/components/tools/PrimeNumberChecker').then((m) => ({ default: m.PrimeNumberChecker }))),
+  'roman-numeral-converter': lazy(() => import('@/components/tools/RomanNumeralConverter').then((m) => ({ default: m.RomanNumeralConverter }))),
+  'percentage-error-calculator': lazy(() => import('@/components/tools/PercentageErrorCalculator').then((m) => ({ default: m.PercentageErrorCalculator }))),
+  'unit-circle-helper': lazy(() => import('@/components/tools/UnitCircleHelper').then((m) => ({ default: m.UnitCircleHelper }))),
 } as const;
 
 export type ToolSlug = keyof typeof TOOL_COMPONENTS;
