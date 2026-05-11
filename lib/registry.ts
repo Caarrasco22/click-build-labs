@@ -599,6 +599,506 @@ export const tools: Tool[] = [
       { question: 'What happens with nested objects?', answer: 'Nested objects are converted to dot notation in the CSV headers (e.g., "address.city").' },
     ],
   },
+  {
+    slug: 'json-validator',
+    name: 'JSON Validator',
+    shortDescription: 'Validate JSON syntax instantly',
+    description:
+      'Validate JSON syntax and get detailed error messages with line and column information. Free, fast, and 100% client-side.',
+    category: 'dev',
+    tags: ['json', 'validator', 'json validator', 'validate json', 'json syntax'],
+    icon: 'check-circle',
+    featured: false,
+    popular: true,
+    relatedTools: ['json-formatter', 'json-minifier'],
+    seo: {
+      title: 'JSON Validator - Free Online JSON Syntax Validator',
+      description:
+        'Validate JSON syntax instantly with detailed error messages. Free online JSON validator with line and column info.',
+      keywords: ['json validator', 'validate json', 'json syntax checker', 'json error'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Does this show error locations?', answer: 'Yes. When JSON is invalid, we show the exact line and column where the error occurred.' },
+      { question: 'Is my JSON sent to a server?', answer: 'No. All validation happens entirely in your browser. Your data never leaves your device.' },
+      { question: 'Can I format valid JSON?', answer: 'Yes. Use our JSON Formatter tool to beautify or minify your JSON.' },
+    ],
+  },
+  {
+    slug: 'json-minifier',
+    name: 'JSON Minifier',
+    shortDescription: 'Minify JSON for production',
+    description:
+      'Minify JSON by removing whitespace and newlines for production use. Free, fast, and 100% client-side.',
+    category: 'dev',
+    tags: ['json', 'minifier', 'minify json', 'compress json', 'json optimizer'],
+    icon: 'minimize-2',
+    featured: false,
+    popular: false,
+    relatedTools: ['json-formatter', 'json-validator'],
+    seo: {
+      title: 'JSON Minifier - Free Online JSON Minification Tool',
+      description:
+        'Minify JSON by removing whitespace for production. Free online JSON minifier. No server processing.',
+      keywords: ['json minifier', 'minify json', 'compress json', 'json optimizer'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What whitespace is removed?', answer: 'All unnecessary spaces, tabs, newlines, and indentation are removed.' },
+      { question: 'Will this change my data?', answer: 'No. Minification only removes formatting whitespace, not actual JSON content.' },
+      { question: 'Is this reversible?', answer: 'Yes. Use our JSON Formatter to beautify the minified JSON back to readable format.' },
+    ],
+  },
+  {
+    slug: 'csv-to-json',
+    name: 'CSV to JSON Converter',
+    shortDescription: 'Convert CSV data to JSON',
+    description:
+      'Convert CSV data to JSON format for use in web applications and APIs. Handles headers and complex CSVs. Free and instant.',
+    category: 'converter',
+    tags: ['csv', 'csv to json', 'convert csv', 'json converter', 'data conversion'],
+    icon: 'file-spreadsheet',
+    featured: false,
+    popular: true,
+    relatedTools: ['json-to-csv', 'json-formatter'],
+    seo: {
+      title: 'CSV to JSON Converter - Free Online CSV to JSON Tool',
+      description:
+        'Convert CSV data to JSON format instantly. Free online CSV to JSON converter with header detection.',
+      keywords: ['csv to json', 'convert csv json', 'csv converter', 'json converter'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How does header detection work?', answer: 'The first row of your CSV is used as JSON keys. Each subsequent row becomes an object.' },
+      { question: 'What if my CSV has quotes?', answer: 'Our parser handles quoted fields and escaped quotes within quoted content.' },
+      { question: 'Can I paste multi-line values?', answer: 'Yes. Quoted fields can contain newlines and will be handled correctly.' },
+    ],
+  },
+  {
+    slug: 'url-parser',
+    name: 'URL Parser',
+    shortDescription: 'Parse URL components instantly',
+    description:
+      'Parse any URL into its components: protocol, host, port, path, query, and fragment. See exactly what each part of a URL means.',
+    category: 'dev',
+    tags: ['url', 'parser', 'url parser', 'parse url', 'url components', 'url analysis'],
+    icon: 'link',
+    featured: false,
+    popular: false,
+    relatedTools: ['url-encoder-decoder', 'slug-generator'],
+    seo: {
+      title: 'URL Parser - Free Online URL Component Parser',
+      description:
+        'Parse URLs into protocol, host, port, path, query, and fragment. Free online URL parser tool.',
+      keywords: ['url parser', 'parse url', 'url components', 'url analysis'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What URL parts are shown?', answer: 'Protocol, host, port, pathname, search (query), hash (fragment), username, and password.' },
+      { question: 'Can I edit the URL and see changes?', answer: 'Yes. Edit any component and see the reconstructed URL update in real-time.' },
+      { question: 'Is my URL sent anywhere?', answer: 'No. All parsing happens locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'jwt-decoder',
+    name: 'JWT Decoder',
+    shortDescription: 'Decode JWT tokens client-side',
+    description:
+      'Decode JWT tokens to view the header, payload, and signature. Perfect for debugging and inspecting tokens. Does NOT verify signatures.',
+    category: 'dev',
+    tags: ['jwt', 'decoder', 'jwt decoder', 'decode jwt', 'json web token', 'jwt viewer'],
+    icon: 'key',
+    featured: false,
+    popular: true,
+    relatedTools: ['hash-generator', 'base64-encode'],
+    seo: {
+      title: 'JWT Decoder - Free Online JWT Token Decoder',
+      description:
+        'Decode JWT tokens to view header and payload. Free online JWT decoder. Does NOT verify signatures.',
+      keywords: ['jwt decoder', 'decode jwt', 'jwt viewer', 'json web token decoder'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Does this verify JWT signatures?', answer: 'No. This tool only DECODES the token for inspection. It does NOT verify the signature. Do not use for security purposes.' },
+      { question: 'What parts of a JWT are shown?', answer: 'The header (algorithm), payload (claims), and signature (Base64 encoded).' },
+      { question: 'Is my JWT stored?', answer: 'No. All decoding happens locally in your browser. Your token is never transmitted.' },
+    ],
+  },
+  {
+    slug: 'regex-tester',
+    name: 'Regex Tester',
+    shortDescription: 'Test regular expressions instantly',
+    description:
+      'Test regular expressions against sample text with real-time matching. Supports JavaScript regex syntax with flags.',
+    category: 'dev',
+    tags: ['regex', 'regex tester', 'regular expression', 'pattern matching', 'test regex'],
+    icon: 'regex',
+    featured: false,
+    popular: true,
+    relatedTools: ['html-entity-encoder-decoder', 'text-diff-checker'],
+    seo: {
+      title: 'Regex Tester - Free Online Regular Expression Tester',
+      description:
+        'Test regular expressions against sample text with real-time matching. Free online regex tester.',
+      keywords: ['regex tester', 'regular expression tester', 'test regex', 'regex pattern'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What regex flags are supported?', answer: 'We support g (global), i (case insensitive), and m (multiline) flags.' },
+      { question: 'Can I see match groups?', answer: 'Yes. Parenthesized groups are captured and displayed separately.' },
+      { question: 'Is this compatible with JavaScript regex?', answer: 'Yes. We use JavaScript regex engine, so the syntax is compatible with JS regex patterns.' },
+    ],
+  },
+  {
+    slug: 'html-minifier',
+    name: 'HTML Minifier',
+    shortDescription: 'Minify HTML for production',
+    description:
+      'Minify HTML by removing unnecessary whitespace, comments, and optional tags. Reduce file size for faster page loads.',
+    category: 'dev',
+    tags: ['html', 'minifier', 'minify html', 'compress html', 'html optimizer'],
+    icon: 'minimize-2',
+    featured: false,
+    popular: false,
+    relatedTools: ['css-minifier', 'javascript-minifier'],
+    seo: {
+      title: 'HTML Minifier - Free Online HTML Minification Tool',
+      description:
+        'Minify HTML for production by removing whitespace and comments. Free online HTML minifier.',
+      keywords: ['html minifier', 'minify html', 'compress html', 'html optimizer'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What is removed during minification?', answer: 'Whitespace between tags, unnecessary newlines, and HTML comments are removed.' },
+      { question: 'Will minification break my page?', answer: 'Our minifier preserves structural whitespace and does not remove content that affects rendering.' },
+      { question: 'Is this suitable for production?', answer: 'Yes. Minified HTML loads faster. Note: for complex sites, consider using a proper build tool.' },
+    ],
+  },
+  {
+    slug: 'css-minifier',
+    name: 'CSS Minifier',
+    shortDescription: 'Minify CSS for production',
+    description:
+      'Minify CSS by removing whitespace, comments, and redundant rules. Reduce CSS file size for faster page loads.',
+    category: 'dev',
+    tags: ['css', 'minifier', 'minify css', 'compress css', 'css optimizer'],
+    icon: 'minimize-2',
+    featured: false,
+    popular: false,
+    relatedTools: ['html-minifier', 'javascript-minifier'],
+    seo: {
+      title: 'CSS Minifier - Free Online CSS Minification Tool',
+      description:
+        'Minify CSS for production by removing whitespace and comments. Free online CSS minifier.',
+      keywords: ['css minifier', 'minify css', 'compress css', 'css optimizer'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What is removed during minification?', answer: 'Whitespace, comments, and redundant semicolons are removed.' },
+      { question: 'Will this break my styles?', answer: 'No. Our minifier only removes non-functional whitespace and comments.' },
+      { question: 'Does it merge duplicate rules?', answer: 'Basic duplicate merging is performed. For complex optimization, use a proper build tool.' },
+    ],
+  },
+  {
+    slug: 'javascript-minifier',
+    name: 'JavaScript Minifier',
+    shortDescription: 'Minify JavaScript for production',
+    description:
+      'Minify JavaScript by removing whitespace, comments, and unnecessary characters. Reduce JS file size for faster page loads.',
+    category: 'dev',
+    tags: ['javascript', 'minifier', 'minify js', 'compress javascript', 'js optimizer'],
+    icon: 'minimize-2',
+    featured: false,
+    popular: false,
+    relatedTools: ['html-minifier', 'css-minifier'],
+    seo: {
+      title: 'JavaScript Minifier - Free Online JS Minification Tool',
+      description:
+        'Minify JavaScript for production by removing whitespace. Free online JS minifier.',
+      keywords: ['javascript minifier', 'minify js', 'compress javascript', 'js optimizer'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What is removed during minification?', answer: 'Whitespace, newlines, and comments between statements are removed.' },
+      { question: 'Does it rename variables?', answer: 'No. Variable renaming (obfuscation) requires a proper build tool like Terser or UglifyJS.' },
+      { question: 'Is minified JS safe for production?', answer: 'Yes. Our basic minification is safe. For production sites, use bundlers like webpack or esbuild for full optimization.' },
+    ],
+  },
+  {
+    slug: 'query-string-builder',
+    name: 'Query String Builder',
+    shortDescription: 'Build URL query strings easily',
+    description:
+      'Build URL query strings by adding key-value pairs. See the resulting URL and copy it for use in your applications.',
+    category: 'utility',
+    tags: ['query string', 'url params', 'build url', 'query builder', 'url builder'],
+    icon: 'plus-square',
+    featured: false,
+    popular: false,
+    relatedTools: ['url-parser', 'url-encoder-decoder'],
+    seo: {
+      title: 'Query String Builder - Free URL Query String Builder',
+      description:
+        'Build URL query strings by adding key-value pairs. Free online query string builder tool.',
+      keywords: ['query string builder', 'url params', 'build url query', 'query builder'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How do I add parameters?', answer: 'Click "Add Parameter" to add a key-value pair. The query string updates automatically.' },
+      { question: 'Can I remove parameters?', answer: 'Yes. Click the X button next to any parameter to remove it.' },
+      { question: 'How are special characters handled?', answer: 'Values are automatically URL-encoded to ensure they are safe in URLs.' },
+    ],
+  },
+  {
+    slug: 'length-converter',
+    name: 'Length Converter',
+    shortDescription: 'Convert between meters, feet, inches, and more',
+    description:
+      'Convert length units instantly: meters, centimeters, millimeters, kilometers, inches, feet, yards, and miles. Free, fast, and 100% client-side.',
+    category: 'converter',
+    tags: ['length converter', 'meters to feet', 'convert length', 'unit converter', 'distance converter'],
+    icon: 'ruler',
+    featured: false,
+    popular: true,
+    relatedTools: ['weight-converter', 'temperature-converter', 'volume-converter'],
+    seo: {
+      title: 'Length Converter - Free Online Length Unit Converter',
+      description:
+        'Convert between meters, feet, inches, yards, miles and more instantly. Free online length converter. No signup required.',
+      keywords: ['length converter', 'meters to feet', 'inches to cm', 'unit converter', 'distance converter'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What units are supported?', answer: 'Meters, centimeters, millimeters, kilometers, inches, feet, yards, and miles.' },
+      { question: 'Is the conversion accurate?', answer: 'Yes. Conversions use standard conversion factors and are mathematically precise.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All conversions happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'weight-converter',
+    name: 'Weight Converter',
+    shortDescription: 'Convert between grams, pounds, ounces, and more',
+    description:
+      'Convert weight units instantly: grams, kilograms, metric tons, ounces, pounds, and stones. Free, fast, and 100% client-side.',
+    category: 'converter',
+    tags: ['weight converter', 'kg to lbs', 'convert weight', 'grams to ounces', 'unit converter'],
+    icon: 'scale',
+    featured: false,
+    popular: true,
+    relatedTools: ['length-converter', 'temperature-converter', 'volume-converter'],
+    seo: {
+      title: 'Weight Converter - Free Online Weight Unit Converter',
+      description:
+        'Convert between grams, kilograms, pounds, ounces, and stones instantly. Free online weight converter.',
+      keywords: ['weight converter', 'kg to lbs', 'grams to ounces', 'convert weight', 'unit converter'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What units are supported?', answer: 'Grams, kilograms, metric tons, ounces, pounds, and stones.' },
+      { question: 'Can I convert between metric and imperial?', answer: 'Yes. All conversions work seamlessly between metric and imperial units.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All conversions happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'temperature-converter',
+    name: 'Temperature Converter',
+    shortDescription: 'Convert between Celsius, Fahrenheit, and Kelvin',
+    description:
+      'Convert temperature units instantly: Celsius, Fahrenheit, and Kelvin. Handle negative values and get precise results.',
+    category: 'converter',
+    tags: ['temperature converter', 'celsius to fahrenheit', 'convert temperature', 'kelvin converter'],
+    icon: 'thermometer',
+    featured: false,
+    popular: true,
+    relatedTools: ['weight-converter', 'length-converter', 'area-converter'],
+    seo: {
+      title: 'Temperature Converter - Free Celsius, Fahrenheit, Kelvin Converter',
+      description:
+        'Convert between Celsius, Fahrenheit, and Kelvin instantly. Free online temperature converter.',
+      keywords: ['temperature converter', 'celsius to fahrenheit', 'kelvin converter', 'convert temperature'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What temperature units are supported?', answer: 'Celsius (°C), Fahrenheit (°F), and Kelvin (K).' },
+      { question: 'Can I enter negative values?', answer: 'Yes. All temperature units support negative values.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All conversions happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'area-converter',
+    name: 'Area Converter',
+    shortDescription: 'Convert between m², ft², acres, hectares, and more',
+    description:
+      'Convert area units instantly: square meters, square centimeters, square kilometers, square feet, square yards, acres, and hectares.',
+    category: 'converter',
+    tags: ['area converter', 'm2 to ft2', 'acres to hectares', 'convert area', 'square converter'],
+    icon: 'maximize-2',
+    featured: false,
+    popular: false,
+    relatedTools: ['length-converter', 'volume-converter', 'speed-converter'],
+    seo: {
+      title: 'Area Converter - Free Square Meters, Acres, Hectares Converter',
+      description:
+        'Convert between m², ft², acres, hectares and more instantly. Free online area converter.',
+      keywords: ['area converter', 'm2 to ft2', 'acres to hectares', 'convert area', 'square converter'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What area units are supported?', answer: 'Square meters, square centimeters, square kilometers, square feet, square yards, acres, and hectares.' },
+      { question: 'Is the conversion accurate?', answer: 'Yes. Conversions use standard conversion factors.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All conversions happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'volume-converter',
+    name: 'Volume Converter',
+    shortDescription: 'Convert between liters, gallons, pints, cups, and more',
+    description:
+      'Convert volume units instantly: liters, milliliters, cubic meters, US gallons, US pints, and US cups.',
+    category: 'converter',
+    tags: ['volume converter', 'liters to gallons', 'convert volume', 'ml to cups', 'fluid converter'],
+    icon: ' droplet',
+    featured: false,
+    popular: true,
+    relatedTools: ['weight-converter', 'length-converter', 'area-converter'],
+    seo: {
+      title: 'Volume Converter - Free Liters, Gallons, Cups Converter',
+      description:
+        'Convert between liters, gallons, pints, cups and more instantly. Free online volume converter.',
+      keywords: ['volume converter', 'liters to gallons', 'ml to cups', 'convert volume', 'fluid converter'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What volume units are supported?', answer: 'Liters, milliliters, cubic meters, US gallons, US pints, and US cups.' },
+      { question: 'Which gallon system is used?', answer: 'We use US gallons (not UK/imperial gallons).' },
+      { question: 'Is my data sent to servers?', answer: 'No. All conversions happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'speed-converter',
+    name: 'Speed Converter',
+    shortDescription: 'Convert between km/h, mph, m/s, and knots',
+    description:
+      'Convert speed units instantly: kilometers per hour, miles per hour, meters per second, and knots.',
+    category: 'converter',
+    tags: ['speed converter', 'km/h to mph', 'convert speed', 'm/s to knots', 'velocity converter'],
+    icon: 'zap',
+    featured: false,
+    popular: true,
+    relatedTools: ['length-converter', 'time-converter', 'fuel-consumption-converter'],
+    seo: {
+      title: 'Speed Converter - Free km/h, mph, m/s, Knots Converter',
+      description:
+        'Convert between km/h, mph, m/s, and knots instantly. Free online speed converter.',
+      keywords: ['speed converter', 'km/h to mph', 'convert speed', 'm/s to knots', 'velocity converter'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What speed units are supported?', answer: 'Kilometers per hour (km/h), miles per hour (mph), meters per second (m/s), and knots.' },
+      { question: 'Is the conversion accurate?', answer: 'Yes. Conversions use standard conversion factors.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All conversions happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'time-converter',
+    name: 'Time Converter',
+    shortDescription: 'Convert between seconds, minutes, hours, days, and weeks',
+    description:
+      'Convert time units instantly: seconds, minutes, hours, days, and weeks. Different from timestamp converter.',
+    category: 'converter',
+    tags: ['time converter', 'hours to minutes', 'convert time', 'seconds to hours', 'duration converter'],
+    icon: 'clock',
+    featured: false,
+    popular: true,
+    relatedTools: ['speed-converter', 'length-converter', 'percentage-calculator'],
+    seo: {
+      title: 'Time Converter - Free Seconds, Minutes, Hours, Days Converter',
+      description:
+        'Convert between seconds, minutes, hours, days, and weeks instantly. Free online time converter.',
+      keywords: ['time converter', 'hours to minutes', 'convert time', 'seconds to hours', 'duration converter'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What time units are supported?', answer: 'Seconds, minutes, hours, days, and weeks.' },
+      { question: 'How is this different from timestamp converter?', answer: 'Timestamp converter handles Unix epoch timestamps. This converter handles duration units like hours to minutes.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All conversions happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'data-storage-converter',
+    name: 'Data Storage Converter',
+    shortDescription: 'Convert between bytes, KB, MB, GB, and binary units (KiB, MiB)',
+    description:
+      'Convert data storage units: bytes, KB, MB, GB, TB (decimal) and KiB, MiB, GiB, TiB (binary). Note the difference.',
+    category: 'converter',
+    tags: ['data storage converter', 'bytes to mb', 'convert data', 'kb to mb', 'gb to tb'],
+    icon: 'hard-drive',
+    featured: false,
+    popular: true,
+    relatedTools: ['length-converter', 'time-converter', 'speed-converter'],
+    seo: {
+      title: 'Data Storage Converter - Free Bytes, KB, MB, GB, TB Converter',
+      description:
+        'Convert between bytes, KB, MB, GB, TB and KiB, MiB, GiB, TiB. Free online data storage converter.',
+      keywords: ['data storage converter', 'bytes to mb', 'convert data', 'kb to mb', 'gb to tb'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What units are supported?', answer: 'Bytes, KB, MB, GB, TB (decimal, 1000-based) and KiB, MiB, GiB, TiB (binary, 1024-based).' },
+      { question: 'What is the difference between decimal and binary?', answer: 'Decimal (KB) uses 1000 as base. Binary (KiB) uses 1024 as base. 1 KiB = 1024 bytes, 1 KB = 1000 bytes.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All conversions happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'angle-converter',
+    name: 'Angle Converter',
+    shortDescription: 'Convert between degrees, radians, and gradians',
+    description:
+      'Convert angle units instantly: degrees, radians, and gradians. Useful for math, engineering, and navigation.',
+    category: 'converter',
+    tags: ['angle converter', 'degrees to radians', 'convert angle', 'gradians converter', 'trigonometry'],
+    icon: 'triangle',
+    featured: false,
+    popular: false,
+    relatedTools: ['length-converter', 'speed-converter', 'time-converter'],
+    seo: {
+      title: 'Angle Converter - Free Degrees, Radians, Gradians Converter',
+      description:
+        'Convert between degrees, radians, and gradians instantly. Free online angle converter.',
+      keywords: ['angle converter', 'degrees to radians', 'convert angle', 'gradians converter', 'trigonometry'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What angle units are supported?', answer: 'Degrees (°), radians (rad), and gradians (grad).' },
+      { question: 'When would I use gradians?', answer: 'Gradians are used in some engineering contexts and angle measurements. 400 gradians = 360 degrees.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All conversions happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'fuel-consumption-converter',
+    name: 'Fuel Consumption Converter',
+    shortDescription: 'Convert between L/100km, km/L, MPG US, and MPG UK',
+    description:
+      'Convert fuel consumption units: L/100km, km/L, MPG US, and MPG UK. See note about consumption vs efficiency.',
+    category: 'converter',
+    tags: ['fuel consumption converter', 'l/100km to mpg', 'convert fuel', 'km/l to mpg', 'gas converter'],
+    icon: 'fuel',
+    featured: false,
+    popular: false,
+    relatedTools: ['speed-converter', 'length-converter', 'time-converter'],
+    seo: {
+      title: 'Fuel Consumption Converter - Free L/100km, MPG Converter',
+      description:
+        'Convert between L/100km, km/L, MPG US, and MPG UK instantly. Free online fuel consumption converter.',
+      keywords: ['fuel consumption converter', 'l/100km to mpg', 'convert fuel', 'km/l to mpg', 'gas converter'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What units are supported?', answer: 'Liters per 100km (L/100km), kilometers per liter (km/L), MPG US, and MPG UK.' },
+      { question: 'Which is better, lower or higher values?', answer: 'For L/100km, lower is better (less fuel used). For km/L and MPG, higher is better (more efficient).' },
+      { question: 'Is my data sent to servers?', answer: 'No. All conversions happen locally in your browser.' },
+    ],
+  },
 ];
 
 export function getToolBySlug(slug: string): Tool | undefined {
