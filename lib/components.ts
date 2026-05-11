@@ -59,6 +59,16 @@ export const TOOL_COMPONENTS = {
   'unix-time-now': lazy(() => import('@/components/tools/UnixTimeNow').then((m) => ({ default: m.UnixTimeNow }))),
   'time-zone-converter': lazy(() => import('@/components/tools/TimeZoneConverter').then((m) => ({ default: m.TimeZoneConverter }))),
   'calendar-week-calculator': lazy(() => import('@/components/tools/CalendarWeekCalculator').then((m) => ({ default: m.CalendarWeekCalculator }))),
+  'percentage-change-calculator': lazy(() => import('@/components/tools/PercentageChangeCalculator').then((m) => ({ default: m.PercentageChangeCalculator }))),
+  'ratio-calculator': lazy(() => import('@/components/tools/RatioCalculator').then((m) => ({ default: m.RatioCalculator }))),
+  'price-per-unit-calculator': lazy(() => import('@/components/tools/PricePerUnitCalculator').then((m) => ({ default: m.PricePerUnitCalculator }))),
+  'split-bill-calculator': lazy(() => import('@/components/tools/SplitBillCalculator').then((m) => ({ default: m.SplitBillCalculator }))),
+  'simple-interest-calculator': lazy(() => import('@/components/tools/SimpleInterestCalculator').then((m) => ({ default: m.SimpleInterestCalculator }))),
+  'compound-interest-calculator': lazy(() => import('@/components/tools/CompoundInterestCalculator').then((m) => ({ default: m.CompoundInterestCalculator }))),
+  'savings-goal-calculator': lazy(() => import('@/components/tools/SavingsGoalCalculator').then((m) => ({ default: m.SavingsGoalCalculator }))),
+  'hourly-to-salary-calculator': lazy(() => import('@/components/tools/HourlyToSalaryCalculator').then((m) => ({ default: m.HourlyToSalaryCalculator }))),
+  'salary-to-hourly-calculator': lazy(() => import('@/components/tools/SalaryToHourlyCalculator').then((m) => ({ default: m.SalaryToHourlyCalculator }))),
+  'unit-rate-calculator': lazy(() => import('@/components/tools/UnitRateCalculator').then((m) => ({ default: m.UnitRateCalculator }))),
 } as const;
 
 export type ToolSlug = keyof typeof TOOL_COMPONENTS;

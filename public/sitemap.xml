@@ -301,6 +301,56 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://clickbuildlabs.com/tools/percentage-change-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/ratio-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/price-per-unit-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/split-bill-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/simple-interest-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/compound-interest-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/savings-goal-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/hourly-to-salary-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/salary-to-hourly-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/unit-rate-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://clickbuildlabs.com/categories/developer/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>

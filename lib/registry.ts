@@ -1704,6 +1704,256 @@ export const tools: Tool[] = [
       { question: 'Is my data sent to servers?', answer: 'No. All calculations happen locally in your browser.' },
     ],
   },
+  {
+    slug: 'percentage-change-calculator',
+    name: 'Percentage Change Calculator',
+    shortDescription: 'Calculate percentage change between two values',
+    description:
+      'Calculate the percentage change and absolute difference between an initial and final value. Shows whether it is an increase or decrease.',
+    category: 'calculators',
+    tags: ['percentage change', 'increase decrease', 'change calculator', 'percent change'],
+    icon: 'percent',
+    featured: false,
+    popular: false,
+    relatedTools: ['percentage-calculator', 'ratio-calculator', 'unit-rate-calculator'],
+    seo: {
+      title: 'Percentage Change Calculator - Free Online Percent Change Tool',
+      description:
+        'Calculate the percentage change and absolute difference between two values. Free online percentage change calculator.',
+      keywords: ['percentage change calculator', 'percent change', 'increase decrease calculator', 'percentage difference'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How is percentage change calculated?', answer: 'Percentage change = ((final - initial) / initial) × 100%' },
+      { question: 'What does a positive result mean?', answer: 'A positive result indicates an increase from the initial value.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All calculations happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'ratio-calculator',
+    name: 'Ratio Calculator',
+    shortDescription: 'Simplify and calculate ratios',
+    description:
+      'Simplify ratios and calculate decimal equivalents. Enter two values to find the simplified ratio form.',
+    category: 'calculators',
+    tags: ['ratio calculator', 'simplify ratio', 'ratio finder', 'proportion calculator'],
+    icon: 'divide',
+    featured: false,
+    popular: false,
+    relatedTools: ['percentage-change-calculator', 'unit-rate-calculator', 'rule-of-three-calculator'],
+    seo: {
+      title: 'Ratio Calculator - Free Online Simplify Ratios Tool',
+      description:
+        'Simplify ratios and calculate decimal equivalents. Free online ratio calculator for math and proportions.',
+      keywords: ['ratio calculator', 'simplify ratio', 'ratio finder', 'proportion calculator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How do you simplify a ratio?', answer: 'Divide both numbers by their greatest common divisor (GCD) to get the simplest form.' },
+      { question: 'Can I use decimals?', answer: 'Yes. The calculator converts decimals to integers for simplification, then shows the decimal value.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All calculations happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'price-per-unit-calculator',
+    name: 'Price Per Unit Calculator',
+    shortDescription: 'Calculate price per single unit',
+    description:
+      'Calculate the price per individual unit from a total price and quantity. Useful for comparing product prices.',
+    category: 'calculators',
+    tags: ['price per unit', 'unit price', 'per unit calculator', 'unit cost calculator'],
+    icon: 'dollar-sign',
+    featured: false,
+    popular: false,
+    relatedTools: ['split-bill-calculator', 'unit-rate-calculator', 'ratio-calculator'],
+    seo: {
+      title: 'Price Per Unit Calculator - Free Online Unit Price Calculator',
+      description:
+        'Calculate the price per individual unit from total price and quantity. Free online unit price calculator.',
+      keywords: ['price per unit calculator', 'unit price', 'per unit calculator', 'unit cost'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Why calculate price per unit?', answer: 'It helps compare products of different sizes to find the best value.' },
+      { question: 'Can I use a custom unit?', answer: 'Yes. Enter any unit label like kg, oz, pcs, or liters.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All calculations happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'split-bill-calculator',
+    name: 'Split Bill Calculator',
+    shortDescription: 'Divide a bill among multiple people',
+    description:
+      'Calculate how much each person pays when splitting a bill. Includes optional tip and tax calculations.',
+    category: 'calculators',
+    tags: ['split bill', 'divide bill', 'bill splitter', 'split check', 'per person'],
+    icon: 'users',
+    featured: false,
+    popular: false,
+    relatedTools: ['tip-calculator', 'price-per-unit-calculator', 'percentage-calculator'],
+    seo: {
+      title: 'Split Bill Calculator - Free Online Bill Splitter Tool',
+      description:
+        'Calculate how much each person pays when splitting a bill. Includes tip and tax options. Free bill splitter.',
+      keywords: ['split bill calculator', 'bill splitter', 'divide bill', 'per person calculator', 'split check'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Can I add tip percentage?', answer: 'Yes. Enter the tip percentage to include it in the total calculation.' },
+      { question: 'What about tax?', answer: 'You can add a tax percentage as well. Both tip and tax are calculated on the original bill total.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All calculations happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'simple-interest-calculator',
+    name: 'Simple Interest Calculator',
+    shortDescription: 'Calculate simple interest on a loan or investment',
+    description:
+      'Calculate simple interest earned or charged on a principal amount over a specified time period.',
+    category: 'calculators',
+    tags: ['simple interest', 'interest calculator', 'loan interest', 'investment interest'],
+    icon: 'calculator',
+    featured: false,
+    popular: false,
+    relatedTools: ['compound-interest-calculator', 'savings-goal-calculator', 'loan-calculator'],
+    seo: {
+      title: 'Simple Interest Calculator - Free Online Simple Interest Tool',
+      description:
+        'Calculate simple interest on a principal amount over time. Free online simple interest calculator.',
+      keywords: ['simple interest calculator', 'interest calculator', 'loan interest', 'simple interest formula'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What is simple interest?', answer: 'Simple interest = Principal × Rate × Time. Interest is calculated only on the original amount.' },
+      { question: 'What is the formula?', answer: 'Interest = P × r × t where P is principal, r is annual rate, t is time in years.' },
+      { question: 'Is this financial advice?', answer: 'No. These calculations are estimates for informational purposes only.' },
+    ],
+  },
+  {
+    slug: 'compound-interest-calculator',
+    name: 'Compound Interest Calculator',
+    shortDescription: 'Calculate compound interest with contributions',
+    description:
+      'Calculate compound interest with optional monthly contributions. Shows total value and interest earned over time.',
+    category: 'calculators',
+    tags: ['compound interest', 'compound savings', 'investment calculator', 'compound growth'],
+    icon: 'trending-up',
+    featured: false,
+    popular: false,
+    relatedTools: ['simple-interest-calculator', 'savings-goal-calculator', 'hourly-to-salary-calculator'],
+    seo: {
+      title: 'Compound Interest Calculator - Free Online Compound Interest Tool',
+      description:
+        'Calculate compound interest with optional monthly contributions. See future value and total interest earned.',
+      keywords: ['compound interest calculator', 'compound savings', 'investment calculator', 'compound growth'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What is compound interest?', answer: 'Compound interest is interest on interest. Your money grows as interest is added to the principal.' },
+      { question: 'How often is interest compounded?', answer: 'You can choose yearly or monthly compounding frequency.' },
+      { question: 'Are results accurate?', answer: 'Results are estimates for informational purposes only and not financial advice.' },
+    ],
+  },
+  {
+    slug: 'savings-goal-calculator',
+    name: 'Savings Goal Calculator',
+    shortDescription: 'Calculate time to reach a savings goal',
+    description:
+      'Calculate how long it will take to reach your savings goal with an initial amount and monthly contributions.',
+    category: 'calculators',
+    tags: ['savings goal', 'savings calculator', 'financial goal', 'savings timeline'],
+    icon: 'target',
+    featured: false,
+    popular: false,
+    relatedTools: ['compound-interest-calculator', 'simple-interest-calculator', 'savings-goal-calculator'],
+    seo: {
+      title: 'Savings Goal Calculator - Free Online Savings Timeline Calculator',
+      description:
+        'Calculate how long it will take to reach your savings goal. Enter target, initial savings, and monthly contribution.',
+      keywords: ['savings goal calculator', 'savings timeline', 'financial goal', 'savings calculator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What if my monthly contribution is 0?', answer: 'The monthly contribution must be greater than 0 to reach a savings goal.' },
+      { question: 'Is my initial savings considered?', answer: 'Yes. Any initial savings you have reduces the amount you need to save.' },
+      { question: 'Is this financial advice?', answer: 'No. These calculations are estimates for informational purposes only.' },
+    ],
+  },
+  {
+    slug: 'hourly-to-salary-calculator',
+    name: 'Hourly to Salary Calculator',
+    shortDescription: 'Convert hourly rate to annual salary',
+    description:
+      'Convert an hourly wage to weekly, monthly, and annual salary estimates. Enter hourly rate, hours per week, and weeks per year.',
+    category: 'calculators',
+    tags: ['hourly to salary', 'salary calculator', 'wage calculator', 'annual salary', 'hourly wage'],
+    icon: 'clock',
+    featured: false,
+    popular: false,
+    relatedTools: ['salary-to-hourly-calculator', 'tip-calculator', 'percentage-calculator'],
+    seo: {
+      title: 'Hourly to Salary Calculator - Free Hourly to Annual Salary Converter',
+      description:
+        'Convert an hourly wage to weekly, monthly, and annual salary estimates. Free hourly to salary calculator.',
+      keywords: ['hourly to salary calculator', 'wage to salary', 'annual salary calculator', 'hourly wage converter'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Is this my actual take-home pay?', answer: 'No. These are gross estimates before taxes and deductions.' },
+      { question: 'What defaults are used?', answer: 'Default is 40 hours per week and 52 weeks per year. You can adjust these.' },
+      { question: 'Are results accurate?', answer: 'Results are estimates for informational purposes only.' },
+    ],
+  },
+  {
+    slug: 'salary-to-hourly-calculator',
+    name: 'Salary to Hourly Calculator',
+    shortDescription: 'Convert annual salary to hourly rate',
+    description:
+      'Convert an annual salary to an equivalent hourly rate. Enter salary, hours per week, and weeks per year.',
+    category: 'calculators',
+    tags: ['salary to hourly', 'hourly rate', 'salary calculator', 'wage calculator', 'annual salary'],
+    icon: 'dollar-sign',
+    featured: false,
+    popular: false,
+    relatedTools: ['hourly-to-salary-calculator', 'tip-calculator', 'percentage-calculator'],
+    seo: {
+      title: 'Salary to Hourly Calculator - Free Annual Salary to Hourly Rate Converter',
+      description:
+        'Convert an annual salary to an equivalent hourly rate. Free salary to hourly calculator.',
+      keywords: ['salary to hourly calculator', 'hourly rate calculator', 'annual salary to hourly', 'wage converter'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Is this my actual take-home rate?', answer: 'No. This is a gross estimate before taxes and deductions.' },
+      { question: 'How is the hourly rate calculated?', answer: 'Hourly rate = Annual Salary / (Hours per Week × Weeks per Year)' },
+      { question: 'Are results accurate?', answer: 'Results are estimates for informational purposes only.' },
+    ],
+  },
+  {
+    slug: 'unit-rate-calculator',
+    name: 'Unit Rate Calculator',
+    shortDescription: 'Calculate rate per single unit',
+    description:
+      'Calculate the rate per one unit from two quantities. Useful for prices, speeds, productivity, and more.',
+    category: 'calculators',
+    tags: ['unit rate', 'rate calculator', 'per unit', 'price per', 'rate per'],
+    icon: 'hash',
+    featured: false,
+    popular: false,
+    relatedTools: ['price-per-unit-calculator', 'ratio-calculator', 'percentage-change-calculator'],
+    seo: {
+      title: 'Unit Rate Calculator - Free Online Rate Per Unit Calculator',
+      description:
+        'Calculate the rate per one unit from two quantities. Free unit rate calculator for prices, speeds, and productivity.',
+      keywords: ['unit rate calculator', 'rate per unit', 'per unit calculator', 'price per', 'rate calculator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What is a unit rate?', answer: 'A unit rate shows how much of something per one unit of something else (e.g., price per kg, speed per hour).' },
+      { question: 'What can I use this for?', answer: 'Compare prices, speeds, productivity, calories, and any other per-unit measurements.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All calculations happen locally in your browser.' },
+    ],
+  },
 ];
 
 export function getToolBySlug(slug: string): Tool | undefined {
