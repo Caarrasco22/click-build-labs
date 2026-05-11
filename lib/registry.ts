@@ -349,6 +349,256 @@ export const tools: Tool[] = [
       },
     ],
   },
+  {
+    slug: 'word-counter',
+    name: 'Word Counter',
+    shortDescription: 'Count words, characters, and reading time',
+    description:
+      'Count words, characters, sentences, paragraphs, and estimated reading time. Useful for essays, articles, and social media posts. Free and instant.',
+    category: 'text',
+    tags: ['word counter', 'character counter', 'count words', 'reading time', 'text analysis'],
+    icon: 'type',
+    featured: false,
+    popular: true,
+    relatedTools: ['character-counter', 'case-converter'],
+    seo: {
+      title: 'Word Counter - Free Online Word & Character Counter',
+      description:
+        'Count words, characters, sentences, paragraphs, and reading time instantly. Free online word counter tool for writers and students.',
+      keywords: ['word counter', 'character counter', 'count words', 'reading time', 'text analysis'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Does it count spaces?', answer: 'Yes. We show both character counts: with spaces and without spaces.' },
+      { question: 'How is reading time calculated?', answer: 'Reading time is estimated at 200 words per minute, a standard reading speed.' },
+      { question: 'Is my text sent anywhere?', answer: 'No. All processing happens in your browser. Your text never leaves your device.' },
+    ],
+  },
+  {
+    slug: 'character-counter',
+    name: 'Character Counter',
+    shortDescription: 'Count characters, words, and lines',
+    description:
+      'Count characters with and without spaces, words, and lines. Useful for Twitter, social media limits, and code. Free and instant.',
+    category: 'text',
+    tags: ['character counter', 'letter counter', 'count characters', 'twitter character count', 'text length'],
+    icon: 'hash',
+    featured: false,
+    popular: false,
+    relatedTools: ['word-counter', 'case-converter'],
+    seo: {
+      title: 'Character Counter - Free Online Character & Word Counter',
+      description:
+        'Count characters, words, and lines instantly. Free character counter tool for Twitter, captions, and code.',
+      keywords: ['character counter', 'letter counter', 'count characters', 'twitter character count'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Does it count spaces?', answer: 'Yes, both with and without spaces.' },
+      { question: 'Can I use it for Twitter/X limits?', answer: 'Yes. Character count is useful for social media posts with character limits.' },
+      { question: 'Is my text stored?', answer: 'No. Everything is processed locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'case-converter',
+    name: 'Case Converter',
+    shortDescription: 'Convert text case instantly',
+    description:
+      'Convert text to lowercase, UPPERCASE, Title Case, Sentence case, camelCase, kebab-case, and snake_case. Free and instant.',
+    category: 'text',
+    tags: ['case converter', 'lowercase', 'uppercase', 'title case', 'camelcase', ' kebab-case', 'snake_case'],
+    icon: 'type',
+    featured: false,
+    popular: true,
+    relatedTools: ['word-counter', 'character-counter', 'slug-generator'],
+    seo: {
+      title: 'Case Converter - Free Online Text Case Converter',
+      description:
+        'Convert text to lowercase, UPPERCASE, Title Case, camelCase, kebab-case, and snake_case instantly. Free and client-side.',
+      keywords: ['case converter', 'lowercase', 'uppercase', 'title case', 'camelcase', 'kebab-case'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What case formats are supported?', answer: 'lowercase, UPPERCASE, Title Case, Sentence case, camelCase, kebab-case, and snake_case.' },
+      { question: 'Can I copy the result?', answer: 'Yes. Click the copy button to copy the result to your clipboard.' },
+      { question: 'Is this case conversion accurate for all languages?', answer: 'It works best with standard Latin characters. Complex Unicode may not convert correctly.' },
+    ],
+  },
+  {
+    slug: 'url-encoder-decoder',
+    name: 'URL Encoder / Decoder',
+    shortDescription: 'Encode and decode URLs instantly',
+    description:
+      'Encode URLs for safe transmission or decode encoded URLs back to readable text. Essential for web development and API work. Free and instant.',
+    category: 'dev',
+    tags: ['url encode', 'url decode', 'encode url', 'decode url', 'percent encoding', 'url encoding'],
+    icon: 'link',
+    featured: false,
+    popular: true,
+    relatedTools: ['html-entity-encoder-decoder', 'base64-encode'],
+    seo: {
+      title: 'URL Encoder / Decoder - Free Online URL Encoding and Decoding',
+      description:
+        'Encode and decode URLs instantly. Free online URL encoder/decoder tool for web developers.',
+      keywords: ['url encode', 'url decode', 'encode url', 'decode url', 'percent encoding'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Why encode URLs?', answer: 'Special characters in URLs must be encoded to ensure they transmit correctly over the internet.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All encoding and decoding happens in your browser.' },
+      { question: 'What characters are encoded?', answer: 'Characters like spaces, &, #, %, and non-ASCII characters are encoded as %XX hex values.' },
+    ],
+  },
+  {
+    slug: 'html-entity-encoder-decoder',
+    name: 'HTML Entity Encoder / Decoder',
+    shortDescription: 'Encode and decode HTML entities',
+    description:
+      'Convert special characters to HTML entities and decode HTML entities back to readable text. Essential for web development. Free and instant.',
+    category: 'dev',
+    tags: ['html entities', 'encode html', 'decode html', 'entity encoder', 'special characters html'],
+    icon: 'code',
+    featured: false,
+    popular: false,
+    relatedTools: ['url-encoder-decoder', 'base64-encode'],
+    seo: {
+      title: 'HTML Entity Encoder / Decoder - Free Online HTML Encoding',
+      description:
+        'Encode and decode HTML entities instantly. Convert special characters to &amp; and &lt; HTML entity format.',
+      keywords: ['html entities', 'encode html', 'decode html', 'entity encoder'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What are HTML entities?', answer: 'HTML entities are codes like &amp;, &lt;, and &gt; used to represent special characters in HTML.' },
+      { question: 'Why encode HTML entities?', answer: 'Encoding is necessary when you want to display special characters in HTML without them being interpreted as HTML code.' },
+      { question: 'Is this client-side?', answer: 'Yes. All processing happens entirely in your browser.' },
+    ],
+  },
+  {
+    slug: 'timestamp-converter',
+    name: 'Timestamp Converter',
+    shortDescription: 'Convert Unix timestamps to dates',
+    description:
+      'Convert Unix timestamps to human-readable dates and vice versa. Supports both seconds and milliseconds. Shows local time and UTC. Free and instant.',
+    category: 'dev',
+    tags: ['timestamp', 'unix timestamp', 'epoch', 'convert timestamp', 'date converter'],
+    icon: 'clock',
+    featured: false,
+    popular: true,
+    relatedTools: ['json-formatter', 'word-counter'],
+    seo: {
+      title: 'Timestamp Converter - Free Online Unix Timestamp Converter',
+      description:
+        'Convert Unix timestamps to dates and dates to timestamps. Supports seconds and milliseconds. Shows local and UTC time.',
+      keywords: ['timestamp converter', 'unix timestamp', 'epoch converter', 'date to timestamp'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What is a Unix timestamp?', answer: 'A Unix timestamp is the number of seconds (or milliseconds) since January 1, 1970 UTC. It is used to represent dates in computing.' },
+      { question: 'Seconds or milliseconds?', answer: 'Our tool supports both. Toggle between seconds and milliseconds using the button above the input field.' },
+      { question: 'What time zones are shown?', answer: 'Both your local time and UTC (Coordinated Universal Time) are displayed.' },
+    ],
+  },
+  {
+    slug: 'percentage-calculator',
+    name: 'Percentage Calculator',
+    shortDescription: 'Calculate percentages instantly',
+    description:
+      'Calculate X% of Y, what percentage X is of Y, and percentage change. Simple, fast, and free. No signup required.',
+    category: 'utility',
+    tags: ['percentage calculator', 'percent', 'calculate percentage', 'percentage change'],
+    icon: 'percent',
+    featured: false,
+    popular: false,
+    relatedTools: ['word-counter', 'character-counter'],
+    seo: {
+      title: 'Percentage Calculator - Free Online Percentage Calculator',
+      description:
+        'Calculate percentages instantly: find X% of Y, what percentage X is of Y, and percentage change. Free and simple.',
+      keywords: ['percentage calculator', 'percent calculator', 'calculate percentage', 'percentage change'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How do I calculate X% of Y?', answer: 'Select "X% of Y" mode, enter the percentage (X) and the total (Y), then click Calculate.' },
+      { question: 'How do I find what percentage X is of Y?', answer: 'Select "X is what % of Y" mode, enter the part (X) and the total (Y).' },
+      { question: 'How is percentage change calculated?', answer: 'Percentage change = ((new - old) / old) × 100%. Select "Change %" mode to calculate.' },
+    ],
+  },
+  {
+    slug: 'text-diff-checker',
+    name: 'Text Diff Checker',
+    shortDescription: 'Compare two texts and find differences',
+    description:
+      'Compare two texts side by side and see the differences highlighted. Line-by-line comparison with add and remove indicators. Free and instant.',
+    category: 'dev',
+    tags: ['text diff', 'compare text', 'diff checker', 'text comparison', 'find differences'],
+    icon: 'diff',
+    featured: false,
+    popular: false,
+    relatedTools: ['word-counter', 'json-formatter'],
+    seo: {
+      title: 'Text Diff Checker - Free Online Text Comparison Tool',
+      description:
+        'Compare two texts and find differences instantly. Line-by-line diff checker for developers and writers.',
+      keywords: ['text diff', 'compare text', 'diff checker', 'text comparison'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How does it work?', answer: 'Paste your original text in the left box and the modified text in the right box, then click Compare.' },
+      { question: 'What does highlighting mean?', answer: 'Green lines are additions, red lines are deletions, and white lines are unchanged.' },
+      { question: 'Is my text stored?', answer: 'No. All processing happens in your browser. Your texts are never sent to any server.' },
+    ],
+  },
+  {
+    slug: 'markdown-previewer',
+    name: 'Markdown Previewer',
+    shortDescription: 'Preview and format Markdown',
+    description:
+      'Write Markdown and see a live preview. Supports headings, bold, italic, lists, links, and code. Free and instant.',
+    category: 'text',
+    tags: ['markdown', 'markdown preview', 'preview markdown', 'markdown editor', 'readme generator'],
+    icon: 'file-text',
+    featured: false,
+    popular: true,
+    relatedTools: ['word-counter', 'case-converter', 'text-diff-checker'],
+    seo: {
+      title: 'Markdown Previewer - Free Online Markdown Editor',
+      description:
+        'Write Markdown and see a live preview. Supports headings, bold, italic, lists, links, and code blocks.',
+      keywords: ['markdown previewer', 'markdown editor', 'preview markdown', 'readme generator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What Markdown syntax is supported?', answer: 'Headings (# ## ###), bold (**text**), italic (*text*), lists (- item), links [text](url), and inline code (`code`).' },
+      { question: 'Is my Markdown saved?', answer: 'No. Your Markdown is processed locally and is not saved anywhere.' },
+      { question: 'Can I copy the HTML output?', answer: 'Yes. Click the "Copy HTML" button to copy the rendered HTML to your clipboard.' },
+    ],
+  },
+  {
+    slug: 'json-to-csv',
+    name: 'JSON to CSV Converter',
+    shortDescription: 'Convert JSON arrays to CSV',
+    description:
+      'Convert JSON arrays to CSV format for use in spreadsheets. Handles nested objects and arrays. Free and instant with download option.',
+    category: 'dev',
+    tags: ['json to csv', 'convert json', 'csv converter', 'json converter', 'data conversion'],
+    icon: 'file-spreadsheet',
+    featured: false,
+    popular: true,
+    relatedTools: ['json-formatter', 'base64-encode'],
+    seo: {
+      title: 'JSON to CSV Converter - Free Online JSON to CSV Tool',
+      description:
+        'Convert JSON arrays to CSV format instantly. Download as CSV file or copy to clipboard. Free and client-side.',
+      keywords: ['json to csv', 'convert json csv', 'csv converter', 'json converter'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What JSON format is supported?', answer: 'We support arrays of objects like [{"name": "John", "age": 30}]. The objects should have consistent keys.' },
+      { question: 'Can I download the CSV?', answer: 'Yes. Click the "Download CSV" button to download the converted file.' },
+      { question: 'What happens with nested objects?', answer: 'Nested objects are converted to dot notation in the CSV headers (e.g., "address.city").' },
+    ],
+  },
 ];
 
 export function getToolBySlug(slug: string): Tool | undefined {

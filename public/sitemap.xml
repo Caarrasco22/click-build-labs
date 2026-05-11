@@ -51,6 +51,56 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://clickbuildlabs.com/tools/word-counter/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/character-counter/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/case-converter/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/url-encoder-decoder/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/html-entity-encoder-decoder/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/timestamp-converter/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/percentage-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/text-diff-checker/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/markdown-previewer/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/json-to-csv/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://clickbuildlabs.com/privacy/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>

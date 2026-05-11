@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
-import { ChevronRight, Home, ArrowRight, Hash, Lock, Shield, Code, Link2, RefreshCw, Palette, Type } from 'lucide-react';
+import { ChevronRight, Home, ArrowRight, Hash, Lock, Shield, Code, Link2, RefreshCw, Palette, Type, Clock, Percent, FileText, FileSpreadsheet } from 'lucide-react';
 import { Container } from '@/components/ui/Container';
 import { Badge } from '@/components/ui/Badge';
 import { Card } from '@/components/ui/Card';
@@ -22,6 +22,10 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   refresh: RefreshCw,
   palette: Palette,
   type: Type,
+  clock: Clock,
+  percent: Percent,
+  'file-text': FileText,
+  'file-spreadsheet': FileSpreadsheet,
 };
 
 interface ToolPageProps {
