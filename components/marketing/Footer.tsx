@@ -12,7 +12,7 @@ function GitHubIcon({ className }: { className?: string }) {
 const CATEGORIES = [
   { slug: 'dev', label: 'Developer Tools' },
   { slug: 'converter', label: 'Converters' },
-  { slug: 'calculator', label: 'Calculators' },
+  { slug: 'calculators', label: 'Calculators' },
   { slug: 'generator', label: 'Generators' },
   { slug: 'text', label: 'Text Tools' },
   { slug: 'utility', label: 'Utilities' },
@@ -46,7 +46,7 @@ export function Footer() {
               {CATEGORIES.map((cat) => (
                 <Link
                   key={cat.slug}
-                  href={`/tools?category=${cat.slug}`}
+                  href={`/categories/${cat.slug}`}
                   className="text-sm text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-300"
                 >
                   {cat.label}

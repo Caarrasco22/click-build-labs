@@ -251,6 +251,36 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://clickbuildlabs.com/categories/developer/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/categories/converter/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/categories/calculators/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/categories/generator/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/categories/text/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/categories/utility/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://clickbuildlabs.com/privacy/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>

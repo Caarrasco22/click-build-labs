@@ -35,6 +35,118 @@ export const CATEGORY_ICONS: Record<ToolCategory, string> = {
   calculators: 'calculator',
 };
 
+export const CATEGORY_INFO: Record<ToolCategory, {
+  title: string;
+  description: string;
+  seoTitle: string;
+  seoDescription: string;
+  faqs: Array<{ question: string; answer: string }>;
+  relatedCategories: ToolCategory[];
+}> = {
+  dev: {
+    title: 'Developer Tools',
+    description: 'Utilidades for JSON, URL, JWT, Base64, Regex, HTML, CSS y formatos técnicos.',
+    seoTitle: 'Developer Tools - Free Online Utilities for JSON, URL, JWT and More',
+    seoDescription: 'Free browser-based developer tools for formatting JSON, decoding JWTs, encoding URLs, testing regex patterns and working with common web formats.',
+    faqs: [
+      {
+        question: 'Are these tools really free to use?',
+        answer: 'Yes, all developer tools on Click & Build Labs are completely free to use with no signup or installation required.',
+      },
+      {
+        question: 'Is my code sent to any server?',
+        answer: 'No. All processing happens entirely in your browser. Your code and data never leave your device.',
+      },
+      {
+        question: 'What formats are supported?',
+        answer: 'We support JSON, URL, Base64, JWT, HTML, CSS, XML, YAML and many other common development formats.',
+      },
+    ],
+    relatedCategories: ['generator', 'converter', 'utility'],
+  },
+  converter: {
+    title: 'Converter Tools',
+    description: 'Conversores online para longitud, peso, temperatura, datos, velocidad, volumen, área y más.',
+    seoTitle: 'Converter Tools - Free Online Unit Conversion Calculators',
+    seoDescription: 'Free browser-based unit converter tools for length, weight, temperature, data, speed, volume, area and more. No signup required.',
+    faqs: [
+      {
+        question: 'What unit conversions are available?',
+        answer: 'We offer converters for length, weight, temperature, data storage, speed, volume, area, time, and more.',
+      },
+      {
+        question: 'Are the conversions accurate?',
+        answer: 'Yes, our converters use standard conversion factors and are precise for everyday use cases.',
+      },
+    ],
+    relatedCategories: ['calculators', 'dev', 'utility'],
+  },
+  calculators: {
+    title: 'Calculator Tools',
+    description: 'Calculadoras online para descuentos, IVA, edad, fechas, préstamos, propinas y porcentajes.',
+    seoTitle: 'Calculator Tools - Free Online Discount, VAT, Loan and Tip Calculators',
+    seoDescription: 'Free browser-based calculators for discounts, VAT, age, dates, loans, tips, percentages and more. No signup required.',
+    faqs: [
+      {
+        question: 'What calculations can I perform?',
+        answer: 'We offer discount calculators, VAT calculators, age calculators, date calculators, loan calculators, tip calculators and percentage calculators.',
+      },
+      {
+        question: 'Is my financial data safe?',
+        answer: 'Yes, all calculations happen locally in your browser. No data is transmitted or stored anywhere.',
+      },
+    ],
+    relatedCategories: ['converter', 'utility', 'generator'],
+  },
+  text: {
+    title: 'Text Tools',
+    description: 'Herramientas para contar, limpiar, transformar, comparar y convertir texto.',
+    seoTitle: 'Text Tools - Free Online String Manipulation and Text Formatting',
+    seoDescription: 'Free browser-based text tools for counting characters, cleaning whitespace, transforming text, comparing strings and more.',
+    faqs: [
+      {
+        question: 'What text operations are available?',
+        answer: 'We offer tools for counting characters and words, removing duplicates, sorting lines, finding and replacing text, and text case conversion.',
+      },
+    ],
+    relatedCategories: ['dev', 'generator', 'utility'],
+  },
+  generator: {
+    title: 'Generator Tools',
+    description: 'Generadores para UUID, passwords, slugs, lorem ipsum y otros valores útiles.',
+    seoTitle: 'Generator Tools - Free Online UUID, Password and Slug Generators',
+    seoDescription: 'Free browser-based generators for UUIDs, passwords, slugs, Lorem Ipsum, hashes and other useful values. No signup required.',
+    faqs: [
+      {
+        question: 'How are passwords and UUIDs generated?',
+        answer: 'We use the Web Crypto API for cryptographically secure random generation of UUIDs and passwords.',
+      },
+    ],
+    relatedCategories: ['dev', 'utility', 'text'],
+  },
+  utility: {
+    title: 'Utility Tools',
+    description: 'Herramientas prácticas variadas que no encajan claramente en otra categoría.',
+    seoTitle: 'Utility Tools - Free Online Miscellaneous Web Utilities',
+    seoDescription: 'Free browser-based utility tools for various practical tasks that do not fit into other categories. No signup required.',
+    faqs: [
+      {
+        question: 'What utilities are available?',
+        answer: 'We offer color converters, QR code generators, timezone converters and other practical utilities.',
+      },
+    ],
+    relatedCategories: ['dev', 'converter', 'calculators'],
+  },
+  image: {
+    title: 'Image Tools',
+    description: 'Herramientas para imágenes.',
+    seoTitle: 'Image Tools - Free Online Image Utilities',
+    seoDescription: 'Free browser-based image tools for common image operations.',
+    faqs: [],
+    relatedCategories: ['utility', 'generator'],
+  },
+};
+
 export const tools: Tool[] = [
   {
     slug: 'uuid-generator',
