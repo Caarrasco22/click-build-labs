@@ -85,6 +85,16 @@ export const TOOL_COMPONENTS = {
   'roman-numeral-converter': lazy(() => import('@/components/tools/RomanNumeralConverter').then((m) => ({ default: m.RomanNumeralConverter }))),
   'percentage-error-calculator': lazy(() => import('@/components/tools/PercentageErrorCalculator').then((m) => ({ default: m.PercentageErrorCalculator }))),
   'unit-circle-helper': lazy(() => import('@/components/tools/UnitCircleHelper').then((m) => ({ default: m.UnitCircleHelper }))),
+  'remove-duplicate-lines': lazy(() => import('@/components/tools/RemoveDuplicateLines').then((m) => ({ default: m.RemoveDuplicateLines }))),
+  'sort-lines': lazy(() => import('@/components/tools/SortLines').then((m) => ({ default: m.SortLines }))),
+  'reverse-text': lazy(() => import('@/components/tools/ReverseText').then((m) => ({ default: m.ReverseText }))),
+  'remove-empty-lines': lazy(() => import('@/components/tools/RemoveEmptyLines').then((m) => ({ default: m.RemoveEmptyLines }))),
+  'trim-lines': lazy(() => import('@/components/tools/TrimLines').then((m) => ({ default: m.TrimLines }))),
+  'text-repeater': lazy(() => import('@/components/tools/TextRepeater').then((m) => ({ default: m.TextRepeater }))),
+  'prefix-suffix-lines': lazy(() => import('@/components/tools/PrefixSuffixLines').then((m) => ({ default: m.PrefixSuffixLines }))),
+  'extract-emails': lazy(() => import('@/components/tools/ExtractEmails').then((m) => ({ default: m.ExtractEmails }))),
+  'extract-urls': lazy(() => import('@/components/tools/ExtractUrls').then((m) => ({ default: m.ExtractUrls }))),
+  'word-frequency-counter': lazy(() => import('@/components/tools/WordFrequencyCounter').then((m) => ({ default: m.WordFrequencyCounter }))),
 } as const;
 
 export type ToolSlug = keyof typeof TOOL_COMPONENTS;

@@ -2354,6 +2354,256 @@ export const tools: Tool[] = [
       { question: 'Are the values exact?', answer: 'Yes. For common angles, values are shown in exact form like √3/2 or 1/2.' },
     ],
   },
+  {
+    slug: 'remove-duplicate-lines',
+    name: 'Remove Duplicate Lines',
+    shortDescription: 'Remove duplicate lines from text',
+    description:
+      'Remove duplicate lines from text. Keep first or last occurrence, optional case-sensitive matching. Shows count of removed duplicates.',
+    category: 'text',
+    tags: ['remove duplicate lines', 'dedupe', 'unique lines', 'text cleanup', 'duplicate remover'],
+    icon: 'file-text',
+    featured: false,
+    popular: true,
+    relatedTools: ['sort-lines', 'remove-empty-lines', 'word-counter'],
+    seo: {
+      title: 'Remove Duplicate Lines - Free Online Duplicate Line Remover',
+      description:
+        'Remove duplicate lines from any text instantly. Keep first occurrence, case-sensitive option. Free online tool.',
+      keywords: ['remove duplicate lines', 'dedupe text', 'unique lines', 'remove duplicates', 'text cleaner'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How does it work?', answer: 'Each line is compared with others. Duplicates are removed while keeping the first occurrence.' },
+      { question: 'Is the order preserved?', answer: 'Yes. The first occurrence of each line is kept in its original position.' },
+      { question: 'Can I make it case-insensitive?', answer: 'Yes. Check the case-sensitive option to treat "Hello" and "HELLO" as different lines.' },
+    ],
+  },
+  {
+    slug: 'sort-lines',
+    name: 'Sort Lines',
+    shortDescription: 'Sort lines alphabetically or reverse',
+    description:
+      'Sort lines in alphabetical order A-Z or reverse Z-A. Optional case-insensitive sorting. Quick and easy.',
+    category: 'text',
+    tags: ['sort lines', 'alphabetize', 'sort text', 'order lines', 'sort alphabetically'],
+    icon: 'arrow-up-down',
+    featured: false,
+    popular: true,
+    relatedTools: ['remove-duplicate-lines', 'reverse-text', 'case-converter'],
+    seo: {
+      title: 'Sort Lines - Free Online Line Sorter A-Z Z-A',
+      description:
+        'Sort lines alphabetically A-Z or reverse Z-A. Case-insensitive option available. Free online text sorter.',
+      keywords: ['sort lines', 'alphabetize lines', 'sort text', 'order lines', 'sort alphabetically'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Can I sort in reverse order?', answer: 'Yes. Click Z-A button to sort in reverse alphabetical order.' },
+      { question: 'What happens to empty lines?', answer: 'Empty lines are filtered out before sorting.' },
+      { question: 'Is it case-sensitive?', answer: 'By default it ignores case. Check the option if you need case-sensitive sorting.' },
+    ],
+  },
+  {
+    slug: 'reverse-text',
+    name: 'Reverse Text',
+    shortDescription: 'Reverse text characters or line order',
+    description:
+      'Reverse text characters, line order, or both. Three modes: reverse all characters, reverse line order, or both combined.',
+    category: 'text',
+    tags: ['reverse text', 'flip text', 'mirror text', 'text reversal', 'backwards text'],
+    icon: 'arrow-left-right',
+    featured: false,
+    popular: false,
+    relatedTools: ['sort-lines', 'case-converter', 'remove-duplicate-lines'],
+    seo: {
+      title: 'Reverse Text - Free Online Text Reverser Tool',
+      description:
+        'Reverse text characters or line order. Three modes available. Free online text reverser.',
+      keywords: ['reverse text', 'flip text', 'mirror text', 'backwards text', 'text reverser'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What does "reverse all" do?', answer: 'It reverses every character. "Hello" becomes "olleH".' },
+      { question: 'What does "reverse line order" do?', answer: 'It reverses which line comes first. Line 1 becomes last, last becomes first.' },
+      { question: 'What does "reverse both" do?', answer: 'Each line\'s characters are reversed, AND the lines are reversed in order.' },
+    ],
+  },
+  {
+    slug: 'remove-empty-lines',
+    name: 'Remove Empty Lines',
+    shortDescription: 'Remove blank and empty lines',
+    description:
+      'Remove empty lines and blank lines from text. Optional whitespace trimming on remaining lines.',
+    category: 'text',
+    tags: ['remove empty lines', 'remove blank lines', 'cleanup text', 'remove newlines', 'text cleanup'],
+    icon: 'trash',
+    featured: false,
+    popular: false,
+    relatedTools: ['trim-lines', 'remove-duplicate-lines', 'sort-lines'],
+    seo: {
+      title: 'Remove Empty Lines - Free Online Blank Line Remover',
+      description:
+        'Remove empty and blank lines from text. Optional whitespace trimming. Free online tool.',
+      keywords: ['remove empty lines', 'remove blank lines', 'text cleanup', 'delete empty lines'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Does it remove lines with only spaces?', answer: 'Yes. If you check the trim option, lines with only whitespace are treated as empty.' },
+      { question: 'Can I keep the trim option off?', answer: 'Yes. By default, only truly empty lines are removed.' },
+      { question: 'Does it modify the original text otherwise?', answer: 'No. All non-empty lines remain unchanged except for optional trimming.' },
+    ],
+  },
+  {
+    slug: 'trim-lines',
+    name: 'Trim Lines',
+    shortDescription: 'Remove leading and trailing whitespace',
+    description:
+      'Remove leading and trailing whitespace from each line. Optional collapse of multiple internal spaces.',
+    category: 'text',
+    tags: ['trim lines', 'remove whitespace', 'clean text', 'strip spaces', 'text cleanup'],
+    icon: 'scissors',
+    featured: false,
+    popular: false,
+    relatedTools: ['remove-empty-lines', 'case-converter', 'remove-duplicate-lines'],
+    seo: {
+      title: 'Trim Lines - Free Online Whitespace Remover',
+      description:
+        'Remove leading and trailing spaces from each line. Optional multiple space collapsing. Free online tool.',
+      keywords: ['trim lines', 'remove whitespace', 'clean text', 'strip spaces', 'text trimmer'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What does trimming do?', answer: 'It removes spaces and tabs from the beginning and end of each line.' },
+      { question: 'What is space collapsing?', answer: 'Checking this option replaces multiple spaces between words with a single space.' },
+      { question: 'Does it affect internal single spaces?', answer: 'No. Only the collapse option modifies internal spaces.' },
+    ],
+  },
+  {
+    slug: 'text-repeater',
+    name: 'Text Repeater',
+    shortDescription: 'Repeat text multiple times',
+    description:
+      'Repeat any text a specified number of times with optional separator between repetitions.',
+    category: 'text',
+    tags: ['text repeater', 'repeat text', 'duplicate text', 'text generator', 'repeat characters'],
+    icon: 'copy',
+    featured: false,
+    popular: false,
+    relatedTools: ['remove-duplicate-lines', 'prefix-suffix-lines', 'lorem-ipsum'],
+    seo: {
+      title: 'Text Repeater - Free Online Text Repetition Generator',
+      description:
+        'Repeat text multiple times with optional separator. Free online text repeater tool.',
+      keywords: ['text repeater', 'repeat text', 'duplicate text', 'text generator', 'repeat characters'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How many repetitions are allowed?', answer: 'Maximum 1000 repetitions to prevent browser overload.' },
+      { question: 'What is the separator for?', answer: 'A separator is added between each repetition. Use a newline to stack text vertically.' },
+      { question: 'Can I repeat multiple lines?', answer: 'Yes. The entire input text is treated as one unit for repetition.' },
+    ],
+  },
+  {
+    slug: 'prefix-suffix-lines',
+    name: 'Prefix Suffix Lines',
+    shortDescription: 'Add prefix or suffix to each line',
+    description:
+      'Add a prefix, suffix, or both to every line in your text. Useful for code comments, bullet points, and list formatting.',
+    category: 'text',
+    tags: ['prefix suffix', 'add prefix', 'add suffix', 'line prefix', 'line suffix', 'format lines'],
+    icon: 'plus',
+    featured: false,
+    popular: false,
+    relatedTools: ['trim-lines', 'remove-empty-lines', 'text-repeater'],
+    seo: {
+      title: 'Prefix Suffix Lines - Free Online Add Prefix Suffix Tool',
+      description:
+        'Add prefix and suffix to each line. Useful for bullet points, code comments, and list formatting. Free online tool.',
+      keywords: ['prefix suffix lines', 'add prefix', 'add suffix', 'line prefix', 'format lines', 'bullet points'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Can I add both prefix and suffix?', answer: 'Yes. Enter values in both fields to add prefix and suffix simultaneously.' },
+      { question: 'What are some common uses?', answer: 'Adding "- " for bullet points, "// " for code comments, or ", " for CSV formatting.' },
+      { question: 'Can I skip empty lines?', answer: 'Yes. Check the "Skip empty lines" option to leave blank lines unchanged.' },
+    ],
+  },
+  {
+    slug: 'extract-emails',
+    name: 'Extract Emails',
+    shortDescription: 'Extract email addresses from text',
+    description:
+      'Find and extract all email addresses from any text. Automatically removes duplicates and shows count.',
+    category: 'text',
+    tags: ['extract emails', 'find emails', 'email extractor', 'email scraper', 'parse emails'],
+    icon: 'mail',
+    featured: false,
+    popular: true,
+    relatedTools: ['extract-urls', 'remove-duplicate-lines', 'word-counter'],
+    seo: {
+      title: 'Extract Emails - Free Online Email Address Extractor',
+      description:
+        'Extract all email addresses from text. Shows unique emails only with duplicate removal. Free online tool.',
+      keywords: ['extract emails', 'find emails', 'email extractor', 'email parser', 'find email addresses'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Does it find partial emails?', answer: 'No. Only properly formatted email addresses matching standard format are extracted.' },
+      { question: 'Are duplicates removed?', answer: 'Yes. If the same email appears multiple times, it is shown only once.' },
+      { question: 'Can I copy the results?', answer: 'Yes. Click the Copy button to copy all emails as a newline-separated list.' },
+    ],
+  },
+  {
+    slug: 'extract-urls',
+    name: 'Extract URLs',
+    shortDescription: 'Extract URLs from text',
+    description:
+      'Find and extract all HTTP and HTTPS URLs from any text. Automatically removes duplicate URLs.',
+    category: 'text',
+    tags: ['extract urls', 'find urls', 'url extractor', 'link finder', 'parse urls'],
+    icon: 'link',
+    featured: false,
+    popular: true,
+    relatedTools: ['extract-emails', 'remove-duplicate-lines', 'word-counter'],
+    seo: {
+      title: 'Extract URLs - Free Online URL Extractor',
+      description:
+        'Extract all HTTP and HTTPS URLs from any text. Removes duplicates automatically. Free online tool.',
+      keywords: ['extract urls', 'find urls', 'url extractor', 'link finder', 'parse urls'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What URL formats are supported?', answer: 'HTTP and HTTPS URLs starting with http:// or https:// are extracted.' },
+      { question: 'Are duplicate URLs removed?', answer: 'Yes. Each URL is shown only once even if it appears multiple times in the text.' },
+      { question: 'Can I copy the results?', answer: 'Yes. Click Copy to get all URLs as a newline-separated list.' },
+    ],
+  },
+  {
+    slug: 'word-frequency-counter',
+    name: 'Word Frequency Counter',
+    shortDescription: 'Count word occurrences in text',
+    description:
+      'Analyze text to count how many times each word appears. Shows frequency table sorted by count. Case-insensitive.',
+    category: 'text',
+    tags: ['word frequency', 'word count', 'frequency counter', 'word occurrence', 'text analysis'],
+    icon: 'bar-chart',
+    featured: false,
+    popular: false,
+    relatedTools: ['word-counter', 'character-counter', 'remove-duplicate-lines'],
+    seo: {
+      title: 'Word Frequency Counter - Free Online Word Occurrence Counter',
+      description:
+        'Count how many times each word appears in your text. Shows frequency table sorted by occurrence. Free online tool.',
+      keywords: ['word frequency counter', 'word occurrence', 'word count', 'text analysis', 'frequency analysis'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Is it case-sensitive?', answer: 'No. "Hello" and "hello" are counted as the same word.' },
+      { question: 'What counts as a word?', answer: 'Sequences of alphabetic characters (a-z) are counted as words.' },
+      { question: 'How are results sorted?', answer: 'Results are sorted by frequency (most common first) by default.' },
+    ],
+  },
 ];
 
 export function getToolBySlug(slug: string): Tool | undefined {

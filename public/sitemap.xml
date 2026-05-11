@@ -431,6 +431,56 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://clickbuildlabs.com/tools/remove-duplicate-lines/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/sort-lines/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/reverse-text/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/remove-empty-lines/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/trim-lines/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/text-repeater/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/prefix-suffix-lines/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/extract-emails/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/extract-urls/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/word-frequency-counter/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://clickbuildlabs.com/categories/developer/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
