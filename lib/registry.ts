@@ -1640,7 +1640,7 @@ export const tools: Tool[] = [
     icon: 'clock',
     featured: false,
     popular: false,
-    relatedTools: ['timestamp-converter', 'time-zone-converter', 'unix-time-now'],
+    relatedTools: ['timestamp-converter', 'time-zone-converter', 'time-duration-calculator'],
     seo: {
       title: 'Unix Time Now - Free Current Unix Timestamp Display',
       description:
@@ -1865,7 +1865,7 @@ export const tools: Tool[] = [
     icon: 'target',
     featured: false,
     popular: false,
-    relatedTools: ['compound-interest-calculator', 'simple-interest-calculator', 'savings-goal-calculator'],
+    relatedTools: ['compound-interest-calculator', 'simple-interest-calculator', 'loan-calculator'],
     seo: {
       title: 'Savings Goal Calculator - Free Online Savings Timeline Calculator',
       description:
@@ -2860,7 +2860,7 @@ export const tools: Tool[] = [
     shortDescription: 'Resize images in browser',
     description:
       'Resize images locally in your browser. Set custom width and height, maintain aspect ratio. Download resized image.',
-    category: 'utility',
+    category: 'image',
     tags: ['image resizer', 'resize image', 'image size', 'photo resize', 'image resize'],
     icon: 'image',
     featured: false,
@@ -2885,7 +2885,7 @@ export const tools: Tool[] = [
     shortDescription: 'Compress images in browser',
     description:
       'Compress images locally in your browser. Adjust quality level and reduce file size. Download compressed image.',
-    category: 'utility',
+    category: 'image',
     tags: ['image compressor', 'compress image', 'reduce image size', 'image optimizer'],
     icon: 'minimize-2',
     featured: false,
@@ -2910,7 +2910,7 @@ export const tools: Tool[] = [
     shortDescription: 'Convert images to Base64 data URLs',
     description:
       'Convert any image to Base64 data URL format. Copy the result for use in CSS, HTML, or data URIs.',
-    category: 'utility',
+    category: 'image',
     tags: ['image to base64', 'base64 image', 'data url', 'image encoder', 'base64 converter'],
     icon: 'image',
     featured: false,
@@ -2935,7 +2935,7 @@ export const tools: Tool[] = [
     shortDescription: 'Convert Base64 back to image',
     description:
       'Decode Base64 data URLs back to images. Preview and download the restored image file.',
-    category: 'utility',
+    category: 'image',
     tags: ['base64 to image', 'decode base64', 'data url decoder', 'image decoder'],
     icon: 'image',
     featured: false,
@@ -2960,7 +2960,7 @@ export const tools: Tool[] = [
     shortDescription: 'View image file information',
     description:
       'View basic metadata of any image: dimensions, file size, MIME type, aspect ratio. Shows info available through browser APIs.',
-    category: 'utility',
+    category: 'image',
     tags: ['image metadata', 'image info', 'image dimensions', 'file size', 'metadata viewer'],
     icon: 'info',
     featured: false,
@@ -3010,7 +3010,7 @@ export const tools: Tool[] = [
     shortDescription: 'Calculate dimensions for target aspect ratio',
     description:
       'Calculate missing dimension when resizing to a specific aspect ratio. Useful for thumbnails and social media.',
-    category: 'calculators',
+    category: 'image',
     tags: ['aspect ratio resizer', 'resize ratio', 'thumbnail calculator', 'aspect ratio', 'social media'],
     icon: 'maximize-2',
     featured: false,
@@ -3035,7 +3035,7 @@ export const tools: Tool[] = [
     shortDescription: 'Generate PNG favicon from any image',
     description:
       'Generate simple PNG favicons (32x32 and 64x64) from any image. Download ready-to-use favicon PNG files.',
-    category: 'utility',
+    category: 'image',
     tags: ['favicon generator', 'favicon maker', 'favicon png', 'website icon', 'favicon creator'],
     icon: 'image',
     featured: false,
@@ -3060,7 +3060,7 @@ export const tools: Tool[] = [
     shortDescription: 'Generate placeholder images',
     description:
       'Generate placeholder images with custom dimensions, colors, and text. Useful for design mockups.',
-    category: 'generator',
+    category: 'image',
     tags: ['placeholder image', 'placeholder generator', 'dummy image', 'mockup image', 'placeholder'],
     icon: 'image',
     featured: false,
@@ -3085,7 +3085,7 @@ export const tools: Tool[] = [
     shortDescription: 'Pick colors from any image',
     description:
       'Click on any point of an image to pick and copy the color. Shows HEX and RGB values.',
-    category: 'utility',
+    category: 'image',
     tags: ['color picker', 'image color picker', 'pick color', 'color from image', 'eyedropper'],
     icon: 'eye',
     featured: false,
@@ -3340,7 +3340,7 @@ export const tools: Tool[] = [
     icon: 'zap',
     featured: false,
     popular: false,
-    relatedTools: ['energy-consumption-calculator', 'power-current-voltage-calculator', 'led-power-calculator'],
+    relatedTools: ['energy-consumption-calculator', 'power-current-voltage-calculator', 'voltage-drop-calculator'],
     seo: {
       title: 'LED Power Calculator - Estimate LED Strip, Bulb and Module Energy Use',
       description:
@@ -3378,7 +3378,7 @@ export function getRelatedTools(slug: string): Tool[] {
   if (!tool) return [];
   return tool.relatedTools
     .map((s) => getToolBySlug(s))
-    .filter((t): t is Tool => t !== undefined)
+    .filter((t): t is Tool => t !== undefined && t.slug !== slug)
     .slice(0, 3);
 }
 

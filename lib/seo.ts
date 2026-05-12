@@ -6,6 +6,11 @@ const SITE_NAME = 'Click & Build Labs';
 const SITE_DESCRIPTION =
   'Free online tools, converters, calculators, text utilities, and developer tools. Fast, browser-based, no signup required.';
 
+function createAbsoluteUrl(path: string = '') {
+  const normalizedPath = path ? `/${path.replace(/^\/+|\/+$/g, '')}` : '';
+  return `${SITE_URL}${normalizedPath}/`;
+}
+
 export const siteMetadata = {
   url: SITE_URL,
   name: SITE_NAME,
@@ -17,7 +22,7 @@ export const siteMetadata = {
 export function createToolMetadata(
   tool: Pick<Tool, 'slug' | 'name' | 'shortDescription' | 'tags'>
 ): Metadata {
-  const url = `${SITE_URL}/tools/${tool.slug}`;
+  const url = createAbsoluteUrl(`/tools/${tool.slug}`);
 
   return {
     title: tool.name,
@@ -47,7 +52,7 @@ export function createPageMetadata(
   description: string,
   path: string = ''
 ): Metadata {
-  const url = `${SITE_URL}${path}`;
+  const url = createAbsoluteUrl(path);
 
   return {
     title,
@@ -72,7 +77,7 @@ export function createPageMetadata(
 }
 
 export function createHomeMetadata(): Metadata {
-  const url = SITE_URL;
+  const url = createAbsoluteUrl();
 
   return {
     title: 'Free Online Tools, Converters & Calculators',
@@ -97,7 +102,7 @@ export function createHomeMetadata(): Metadata {
 }
 
 export function createToolJsonLd(tool: Tool) {
-  const url = `${SITE_URL}/tools/${tool.slug}`;
+  const url = createAbsoluteUrl(`/tools/${tool.slug}`);
 
   return {
     '@context': 'https://schema.org',
@@ -127,12 +132,12 @@ export function createWebsiteJsonLd() {
     '@type': 'WebSite',
     name: SITE_NAME,
     description: SITE_DESCRIPTION,
-    url: SITE_URL,
+    url: createAbsoluteUrl(),
     potentialAction: {
       '@type': 'SearchAction',
       target: {
         '@type': 'EntryPoint',
-        urlTemplate: `${SITE_URL}/tools?q={search_term_string}`,
+        urlTemplate: `${createAbsoluteUrl('/tools')}?q={search_term_string}`,
       },
       'query-input': 'required name=search_term_string',
     },

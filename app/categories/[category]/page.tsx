@@ -80,9 +80,9 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
     itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://clickbuildlabs.com' },
-      { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://clickbuildlabs.com/tools' },
-      { '@type': 'ListItem', position: 3, name: categoryLabel, item: `https://clickbuildlabs.com/categories/${category}` },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://clickbuildlabs.com/' },
+      { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://clickbuildlabs.com/tools/' },
+      { '@type': 'ListItem', position: 3, name: categoryLabel, item: `https://clickbuildlabs.com/categories/${category}/` },
     ],
   };
 

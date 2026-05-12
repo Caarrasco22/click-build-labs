@@ -1,8 +1,6 @@
 import type { Metadata } from 'next';
-import { Suspense } from 'react';
-import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
-import { Button } from '@/components/ui/Button';
+import { ToolCard } from '@/components/tools/ToolCard';
 import { tools } from '@/lib/registry';
 import { ToolsFilterClient } from './ToolsFilterClient';
 
@@ -22,22 +20,9 @@ export const metadata: Metadata = {
     description: 'Browse all free online tools: formatters, converters, generators, calculators, and utilities.',
   },
   alternates: {
-    canonical: 'https://clickbuildlabs.com/tools',
+    canonical: 'https://clickbuildlabs.com/tools/',
   },
 };
-
-function ToolsLoading() {
-  return (
-    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {[1, 2, 3, 4, 5, 6].map((i) => (
-        <div
-          key={i}
-          className="h-24 rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-100 dark:bg-zinc-900 animate-pulse"
-        />
-      ))}
-    </div>
-  );
-}
 
 export default async function ToolsPage() {
   return (
@@ -51,9 +36,21 @@ export default async function ToolsPage() {
         </p>
       </div>
 
-      <Suspense fallback={<ToolsLoading />}>
-        <ToolsFilterClient tools={tools} />
-      </Suspense>
+      <ToolsFilterClient />
+
+      <div id="tools-grid" className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {tools.map((tool) => (
+          <div
+            key={tool.slug}
+            data-tool-card
+            data-tool-name={tool.name.toLowerCase()}
+            data-tool-description={tool.shortDescription.toLowerCase()}
+            data-tool-category={tool.category}
+          >
+            <ToolCard tool={tool} />
+          </div>
+        ))}
+      </div>
 
       <div className="mt-12 text-center">
         <p className="text-sm text-zinc-500 dark:text-zinc-400">

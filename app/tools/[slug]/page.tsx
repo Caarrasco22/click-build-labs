@@ -118,9 +118,9 @@ export default async function ToolPage({ params }: ToolPageProps) {
   const relatedTools = getRelatedTools(slug);
   const jsonLd = createToolJsonLd(tool);
   const breadcrumbJsonLd = createBreadcrumbJsonLd([
-    { name: 'Home', url: 'https://clickbuildlabs.com' },
-    { name: 'Tools', url: 'https://clickbuildlabs.com/tools' },
-    { name: tool.name, url: `https://clickbuildlabs.com/tools/${tool.slug}` },
+    { name: 'Home', url: 'https://clickbuildlabs.com/' },
+    { name: 'Tools', url: 'https://clickbuildlabs.com/tools/' },
+    { name: tool.name, url: `https://clickbuildlabs.com/tools/${tool.slug}/` },
   ]);
   const faqJsonLd = tool.faqs && tool.faqs.length > 0 ? createFaqJsonLd(tool.faqs) : null;
 
