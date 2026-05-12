@@ -2604,6 +2604,506 @@ export const tools: Tool[] = [
       { question: 'How are results sorted?', answer: 'Results are sorted by frequency (most common first) by default.' },
     ],
   },
+  {
+    slug: 'hex-to-rgb',
+    name: 'HEX to RGB Converter',
+    shortDescription: 'Convert HEX colors to RGB and RGBA',
+    description:
+      'Convert HEX color codes to RGB and RGBA format. Supports 3 and 6 digit hex colors. Shows color preview.',
+    category: 'converter',
+    tags: ['hex to rgb', 'color converter', 'hex color', 'color picker', 'rgba converter'],
+    icon: 'palette',
+    featured: false,
+    popular: true,
+    relatedTools: ['rgb-to-hex', 'hsl-converter', 'color-palette-generator'],
+    seo: {
+      title: 'HEX to RGB Converter - Free Online HEX Color to RGB/RGBA Converter',
+      description:
+        'Convert HEX color codes to RGB and RGBA. Supports short and long hex formats with color preview.',
+      keywords: ['hex to rgb converter', 'hex color to rgb', 'color converter', 'rgba converter'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What hex formats are supported?', answer: 'Both 3-digit (#FFF) and 6-digit (#FFFFFF) HEX formats are supported.' },
+      { question: 'Can I add alpha/transparency?', answer: 'Yes. Enter a value between 0 and 1 in the alpha field.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All conversions happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'rgb-to-hex',
+    name: 'RGB to HEX Converter',
+    shortDescription: 'Convert RGB values to HEX color',
+    description:
+      'Convert RGB color values (0-255) to HEX color codes. Shows color preview and validates input range.',
+    category: 'converter',
+    tags: ['rgb to hex', 'color converter', 'hex color', 'rgb to hex', 'color picker'],
+    icon: 'palette',
+    featured: false,
+    popular: true,
+    relatedTools: ['hex-to-rgb', 'hsl-converter', 'contrast-checker'],
+    seo: {
+      title: 'RGB to HEX Converter - Free Online RGB to HEX Color Converter',
+      description:
+        'Convert RGB color values to HEX format. Enter R, G, B (0-255) and get HEX code with preview.',
+      keywords: ['rgb to hex converter', 'rgb color to hex', 'color converter', 'hex color generator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What RGB values are valid?', answer: 'Values must be between 0 and 255 for each channel.' },
+      { question: 'Is the result uppercase?', answer: 'Yes. HEX output uses uppercase letters for consistency.' },
+      { question: 'Is my data sent to servers?', answer: 'No. All conversions happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'hsl-converter',
+    name: 'HSL Converter',
+    shortDescription: 'Convert between HEX, RGB, and HSL',
+    description:
+      'Convert colors between HEX, RGB, and HSL formats. Three modes: HEX to HSL, RGB to HSL, and HSL to HEX.',
+    category: 'converter',
+    tags: ['hsl converter', 'hsl to rgb', 'rgb to hsl', 'color converter', 'hex hsl converter'],
+    icon: 'palette',
+    featured: false,
+    popular: false,
+    relatedTools: ['hex-to-rgb', 'rgb-to-hex', 'color-palette-generator'],
+    seo: {
+      title: 'HSL Converter - Free HEX RGB HSL Color Converter',
+      description:
+        'Convert colors between HEX, RGB, and HSL formats. Three conversion modes in one tool.',
+      keywords: ['hsl converter', 'hsl to rgb', 'rgb to hsl', 'color converter', 'hex hsl converter'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What conversions are possible?', answer: 'HEX to HSL, RGB to HSL, and HSL to HEX are all supported.' },
+      { question: 'Are HSL values standard?', answer: 'Yes. H uses degrees (0-360), S and L use percentage (0-100).' },
+      { question: 'Is my data sent to servers?', answer: 'No. All conversions happen locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'color-palette-generator',
+    name: 'Color Palette Generator',
+    shortDescription: 'Generate color palettes from a base color',
+    description:
+      'Generate color palettes including shades, tints, complementary, and analogous colors from a base HEX color.',
+    category: 'generator',
+    tags: ['color palette', 'palette generator', 'shades', 'tints', 'color scheme'],
+    icon: 'palette',
+    featured: false,
+    popular: true,
+    relatedTools: ['hex-to-rgb', 'random-color-generator', 'gradient-generator'],
+    seo: {
+      title: 'Color Palette Generator - Free Shades and Tints Generator',
+      description:
+        'Generate color palettes with shades, tints, complementary, and analogous colors from any base color.',
+      keywords: ['color palette generator', 'shades and tints', 'color scheme generator', 'complementary colors'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What colors are generated?', answer: 'Shades (darker), tints (lighter), complementary (opposite), and analogous (neighbors).' },
+      { question: 'How many colors per palette?', answer: 'Typically 10-12 colors are generated including shades, tints, and color relationships.' },
+      { question: 'Can I copy individual colors?', answer: 'Yes. Click any color swatch to copy its HEX code.' },
+    ],
+  },
+  {
+    slug: 'gradient-generator',
+    name: 'CSS Gradient Generator',
+    shortDescription: 'Generate CSS linear gradients',
+    description:
+      'Create linear gradients with custom colors and direction. Generate clean CSS code for web projects.',
+    category: 'dev',
+    tags: ['css gradient', 'linear gradient', 'gradient generator', 'css maker', 'gradient css'],
+    icon: 'palette',
+    featured: false,
+    popular: true,
+    relatedTools: ['color-palette-generator', 'css-box-shadow-generator', 'border-radius-generator'],
+    seo: {
+      title: 'CSS Gradient Generator - Free Online Linear Gradient Creator',
+      description:
+        'Create CSS linear gradients with custom colors and directions. Get ready-to-use CSS code.',
+      keywords: ['css gradient generator', 'linear gradient', 'gradient css', 'css maker'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What directions are available?', answer: 'Left, right, top, bottom, and all diagonals (8 directions total).' },
+      { question: 'What format is the CSS output?', answer: 'Standard CSS linear-gradient function ready to use in your stylesheet.' },
+      { question: 'Can I use this for production?', answer: 'Yes. The generated CSS works in all modern browsers.' },
+    ],
+  },
+  {
+    slug: 'contrast-checker',
+    name: 'Contrast Checker',
+    shortDescription: 'Check text contrast ratio for accessibility',
+    description:
+      'Check contrast ratio between foreground and background colors. Shows WCAG AA and AAA compliance levels.',
+    category: 'dev',
+    tags: ['contrast checker', 'accessibility', 'wcag', 'color contrast', 'accessibility checker'],
+    icon: 'eye',
+    featured: false,
+    popular: true,
+    relatedTools: ['hex-to-rgb', 'rgb-to-hex', 'color-palette-generator'],
+    seo: {
+      title: 'Contrast Checker - Free WCAG AA AAA Accessibility Checker',
+      description:
+        'Check color contrast ratio for WCAG accessibility compliance. Shows AA and AAA pass/fail for normal and large text.',
+      keywords: ['contrast checker', 'wcag contrast', 'accessibility checker', 'color contrast ratio'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What WCAG levels are checked?', answer: 'AA and AAA for both normal text (under 18pt) and large text (18pt+ or 14pt bold).' },
+      { question: 'What is the minimum contrast for AA?', answer: '4.5:1 for normal text, 3:1 for large text.' },
+      { question: 'Is this tool accurate?', answer: 'This is an approximation for planning. Test with actual fonts and content for official compliance.' },
+    ],
+  },
+  {
+    slug: 'random-color-generator',
+    name: 'Random Color Generator',
+    shortDescription: 'Generate random colors instantly',
+    description:
+      'Generate random colors with HEX and RGB values. Click to generate new colors. Perfect for design inspiration.',
+    category: 'generator',
+    tags: ['random color', 'color generator', 'random color picker', 'color inspiration'],
+    icon: 'palette',
+    featured: false,
+    popular: true,
+    relatedTools: ['color-palette-generator', 'hex-to-rgb', 'contrast-checker'],
+    seo: {
+      title: 'Random Color Generator - Free Instant Random Color Picker',
+      description:
+        'Generate random colors instantly with HEX and RGB values. Click to get new colors for design inspiration.',
+      keywords: ['random color generator', 'random color picker', 'color generator', 'color inspiration'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How random are the colors?', answer: 'Uses JavaScript Math.random() for uniform distribution across the color space.' },
+      { question: 'Can I copy the values?', answer: 'Yes. Copy HEX or RGB format with the copy buttons.' },
+      { question: 'Is there a limit?', answer: 'No limit. Generate as many colors as you need.' },
+    ],
+  },
+  {
+    slug: 'css-box-shadow-generator',
+    name: 'CSS Box Shadow Generator',
+    shortDescription: 'Generate CSS box-shadow code',
+    description:
+      'Create CSS box-shadow with custom offset, blur, spread, and color. Get clean, production-ready CSS code.',
+    category: 'dev',
+    tags: ['css box shadow', 'box shadow generator', 'css maker', 'shadow css', 'box-shadow'],
+    icon: 'square',
+    featured: false,
+    popular: false,
+    relatedTools: ['gradient-generator', 'border-radius-generator', 'css-clamp-generator'],
+    seo: {
+      title: 'CSS Box Shadow Generator - Free Online Box Shadow Creator',
+      description:
+        'Generate CSS box-shadow with custom offset, blur, spread, and color. Get production-ready CSS code.',
+      keywords: ['css box shadow generator', 'box shadow css', 'shadow generator', 'css maker'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What box-shadow properties are supported?', answer: 'Offset X, offset Y, blur radius, spread radius, color, and opacity.' },
+      { question: 'Is the output production-ready?', answer: 'Yes. The generated CSS uses rgba for proper color with opacity.' },
+      { question: 'Can I adjust shadow intensity?', answer: 'Yes. Use the opacity and spread controls to adjust shadow intensity.' },
+    ],
+  },
+  {
+    slug: 'border-radius-generator',
+    name: 'Border Radius Generator',
+    shortDescription: 'Generate CSS border-radius code',
+    description:
+      'Create CSS border-radius with uniform or individual corner values. Get clean CSS code for rounded corners.',
+    category: 'dev',
+    tags: ['border radius', 'border radius generator', 'css border-radius', 'rounded corners', 'css maker'],
+    icon: 'square',
+    featured: false,
+    popular: false,
+    relatedTools: ['css-box-shadow-generator', 'gradient-generator', 'css-clamp-generator'],
+    seo: {
+      title: 'Border Radius Generator - Free Online CSS Border Radius Creator',
+      description:
+        'Generate CSS border-radius code with uniform or individual corner values. Perfect for rounded corners.',
+      keywords: ['border radius generator', 'css border radius', 'rounded corners', 'css maker'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Can I set each corner separately?', answer: 'Yes. Check "Set each corner separately" to enter different values.' },
+      { question: 'What units are used?', answer: 'Pixels are used for consistent output across browsers.' },
+      { question: 'Is the output production-ready?', answer: 'Yes. Standard CSS that works in all modern browsers.' },
+    ],
+  },
+  {
+    slug: 'css-clamp-generator',
+    name: 'CSS Clamp Generator',
+    shortDescription: 'Generate CSS clamp() for fluid typography',
+    description:
+      'Create CSS clamp() values for fluid typography that scales responsively. Generate min, preferred, and max values.',
+    category: 'dev',
+    tags: ['css clamp', 'fluid typography', 'clamp generator', 'responsive font size', 'css maker'],
+    icon: 'type',
+    featured: false,
+    popular: false,
+    relatedTools: ['border-radius-generator', 'css-box-shadow-generator', 'gradient-generator'],
+    seo: {
+      title: 'CSS Clamp Generator - Free Fluid Typography Calculator',
+      description:
+        'Generate CSS clamp() values for responsive font sizing. Set min, preferred, and max values.',
+      keywords: ['css clamp generator', 'fluid typography', 'responsive font size', 'clamp css'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What does clamp() do?', answer: 'Clamp lets you set a value that scales between a minimum and maximum based on a preferred value.' },
+      { question: 'What is the preferred value for?', answer: 'Typically uses vw units (viewport width) for responsive scaling.' },
+      { question: 'Is this for font-size only?', answer: 'No. clamp() works for any CSS property, but this tool focuses on typography use case.' },
+    ],
+  },
+  {
+    slug: 'image-resizer',
+    name: 'Image Resizer',
+    shortDescription: 'Resize images in browser',
+    description:
+      'Resize images locally in your browser. Set custom width and height, maintain aspect ratio. Download resized image.',
+    category: 'utility',
+    tags: ['image resizer', 'resize image', 'image size', 'photo resize', 'image resize'],
+    icon: 'image',
+    featured: false,
+    popular: true,
+    relatedTools: ['image-compressor', 'aspect-ratio-resizer', 'image-metadata-viewer'],
+    seo: {
+      title: 'Image Resizer - Free Online Browser-Based Image Resizer',
+      description:
+        'Resize images directly in your browser. Set dimensions, maintain aspect ratio, and download. No upload required.',
+      keywords: ['image resizer', 'resize image', 'photo resize', 'image size reducer'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Is my image uploaded to a server?', answer: 'No. All processing happens locally in your browser. Your image never leaves your device.' },
+      { question: 'Can I maintain the aspect ratio?', answer: 'Yes. Check the "Maintain aspect ratio" option to automatically adjust height when you change width.' },
+      { question: 'What image formats are supported?', answer: 'Most common formats like PNG, JPEG, GIF, WebP are supported.' },
+    ],
+  },
+  {
+    slug: 'image-compressor',
+    name: 'Image Compressor',
+    shortDescription: 'Compress images in browser',
+    description:
+      'Compress images locally in your browser. Adjust quality level and reduce file size. Download compressed image.',
+    category: 'utility',
+    tags: ['image compressor', 'compress image', 'reduce image size', 'image optimizer'],
+    icon: 'minimize-2',
+    featured: false,
+    popular: true,
+    relatedTools: ['image-resizer', 'image-to-base64', 'placeholder-image-generator'],
+    seo: {
+      title: 'Image Compressor - Free Browser-Based Image Compression',
+      description:
+        'Compress images directly in your browser. Adjust quality and reduce file size. No upload required.',
+      keywords: ['image compressor', 'compress image', 'reduce image size', 'image optimizer'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Is compression done on a server?', answer: 'No. The compression uses browser Canvas API and happens entirely locally.' },
+      { question: 'How much can I compress?', answer: 'Results vary based on original format and quality setting. JPEG images typically compress well.' },
+      { question: 'What format is the output?', answer: 'Output is JPEG format with the quality level you select.' },
+    ],
+  },
+  {
+    slug: 'image-to-base64',
+    name: 'Image to Base64 Converter',
+    shortDescription: 'Convert images to Base64 data URLs',
+    description:
+      'Convert any image to Base64 data URL format. Copy the result for use in CSS, HTML, or data URIs.',
+    category: 'utility',
+    tags: ['image to base64', 'base64 image', 'data url', 'image encoder', 'base64 converter'],
+    icon: 'image',
+    featured: false,
+    popular: false,
+    relatedTools: ['base64-to-image', 'image-resizer', 'image-compressor'],
+    seo: {
+      title: 'Image to Base64 Converter - Free Online Base64 Image Encoder',
+      description:
+        'Convert images to Base64 data URLs in your browser. Copy and use in CSS or HTML.',
+      keywords: ['image to base64', 'base64 image', 'data url converter', 'image encoder'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'Is this done in my browser?', answer: 'Yes. The conversion happens locally. No image data is sent to any server.' },
+      { question: 'What can I use the Base64 for?', answer: 'Data URLs can be used directly in CSS background-image or img src attributes.' },
+      { question: 'Is there a size limit?', answer: 'Large images produce very long Base64 strings. Consider using images under 5MB.' },
+    ],
+  },
+  {
+    slug: 'base64-to-image',
+    name: 'Base64 to Image Converter',
+    shortDescription: 'Convert Base64 back to image',
+    description:
+      'Decode Base64 data URLs back to images. Preview and download the restored image file.',
+    category: 'utility',
+    tags: ['base64 to image', 'decode base64', 'data url decoder', 'image decoder'],
+    icon: 'image',
+    featured: false,
+    popular: false,
+    relatedTools: ['image-to-base64', 'image-resizer', 'favicon-generator'],
+    seo: {
+      title: 'Base64 to Image Converter - Free Online Base64 Image Decoder',
+      description:
+        'Decode Base64 data URLs back to image files. Preview and download the converted image.',
+      keywords: ['base64 to image', 'decode base64', 'data url decoder', 'image converter'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How do I use this?', answer: 'Paste a complete Base64 data URL (starting with data:image/) and click Convert.' },
+      { question: 'Is the conversion local?', answer: 'Yes. All processing happens in your browser.' },
+      { question: 'What formats are supported?', answer: 'Standard browser-supported formats: PNG, JPEG, GIF, WebP, SVG.' },
+    ],
+  },
+  {
+    slug: 'image-metadata-viewer',
+    name: 'Image Metadata Viewer',
+    shortDescription: 'View image file information',
+    description:
+      'View basic metadata of any image: dimensions, file size, MIME type, aspect ratio. Shows info available through browser APIs.',
+    category: 'utility',
+    tags: ['image metadata', 'image info', 'image dimensions', 'file size', 'metadata viewer'],
+    icon: 'info',
+    featured: false,
+    popular: false,
+    relatedTools: ['image-resizer', 'aspect-ratio-calculator', 'image-color-picker'],
+    seo: {
+      title: 'Image Metadata Viewer - Free Online Image Info Checker',
+      description:
+        'View image metadata including dimensions, file size, type, and aspect ratio. No upload required.',
+      keywords: ['image metadata viewer', 'image info', 'image dimensions', 'file size checker'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What metadata is shown?', answer: 'Filename, file size, MIME type, width, height, and simplified aspect ratio.' },
+      { question: 'Is EXIF data read?', answer: 'No. This tool shows only basic metadata available through browser file APIs.' },
+      { question: 'Is my image uploaded?', answer: 'No. All processing happens locally in your browser.' },
+    ],
+  },
+  {
+    slug: 'aspect-ratio-calculator',
+    name: 'Aspect Ratio Calculator',
+    shortDescription: 'Calculate aspect ratio from dimensions',
+    description:
+      'Calculate the simplified aspect ratio from width and height values. Includes common preset ratios.',
+    category: 'calculators',
+    tags: ['aspect ratio calculator', 'ratio calculator', 'aspect ratio', 'image ratio', 'video ratio'],
+    icon: 'maximize-2',
+    featured: false,
+    popular: true,
+    relatedTools: ['aspect-ratio-resizer', 'image-resizer', 'placeholder-image-generator'],
+    seo: {
+      title: 'Aspect Ratio Calculator - Free Online Ratio Finder',
+      description:
+        'Calculate the simplified aspect ratio from dimensions. Common presets included.',
+      keywords: ['aspect ratio calculator', 'ratio calculator', 'aspect ratio', 'image ratio'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How is the ratio simplified?', answer: 'The GCD (greatest common divisor) of width and height is used to simplify to lowest terms.' },
+      { question: 'What presets are available?', answer: '16:9, 4:3, 1:1, 9:16, 3:2, and 21:9.' },
+      { question: 'Can I copy the result?', answer: 'Yes. Click Copy to copy the simplified ratio like "16:9".' },
+    ],
+  },
+  {
+    slug: 'aspect-ratio-resizer',
+    name: 'Aspect Ratio Resizer',
+    shortDescription: 'Calculate dimensions for target aspect ratio',
+    description:
+      'Calculate missing dimension when resizing to a specific aspect ratio. Useful for thumbnails and social media.',
+    category: 'calculators',
+    tags: ['aspect ratio resizer', 'resize ratio', 'thumbnail calculator', 'aspect ratio', 'social media'],
+    icon: 'maximize-2',
+    featured: false,
+    popular: false,
+    relatedTools: ['aspect-ratio-calculator', 'image-resizer', 'placeholder-image-generator'],
+    seo: {
+      title: 'Aspect Ratio Resizer - Free Target Ratio Calculator',
+      description:
+        'Calculate dimensions to match a target aspect ratio. Enter one dimension to get the other.',
+      keywords: ['aspect ratio resizer', 'thumbnail calculator', 'resize ratio', 'aspect ratio'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How does it work?', answer: 'Select a ratio preset and enter one dimension. The other dimension is calculated automatically.' },
+      { question: 'What ratios are available?', answer: '16:9, 4:3, 1:1, 9:16, 3:2, and 21:9.' },
+      { question: 'Is this useful for video thumbnails?', answer: 'Yes. 16:9 is common for YouTube, 9:16 for Instagram stories and TikTok.' },
+    ],
+  },
+  {
+    slug: 'favicon-generator',
+    name: 'Favicon Generator',
+    shortDescription: 'Generate PNG favicon from any image',
+    description:
+      'Generate simple PNG favicons (32x32 and 64x64) from any image. Download ready-to-use favicon PNG files.',
+    category: 'utility',
+    tags: ['favicon generator', 'favicon maker', 'favicon png', 'website icon', 'favicon creator'],
+    icon: 'image',
+    featured: false,
+    popular: false,
+    relatedTools: ['image-resizer', 'placeholder-image-generator', 'image-metadata-viewer'],
+    seo: {
+      title: 'Favicon Generator - Free Online PNG Favicon Creator',
+      description:
+        'Generate PNG favicon files (32x32 and 64x64) from any image. Download and use as your website favicon.',
+      keywords: ['favicon generator', 'favicon maker', 'favicon png', 'website icon maker'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What formats are generated?', answer: 'This tool generates PNG files at 32x32 and 64x64 pixels.' },
+      { question: 'How do I use the favicon?', answer: 'Place the PNG file as favicon.ico or favicon.png in your website root.' },
+      { question: 'Is the processing local?', answer: 'Yes. All processing happens in your browser. No image is uploaded.' },
+    ],
+  },
+  {
+    slug: 'placeholder-image-generator',
+    name: 'Placeholder Image Generator',
+    shortDescription: 'Generate placeholder images',
+    description:
+      'Generate placeholder images with custom dimensions, colors, and text. Useful for design mockups.',
+    category: 'generator',
+    tags: ['placeholder image', 'placeholder generator', 'dummy image', 'mockup image', 'placeholder'],
+    icon: 'image',
+    featured: false,
+    popular: true,
+    relatedTools: ['image-resizer', 'aspect-ratio-resizer', 'favicon-generator'],
+    seo: {
+      title: 'Placeholder Image Generator - Free Online Dummy Image Creator',
+      description:
+        'Generate placeholder images with custom size, background color, text color, and optional label.',
+      keywords: ['placeholder image generator', 'dummy image', 'mockup image', 'placeholder generator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What format is the output?', answer: 'PNG format, downloaded directly to your device.' },
+      { question: 'Can I add custom text?', answer: 'Yes. Enter any text or leave empty to show dimensions automatically.' },
+      { question: 'What are common uses?', answer: 'Design mockups, wireframes, documentation, and development placeholders.' },
+    ],
+  },
+  {
+    slug: 'image-color-picker',
+    name: 'Image Color Picker',
+    shortDescription: 'Pick colors from any image',
+    description:
+      'Click on any point of an image to pick and copy the color. Shows HEX and RGB values.',
+    category: 'utility',
+    tags: ['color picker', 'image color picker', 'pick color', 'color from image', 'eyedropper'],
+    icon: 'eye',
+    featured: false,
+    popular: true,
+    relatedTools: ['image-metadata-viewer', 'hex-to-rgb', 'color-palette-generator'],
+    seo: {
+      title: 'Image Color Picker - Free Online Click-to-Copy Color Picker',
+      description:
+        'Pick colors from any image by clicking. Get HEX and RGB values. Copy with one click.',
+      keywords: ['image color picker', 'color picker', 'pick color', 'color from image', 'eyedropper'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How do I pick a color?', answer: 'Click anywhere on the preview image. The color under your cursor is captured.' },
+      { question: 'What formats are shown?', answer: 'Both HEX (#FF5500) and RGB (rgb(255, 85, 0)) formats are displayed.' },
+      { question: 'Is this local processing?', answer: 'Yes. The image is processed entirely in your browser. No uploads.' },
+    ],
+  },
 ];
 
 export function getToolBySlug(slug: string): Tool | undefined {
