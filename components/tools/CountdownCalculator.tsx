@@ -16,6 +16,7 @@ export function CountdownCalculator() {
 
   useEffect(() => {
     if (!targetDate || !targetTime) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setCountdown(null);
       setIsPast(false);
       return;

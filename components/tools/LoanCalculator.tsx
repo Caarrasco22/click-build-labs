@@ -17,7 +17,9 @@ export function LoanCalculator() {
   const isValidM = !isNaN(m) && m > 0;
 
   const monthlyPayment = isValidP && isValidR && isValidM
-    ? (p * (r / 100 / 12) * Math.pow(1 + r / 100 / 12, m)) / (Math.pow(1 + r / 100 / 12, m) - 1)
+    ? r === 0
+      ? p / m
+      : (p * (r / 100 / 12) * Math.pow(1 + r / 100 / 12, m)) / (Math.pow(1 + r / 100 / 12, m) - 1)
     : null;
 
   const totalPaid = monthlyPayment !== null ? monthlyPayment * m : null;

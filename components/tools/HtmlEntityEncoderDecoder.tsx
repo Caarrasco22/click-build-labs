@@ -23,6 +23,7 @@ export function HtmlEntityEncoderDecoder() {
 
   useEffect(() => {
     if (!input.trim()) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setResult('');
       setError('');
       return;

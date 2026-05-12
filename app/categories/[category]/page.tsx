@@ -6,7 +6,7 @@ import { Card } from '@/components/ui/Card';
 import { ToolCard } from '@/components/tools/ToolCard';
 import { CATEGORY_LABELS, CATEGORY_INFO, tools, type ToolCategory } from '@/lib/registry';
 
-const VALID_CATEGORIES: ToolCategory[] = ['dev', 'converter', 'calculators', 'generator', 'text', 'utility'];
+const VALID_CATEGORIES: ToolCategory[] = ['dev', 'converter', 'calculators', 'generator', 'text', 'utility', 'image'];
 
 interface CategoryPageProps {
   params: Promise<{ category: string }>;

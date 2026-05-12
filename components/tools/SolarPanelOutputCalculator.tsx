@@ -16,33 +16,26 @@ export function SolarPanelOutputCalculator() {
   const eff = parseFloat(efficiency);
 
   const isValid = !isNaN(pp) && pp > 0 && !isNaN(np) && np > 0 && !isNaN(ph) && ph > 0;
-  const effDecimal = !isNaN(eff) && eff >= 0 ? (100 - eff) / 100 : 0.85;
+  const efficiencyDecimal = !isNaN(eff) && eff > 0 && eff <= 100 ? eff / 100 : 0.85;
 
-  const dailykWh = isValid ? (pp * np * ph * effDecimal) / 1000 : null;
+  const arrayKw = isValid ? (pp * np) / 1000 : null;
+  const dailykWh = arrayKw !== null ? arrayKw * ph * efficiencyDecimal : null;
   const monthlykWh = dailykWh !== null ? dailykWh * 30 : null;
 
-  const outputBlock = dailykWh !== null && monthlykWh !== null ? (
-    <div className="grid gap-4 sm:grid-cols-2">
-      <div className="p-4 rounded-lg border border-green-200 dark:border-green-900 bg-green-50 dark:bg-green-900/20 text-center">
-        <p className="text-sm text-green-600 dark:text-green-400">Daily Output</p>
-        <p className="text-3xl font-bold text-green-700 dark:text-green-300">{dailykWh.toFixed(2)} kWh</p>
-      </div>
-      <div className="p-4 rounded-lg border border-blue-200 dark:border-blue-900 bg-blue-50 dark:bg-blue-900/20 text-center">
-        <p className="text-sm text-blue-600 dark:text-blue-400">Monthly Output (×30)</p>
-        <p className="text-3xl font-bold text-blue-700 dark:text-blue-300">{monthlykWh.toFixed(2)} kWh</p>
-      </div>
-    </div>
-  ) : null;
-
   const copyResult = async () => {
-    if (dailykWh !== null && monthlykWh !== null) {
-      await navigator.clipboard.writeText(`Daily: ${dailykWh.toFixed(2)} kWh | Monthly: ${monthlykWh.toFixed(2)} kWh`);
+    if (dailykWh !== null && monthlykWh !== null && arrayKw !== null) {
+      await navigator.clipboard.writeText(`Array: ${arrayKw.toFixed(2)} kW | Daily: ${dailykWh.toFixed(2)} kWh | Monthly: ${monthlykWh.toFixed(2)} kWh`);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     }
   };
 
-  const clear = () => { setPanelPower(''); setNumPanels(''); setPeakHours(''); setEfficiency(''); };
+  const clear = () => {
+    setPanelPower('');
+    setNumPanels('');
+    setPeakHours('');
+    setEfficiency('');
+  };
 
   return (
     <div className="space-y-4">
@@ -54,7 +47,7 @@ export function SolarPanelOutputCalculator() {
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="space-y-2">
-          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Panel Power (W)</label>
+          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Panel rating (W)</label>
           <input
             type="number"
             value={panelPower}
@@ -64,17 +57,17 @@ export function SolarPanelOutputCalculator() {
           />
         </div>
         <div className="space-y-2">
-          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Number of Panels</label>
+          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Number of panels</label>
           <input
             type="number"
             value={numPanels}
             onChange={(e) => setNumPanels(e.target.value)}
-            placeholder="10"
+            placeholder="5"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-lg"
           />
         </div>
         <div className="space-y-2">
-          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Peak Sun Hours</label>
+          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Peak sun hours</label>
           <input
             type="number"
             value={peakHours}
@@ -85,12 +78,12 @@ export function SolarPanelOutputCalculator() {
           />
         </div>
         <div className="space-y-2">
-          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Losses/Efficiency (%), default 15%</label>
+          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">System efficiency (%), default 85%</label>
           <input
             type="number"
             value={efficiency}
             onChange={(e) => setEfficiency(e.target.value)}
-            placeholder="15"
+            placeholder="85"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-lg"
           />
         </div>
@@ -104,7 +97,7 @@ export function SolarPanelOutputCalculator() {
           <RefreshCw className="h-4 w-4 inline mr-1" />
           Clear
         </button>
-{dailykWh !== null && monthlykWh !== null && (
+        {dailykWh !== null && monthlykWh !== null && (
           <button
             onClick={copyResult}
             className="px-3 py-1.5 text-sm rounded-md bg-zinc-100 text-zinc-600 hover:bg-zinc-200 dark:bg-zinc-800 dark:text-zinc-300 dark:hover:bg-zinc-700"
@@ -115,7 +108,22 @@ export function SolarPanelOutputCalculator() {
         )}
       </div>
 
-      {outputBlock}
+      {dailykWh !== null && monthlykWh !== null && arrayKw !== null && (
+        <div className="grid gap-4 sm:grid-cols-3">
+          <div className="p-4 rounded-lg border border-purple-200 dark:border-purple-900 bg-purple-50 dark:bg-purple-900/20 text-center">
+            <p className="text-sm text-purple-600 dark:text-purple-400">PV array rating</p>
+            <p className="text-3xl font-bold text-purple-700 dark:text-purple-300">{arrayKw.toFixed(2)} kW</p>
+          </div>
+          <div className="p-4 rounded-lg border border-green-200 dark:border-green-900 bg-green-50 dark:bg-green-900/20 text-center">
+            <p className="text-sm text-green-600 dark:text-green-400">Daily output estimate</p>
+            <p className="text-3xl font-bold text-green-700 dark:text-green-300">{dailykWh.toFixed(2)} kWh</p>
+          </div>
+          <div className="p-4 rounded-lg border border-blue-200 dark:border-blue-900 bg-blue-50 dark:bg-blue-900/20 text-center">
+            <p className="text-sm text-blue-600 dark:text-blue-400">Monthly estimate (30 days)</p>
+            <p className="text-3xl font-bold text-blue-700 dark:text-blue-300">{monthlykWh.toFixed(2)} kWh</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -12,7 +12,7 @@ export function Base64ToImage() {
     setError('');
     setPreview(null);
 
-    let dataUrl = input.trim();
+    const dataUrl = input.trim();
     if (!dataUrl.startsWith('data:')) {
       if (dataUrl.match(/^[A-Za-z0-9+/=]+$/)) {
         setError('Invalid input. Please paste a complete Base64 data URL (starts with data:image/...)');

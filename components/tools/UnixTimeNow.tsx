@@ -4,12 +4,12 @@ import { useState } from 'react';
 import { Clock, RefreshCw, Copy } from 'lucide-react';
 
 export function UnixTimeNow() {
-  const [timestamp, setTimestamp] = useState({
-    seconds: Math.floor(Date.now() / 1000),
-    milliseconds: Date.now(),
+  const [timestamp, setTimestamp] = useState(() => {
+    const now = Date.now();
+    return { seconds: Math.floor(now / 1000), milliseconds: now };
   });
-  const [localTime, setLocalTime] = useState(new Date().toLocaleString());
-  const [utcTime, setUtcTime] = useState(new Date().toUTCString());
+  const [localTime, setLocalTime] = useState(() => new Date().toLocaleString());
+  const [utcTime, setUtcTime] = useState(() => new Date().toUTCString());
 
   const refresh = () => {
     const now = Date.now();

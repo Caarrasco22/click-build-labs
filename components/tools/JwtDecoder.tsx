@@ -3,12 +3,18 @@
 import { useState } from 'react';
 import { Copy, Check, RefreshCw, AlertTriangle } from 'lucide-react';
 
+function decodeBase64Url(part: string): string {
+  const base64 = part.replace(/-/g, '+').replace(/_/g, '/');
+  const padded = base64.padEnd(base64.length + ((4 - base64.length % 4) % 4), '=');
+  return atob(padded);
+}
+
 function decodeJWT(token: string): { header: object; payload: object } | null {
   try {
     const parts = token.split('.');
     if (parts.length !== 3) return null;
-    const header = JSON.parse(atob(parts[0]));
-    const payload = JSON.parse(atob(parts[1]));
+    const header = JSON.parse(decodeBase64Url(parts[0]));
+    const payload = JSON.parse(decodeBase64Url(parts[1]));
     return { header, payload };
   } catch {
     return null;
@@ -71,7 +77,7 @@ export function JwtDecoder() {
       <div className="flex items-start gap-2 px-4 py-3 rounded-lg border border-yellow-200 dark:border-yellow-900 bg-yellow-50 dark:bg-yellow-900/20">
         <AlertTriangle className="h-4 w-4 text-yellow-600 mt-0.5" />
         <p className="text-sm text-yellow-700 dark:text-yellow-400">
-          This tool only decodes the token. It does NOT verify the signature. Do not use for security-critical purposes.
+          This tool only decodes the token. It does NOT verify the signature. Avoid pasting sensitive tokens and do not use decoded output for security-critical decisions.
         </p>
       </div>
 

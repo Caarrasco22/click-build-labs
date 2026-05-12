@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
 import { Copy, Check, RefreshCw, Pipette } from 'lucide-react';
 
@@ -188,16 +188,20 @@ function formatCmyk(c: number, m: number, y: number, k: number): string {
   return `cmyk(${c}%, ${m}%, ${y}%, ${k}%)`;
 }
 
+const DEFAULT_RGB = { r: 59, g: 130, b: 246 };
+const DEFAULT_COLOR: ColorValues = {
+  hex: rgbToHex(DEFAULT_RGB.r, DEFAULT_RGB.g, DEFAULT_RGB.b),
+  rgb: DEFAULT_RGB,
+  hsl: rgbToHsl(DEFAULT_RGB.r, DEFAULT_RGB.g, DEFAULT_RGB.b),
+  hsv: rgbToHsv(DEFAULT_RGB.r, DEFAULT_RGB.g, DEFAULT_RGB.b),
+  cmyk: rgbToCmyk(DEFAULT_RGB.r, DEFAULT_RGB.g, DEFAULT_RGB.b),
+};
+
 export function ColorConverter() {
   const [input, setInput] = useState('#3b82f6');
-  const [color, setColor] = useState<ColorValues | null>(null);
+  const [color, setColor] = useState<ColorValues | null>(DEFAULT_COLOR);
   const [copied, setCopied] = useState<ColorFormat | null>(null);
   const [colorPickerRef, setColorPickerRef] = useState<HTMLInputElement | null>(null);
-
-  useEffect(() => {
-    if (color) return;
-    handleColorChange('#3b82f6');
-  }, []);
 
   const handleColorChange = (value: string) => {
     setInput(value);

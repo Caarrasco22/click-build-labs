@@ -78,7 +78,7 @@ export function StudyTimeCalculator() {
       </div>
 
       <p className="text-xs text-zinc-500 dark:text-zinc-400">
-        Leave "Hours Per Day" empty to calculate how many hours you need per day based on days available.
+        Leave &quot;Hours Per Day&quot; empty to calculate how many hours you need per day based on days available.
       </p>
 
       <div className="flex gap-2">

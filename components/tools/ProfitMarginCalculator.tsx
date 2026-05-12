@@ -14,7 +14,7 @@ export function ProfitMarginCalculator() {
   const isValidSell = !isNaN(sellVal) && sellVal >= 0;
 
   const profit = isValidCost && isValidSell ? sellVal - costVal : null;
-  const margin = isValidCost && isValidSell && costVal > 0 ? (profit! / sellVal) * 100 : null;
+  const margin = isValidCost && isValidSell && sellVal > 0 ? (profit! / sellVal) * 100 : null;
   const markup = isValidCost && isValidSell && costVal > 0 ? (profit! / costVal) * 100 : null;
 
   const profitStr = profit !== null ? profit.toFixed(2) : '';
@@ -80,7 +80,7 @@ export function ProfitMarginCalculator() {
         </div>
       )}
 
-      {profit !== null && !hasError && (
+      {profit !== null && !hasError && margin !== null && markup !== null && (
         <div className="grid gap-4 sm:grid-cols-3">
           <div className="p-4 rounded-lg border border-green-200 dark:border-green-900 bg-green-50 dark:bg-green-900/20 text-center">
             <p className="text-sm text-green-600 dark:text-green-400">Profit</p>

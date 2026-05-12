@@ -8,55 +8,62 @@ export function BatteryRuntimeCalculator() {
   const [capacityUnit, setCapacityUnit] = useState<'Wh' | 'Ah'>('Wh');
   const [voltage, setVoltage] = useState('');
   const [load, setLoad] = useState('');
+  const [depthOfDischarge, setDepthOfDischarge] = useState('');
   const [efficiency, setEfficiency] = useState('');
   const [copied, setCopied] = useState(false);
 
   const cap = parseFloat(capacity);
   const v = parseFloat(voltage);
   const loadW = parseFloat(load);
+  const dod = parseFloat(depthOfDischarge);
   const eff = parseFloat(efficiency);
 
-  let capacityWh: number | null = null;
+  let nominalWh: number | null = null;
   if (capacityUnit === 'Wh') {
-    capacityWh = !isNaN(cap) && cap > 0 ? cap : null;
+    nominalWh = !isNaN(cap) && cap > 0 ? cap : null;
   } else {
-    capacityWh = !isNaN(cap) && !isNaN(v) && cap > 0 && v > 0 ? cap * v : null;
+    nominalWh = !isNaN(cap) && !isNaN(v) && cap > 0 && v > 0 ? cap * v : null;
   }
 
-  const isValid = capacityWh !== null && !isNaN(loadW) && loadW > 0;
-  const effDecimal = !isNaN(eff) && eff > 0 ? (100 - eff) / 100 : 1;
-  let hours: number | null = null;
-  if (isValid && capacityWh !== null) {
-    hours = (capacityWh * effDecimal) / loadW;
-  }
+  const dodDecimal = !isNaN(dod) && dod > 0 && dod <= 100 ? dod / 100 : 1;
+  const efficiencyDecimal = !isNaN(eff) && eff > 0 && eff <= 100 ? eff / 100 : 1;
+  const isValid = nominalWh !== null && !isNaN(loadW) && loadW > 0;
+  const usableWh = isValid && nominalWh !== null ? nominalWh * dodDecimal * efficiencyDecimal : null;
+  const hours = usableWh !== null ? usableWh / loadW : null;
 
   const copyResult = async () => {
-    if (hours !== null) {
-      await navigator.clipboard.writeText(`${hours.toFixed(2)} hours`);
+    if (hours !== null && usableWh !== null) {
+      await navigator.clipboard.writeText(`Runtime: ${hours.toFixed(2)} hours | Usable capacity: ${usableWh.toFixed(1)} Wh`);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     }
   };
 
-  const clear = () => { setCapacity(''); setVoltage(''); setLoad(''); setEfficiency(''); };
+  const clear = () => {
+    setCapacity('');
+    setVoltage('');
+    setLoad('');
+    setDepthOfDischarge('');
+    setEfficiency('');
+  };
 
   return (
     <div className="space-y-4">
       <div className="p-3 rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800">
         <p className="text-xs text-amber-700 dark:text-amber-300">
-          <strong>Disclaimer:</strong> Results are estimates for informational purposes only. Actual runtime varies with battery age, temperature, and discharge characteristics.
+          <strong>Disclaimer:</strong> Results are estimates for informational purposes only and are not professional engineering or electrical advice. Always follow local regulations and consult a qualified professional for real installations.
         </p>
       </div>
 
       <div className="grid gap-4 sm:grid-cols-2">
         <div className="space-y-2">
-          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Battery Capacity</label>
+          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Nominal battery capacity</label>
           <div className="flex gap-2">
             <input
               type="number"
               value={capacity}
               onChange={(e) => setCapacity(e.target.value)}
-              placeholder="100"
+              placeholder="1000"
               className="flex-1 px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-lg"
             />
             <select
@@ -71,7 +78,7 @@ export function BatteryRuntimeCalculator() {
         </div>
         {capacityUnit === 'Ah' && (
           <div className="space-y-2">
-            <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">System Voltage (V)</label>
+            <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">System voltage (V)</label>
             <input
               type="number"
               value={voltage}
@@ -87,17 +94,27 @@ export function BatteryRuntimeCalculator() {
             type="number"
             value={load}
             onChange={(e) => setLoad(e.target.value)}
-            placeholder="50"
+            placeholder="100"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-lg"
           />
         </div>
         <div className="space-y-2">
-          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Efficiency (%), default 0%</label>
+          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Depth of discharge (%), default 100%</label>
+          <input
+            type="number"
+            value={depthOfDischarge}
+            onChange={(e) => setDepthOfDischarge(e.target.value)}
+            placeholder="100"
+            className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-lg"
+          />
+        </div>
+        <div className="space-y-2">
+          <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">System efficiency (%), default 100%</label>
           <input
             type="number"
             value={efficiency}
             onChange={(e) => setEfficiency(e.target.value)}
-            placeholder="0"
+            placeholder="100"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-lg"
           />
         </div>
@@ -122,14 +139,20 @@ export function BatteryRuntimeCalculator() {
         )}
       </div>
 
-      {hours !== null && (
+      {hours !== null && usableWh !== null && (
         <div className="space-y-3">
-          <div className="p-6 rounded-lg border border-green-200 dark:border-green-900 bg-green-50 dark:bg-green-900/20 text-center">
-            <p className="text-sm text-green-600 dark:text-green-400 mb-1">Estimated Runtime</p>
-            <p className="text-4xl font-bold text-green-700 dark:text-green-300">{hours.toFixed(2)} hours</p>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="p-4 rounded-lg border border-green-200 dark:border-green-900 bg-green-50 dark:bg-green-900/20 text-center">
+              <p className="text-sm text-green-600 dark:text-green-400">Estimated runtime</p>
+              <p className="text-3xl font-bold text-green-700 dark:text-green-300">{hours.toFixed(2)} hours</p>
+            </div>
+            <div className="p-4 rounded-lg border border-blue-200 dark:border-blue-900 bg-blue-50 dark:bg-blue-900/20 text-center">
+              <p className="text-sm text-blue-600 dark:text-blue-400">Usable capacity</p>
+              <p className="text-3xl font-bold text-blue-700 dark:text-blue-300">{usableWh.toFixed(1)} Wh</p>
+            </div>
           </div>
           <p className="text-xs text-zinc-500 dark:text-zinc-400 text-center">
-            Formula: Runtime = (Capacity × Efficiency) / Load
+            Formulas: available Wh = nominal Wh x DoD x efficiency. Runtime = available Wh / load W.
           </p>
         </div>
       )}

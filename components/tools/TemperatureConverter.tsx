@@ -6,8 +6,8 @@ import { Copy, Check, RefreshCw, ArrowUpDown } from 'lucide-react';
 type TempUnit = 'c' | 'f' | 'k';
 
 const UNITS: { value: TempUnit; label: string }[] = [
-  { value: 'c', label: 'Celsius (°C)' },
-  { value: 'f', label: 'Fahrenheit (°F)' },
+  { value: 'c', label: 'Celsius (C)' },
+  { value: 'f', label: 'Fahrenheit (F)' },
   { value: 'k', label: 'Kelvin (K)' },
 ];
 
@@ -29,16 +29,22 @@ function kelvinToCelsius(k: number): number {
 
 function convert(value: number, from: TempUnit, to: TempUnit): number | null {
   if (isNaN(value)) return null;
+  if (from === 'k' && value < 0) return null;
+
   let celsius: number;
   switch (from) {
     case 'c': celsius = value; break;
     case 'f': celsius = fahrenheitToCelsius(value); break;
     case 'k': celsius = kelvinToCelsius(value); break;
   }
+
   switch (to) {
     case 'c': return celsius;
     case 'f': return celsiusToFahrenheit(celsius);
-    case 'k': return celsiusToKelvin(celsius);
+    case 'k': {
+      const kelvin = celsiusToKelvin(celsius);
+      return kelvin < 0 ? null : kelvin;
+    }
   }
 }
 
@@ -50,6 +56,7 @@ export function TemperatureConverter() {
 
   const result = convert(parseFloat(input), fromUnit, toUnit);
   const resultStr = result !== null ? result.toFixed(2) : '';
+  const showAbsoluteZeroError = input.trim() !== '' && result === null;
 
   const copyResult = async () => {
     if (resultStr) {
@@ -133,6 +140,14 @@ export function TemperatureConverter() {
           </button>
         )}
       </div>
+
+      {showAbsoluteZeroError && (
+        <div className="p-3 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800">
+          <p className="text-sm text-red-700 dark:text-red-300">
+            Temperature cannot be below absolute zero.
+          </p>
+        </div>
+      )}
     </div>
   );
 }

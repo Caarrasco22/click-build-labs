@@ -11,7 +11,7 @@ const UNITS: { value: AreaUnit; label: string; factor: number }[] = [
   { value: 'km2', label: 'Square Kilometers (km²)', factor: 1000000 },
   { value: 'ft2', label: 'Square Feet (ft²)', factor: 0.092903 },
   { value: 'yd2', label: 'Square Yards (yd²)', factor: 0.836127 },
-  { value: 'ac', label: 'Acres (ac)', factor: 4046.86 },
+  { value: 'ac', label: 'Acres (ac)', factor: 4046.8564224 },
   { value: 'ha', label: 'Hectares (ha)', factor: 10000 },
 ];
 

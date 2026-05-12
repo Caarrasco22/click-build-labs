@@ -17,7 +17,7 @@ export function TimeDurationCalculator() {
     const [startH, startM] = startTime.split(':').map(Number);
     const [endH, endM] = endTime.split(':').map(Number);
 
-    let startMinutes = startH * 60 + startM;
+    const startMinutes = startH * 60 + startM;
     let endMinutes = endH * 60 + endM;
 
     if (endMinutes < startMinutes) {

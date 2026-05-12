@@ -26,15 +26,15 @@ export function ImageColorPicker() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    canvas.width = imgRef.current.width;
-    canvas.height = imgRef.current.height;
+    canvas.width = imgRef.current.naturalWidth;
+    canvas.height = imgRef.current.naturalHeight;
     ctx.drawImage(imgRef.current, 0, 0);
 
     const rect = e.currentTarget.getBoundingClientRect();
     const scaleX = canvas.width / rect.width;
     const scaleY = canvas.height / rect.height;
-    const x = Math.floor((e.clientX - rect.left) * scaleX);
-    const y = Math.floor((e.clientY - rect.top) * scaleY);
+    const x = Math.min(canvas.width - 1, Math.max(0, Math.floor((e.clientX - rect.left) * scaleX)));
+    const y = Math.min(canvas.height - 1, Math.max(0, Math.floor((e.clientY - rect.top) * scaleY)));
 
     const pixel = ctx.getImageData(x, y, 1, 1).data;
     const hex = '#' + [pixel[0], pixel[1], pixel[2]].map(c => c.toString(16).padStart(2, '0')).join('').toUpperCase();
