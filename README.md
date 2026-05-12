@@ -1,4 +1,5 @@
 # ClickBuildLabs
+
 <p align="center">
   <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
   <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white" />
@@ -11,10 +12,52 @@ Free online tools for quick everyday tasks: calculators, converters, text utilit
 
 Built as a static, lightweight and free tool collection.
 
-Live site:
-https://clickbuildlabs.com
+**Live site:** https://clickbuildlabs.com
 
-Current focus:
+---
+
+## What is ClickBuildLabs?
+
+ClickBuildLabs is a free online tools website designed to solve quick tasks without login, subscriptions or unnecessary complexity.
+
+The project includes:
+
+- Calculators
+- Converters
+- Text utilities
+- JSON tools
+- Date and time tools
+- Image helpers
+- Simple finance tools
+
+---
+
+## Current status
+
+- Live in production
+- Deployed on Cloudflare Pages
+- Static export
+- No backend
+- No database
+- No external APIs
+- No ads yet
+- SEO improvements in progress
+
+---
+
+## Current focus
+
 - Improving SEO pages
 - Expanding useful tools
+- Improving internal linking
 - Keeping everything fast, free and simple
+
+---
+
+## Built with
+
+- Next.js
+- TypeScript
+- React
+- Tailwind CSS
+- Cloudflare Pages
