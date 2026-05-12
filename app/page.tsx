@@ -6,7 +6,7 @@ import { Card } from '@/components/ui/Card';
 import { ToolCard } from '@/components/tools/ToolCard';
 import { SearchBar } from '@/components/tools/SearchBar';
 import { tools, getFeaturedTools, getPopularTools, TOOL_CATEGORIES, CATEGORY_LABELS } from '@/lib/registry';
-import { createHomeMetadata } from '@/lib/seo';
+import { createHomeMetadata, createWebsiteJsonLd } from '@/lib/seo';
 import { ArrowRight, Zap, Shield, Code2, Layers, Sparkles } from 'lucide-react';
 
 export const metadata: Metadata = createHomeMetadata();
@@ -16,9 +16,15 @@ export default function HomePage() {
   const popularTools = getPopularTools();
   const toolCount = tools.length;
   const categoryCount = TOOL_CATEGORIES.filter((c) => c !== 'all').length;
+  const websiteJsonLd = createWebsiteJsonLd();
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
+
       <section className="border-b border-zinc-200 dark:border-zinc-800">
         <Container className="py-20 sm:py-28">
           <div className="max-w-2xl mx-auto text-center mb-12">

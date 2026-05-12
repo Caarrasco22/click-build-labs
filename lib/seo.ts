@@ -130,7 +130,7 @@ export function createWebsiteJsonLd() {
   return {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: SITE_NAME,
+    name: 'ClickBuildLabs',
     description: SITE_DESCRIPTION,
     url: createAbsoluteUrl(),
     potentialAction: {

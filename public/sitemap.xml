@@ -13,42 +13,42 @@
   <url>
     <loc>https://clickbuildlabs.com/tools/uuid-generator/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/base64-encode/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/password-generator/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/json-formatter/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/slug-generator/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/hash-generator/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/color-converter/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/lorem-ipsum/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/word-counter/</loc>
@@ -58,7 +58,7 @@
   <url>
     <loc>https://clickbuildlabs.com/tools/character-counter/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/case-converter/</loc>
@@ -73,22 +73,22 @@
   <url>
     <loc>https://clickbuildlabs.com/tools/html-entity-encoder-decoder/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/timestamp-converter/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/percentage-calculator/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/text-diff-checker/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/markdown-previewer/</loc>
@@ -108,7 +108,7 @@
   <url>
     <loc>https://clickbuildlabs.com/tools/json-minifier/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/csv-to-json/</loc>
@@ -118,7 +118,7 @@
   <url>
     <loc>https://clickbuildlabs.com/tools/url-parser/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/jwt-decoder/</loc>
@@ -128,27 +128,27 @@
   <url>
     <loc>https://clickbuildlabs.com/tools/regex-tester/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/html-minifier/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/css-minifier/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/javascript-minifier/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/query-string-builder/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/length-converter/</loc>
@@ -168,12 +168,12 @@
   <url>
     <loc>https://clickbuildlabs.com/tools/area-converter/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/volume-converter/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/speed-converter/</loc>
@@ -188,17 +188,17 @@
   <url>
     <loc>https://clickbuildlabs.com/tools/data-storage-converter/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/angle-converter/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/fuel-consumption-converter/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/discount-calculator/</loc>
@@ -213,17 +213,17 @@
   <url>
     <loc>https://clickbuildlabs.com/tools/profit-margin-calculator/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/rule-of-three-calculator/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/average-calculator/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/age-calculator/</loc>
@@ -358,7 +358,7 @@
   <url>
     <loc>https://clickbuildlabs.com/tools/grade-calculator/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/scientific-calculator/</loc>
@@ -368,17 +368,17 @@
   <url>
     <loc>https://clickbuildlabs.com/tools/fraction-calculator/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/number-base-converter/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/equation-solver/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/final-grade-calculator/</loc>
@@ -388,22 +388,22 @@
   <url>
     <loc>https://clickbuildlabs.com/tools/percentage-grade-calculator/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/study-time-calculator/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/reading-speed-calculator/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/essay-word-count-planner/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/multiplication-table-generator/</loc>
@@ -418,17 +418,17 @@
   <url>
     <loc>https://clickbuildlabs.com/tools/roman-numeral-converter/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/percentage-error-calculator/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/unit-circle-helper/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/remove-duplicate-lines/</loc>
@@ -443,27 +443,27 @@
   <url>
     <loc>https://clickbuildlabs.com/tools/reverse-text/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/remove-empty-lines/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/trim-lines/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/text-repeater/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/prefix-suffix-lines/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/extract-emails/</loc>
@@ -478,7 +478,7 @@
   <url>
     <loc>https://clickbuildlabs.com/tools/word-frequency-counter/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/hex-to-rgb/</loc>
@@ -493,7 +493,7 @@
   <url>
     <loc>https://clickbuildlabs.com/tools/hsl-converter/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/color-palette-generator/</loc>
@@ -518,17 +518,17 @@
   <url>
     <loc>https://clickbuildlabs.com/tools/css-box-shadow-generator/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/border-radius-generator/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/css-clamp-generator/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/image-resizer/</loc>
@@ -543,17 +543,17 @@
   <url>
     <loc>https://clickbuildlabs.com/tools/image-to-base64/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/base64-to-image/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/image-metadata-viewer/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/aspect-ratio-calculator/</loc>
@@ -563,12 +563,12 @@
   <url>
     <loc>https://clickbuildlabs.com/tools/aspect-ratio-resizer/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/favicon-generator/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/tools/placeholder-image-generator/</loc>
@@ -631,7 +631,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://clickbuildlabs.com/categories/dev/</loc>
+    <loc>https://clickbuildlabs.com/categories/calculators/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -641,12 +641,17 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://clickbuildlabs.com/categories/calculators/</loc>
+    <loc>https://clickbuildlabs.com/categories/dev/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://clickbuildlabs.com/categories/generator/</loc>
+    <changefreq>daily</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/categories/image/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
@@ -657,11 +662,6 @@
   </url>
   <url>
     <loc>https://clickbuildlabs.com/categories/utility/</loc>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://clickbuildlabs.com/categories/image/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
   </url>
