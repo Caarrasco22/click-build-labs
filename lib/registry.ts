@@ -3104,6 +3104,256 @@ export const tools: Tool[] = [
       { question: 'Is this local processing?', answer: 'Yes. The image is processed entirely in your browser. No uploads.' },
     ],
   },
+  {
+    slug: 'power-current-voltage-calculator',
+    name: 'Power Current Voltage Calculator',
+    shortDescription: 'Calculate power, current or voltage from the other two',
+    description:
+      'Calculate electrical power (P), voltage (V), or current (I) using Ohm\'s law. Enter any two values to find the third.',
+    category: 'calculators',
+    tags: ['power calculator', 'current calculator', 'voltage calculator', 'ohms law', 'electrical calculator'],
+    icon: 'zap',
+    featured: false,
+    popular: false,
+    relatedTools: ['energy-consumption-calculator', 'battery-runtime-calculator', 'led-power-calculator'],
+    seo: {
+      title: 'Power Current Voltage Calculator - Free Ohm\'s Law Calculator',
+      description:
+        'Calculate power, current, or voltage using Ohm\'s law. Free online P/V/I calculator. Enter any two values to find the third.',
+      keywords: ['power calculator', 'current calculator', 'voltage calculator', 'ohms law', 'electrical calculator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How does it work?', answer: 'Select what you want to calculate (P, V, or I), enter the other two values, and get the result instantly.' },
+      { question: 'What is Ohm\'s law?', answer: 'P = V × I. Power (watts) equals Voltage (volts) times Current (amps). You can rearrange to find any value.' },
+      { question: 'Are results accurate?', answer: 'Yes. This uses standard electrical formulas for ideal conditions. Actual results may vary based on real-world factors.' },
+    ],
+  },
+  {
+    slug: 'energy-consumption-calculator',
+    name: 'Energy Consumption Calculator',
+    shortDescription: 'Calculate energy usage and estimated cost',
+    description:
+      'Calculate daily and total energy consumption in kWh. Enter power, hours of use, and days to get consumption. Optional cost estimation.',
+    category: 'calculators',
+    tags: ['energy consumption', 'kwh calculator', 'electricity consumption', 'power usage', 'energy cost'],
+    icon: 'zap',
+    featured: false,
+    popular: false,
+    relatedTools: ['power-current-voltage-calculator', 'solar-panel-output-calculator', 'led-power-calculator'],
+    seo: {
+      title: 'Energy Consumption Calculator - Free kWh Usage Calculator',
+      description:
+        'Calculate energy consumption in kWh based on power rating and usage time. Estimate electricity costs.',
+      keywords: ['energy consumption calculator', 'kwh calculator', 'electricity consumption', 'power usage calculator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How is energy calculated?', answer: 'Energy (kWh) = Power (kW) × Hours. For example, a 1.5kW device running 4 hours uses 6kWh.' },
+      { question: 'What is a kilowatt-hour?', answer: 'A kilowatt-hour (kWh) is the unit electricity companies use for billing. It represents 1000 watts used for 1 hour.' },
+      { question: 'Is cost estimation accurate?', answer: 'It depends on your electricity rate. Enter the price per kWh from your utility bill for estimates.' },
+    ],
+  },
+  {
+    slug: 'solar-panel-output-calculator',
+    name: 'Solar Panel Output Calculator',
+    shortDescription: 'Estimate daily and monthly solar energy output',
+    description:
+      'Estimate solar panel energy output. Enter panel wattage, number of panels, and peak sun hours. Calculate daily and monthly kWh production.',
+    category: 'calculators',
+    tags: ['solar panel', 'solar output', 'solar energy', 'photovoltaic', 'solar calculator', 'renewable energy'],
+    icon: 'sun',
+    featured: false,
+    popular: false,
+    relatedTools: ['solar-system-size-calculator', 'energy-consumption-calculator', 'battery-runtime-calculator'],
+    seo: {
+      title: 'Solar Panel Output Calculator - Free Solar Energy Estimator',
+      description:
+        'Estimate daily and monthly solar panel energy output in kWh. Enter panel wattage, number of panels, and sun hours.',
+      keywords: ['solar panel calculator', 'solar output calculator', 'solar energy', 'photovoltaic calculator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What are peak sun hours?', answer: 'Peak sun hours (PSH) is the equivalent hours of full sunlight your location receives per day. Typical values are 3–6 hours.' },
+      { question: 'What losses are included?', answer: 'Default is 15% losses (wiring, inverter, temperature). You can adjust this based on your installation quality.' },
+      { question: 'Is this accurate for my location?', answer: 'No. Results are estimates only. Actual output depends on location, orientation, shadows, weather, and installation.' },
+    ],
+  },
+  {
+    slug: 'solar-system-size-calculator',
+    name: 'Solar System Size Calculator',
+    shortDescription: 'Calculate required solar system size for your energy needs',
+    description:
+      'Calculate the solar system size needed based on daily energy consumption and available sun hours. Optional panel count estimation.',
+    category: 'calculators',
+    tags: ['solar system size', 'solar sizing', 'solar panel', 'off-grid', 'renewable energy', 'solar calculator'],
+    icon: 'sun',
+    featured: false,
+    popular: false,
+    relatedTools: ['solar-panel-output-calculator', 'battery-capacity-calculator', 'inverter-size-calculator'],
+    seo: {
+      title: 'Solar System Size Calculator - Free Solar Sizing Tool',
+      description:
+        'Calculate the solar system size needed for your energy needs. Enter daily consumption and sun hours.',
+      keywords: ['solar system size calculator', 'solar sizing', 'solar panel size', 'off-grid calculator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How is system size calculated?', answer: 'System Size (kW) = Daily Need (kWh) / (Peak Hours × Loss Factor). Default loss factor is 1.2 (20% losses).' },
+      { question: 'What if I have partial sun?', answer: 'Fewer peak sun hours means you need a larger system. Adjust peak hours to match your location.' },
+      { question: 'Is this for grid-tie or off-grid?', answer: 'It works for both. Off-grid systems may need extra capacity and battery storage for bad weather.' },
+    ],
+  },
+  {
+    slug: 'battery-runtime-calculator',
+    name: 'Battery Runtime Calculator',
+    shortDescription: 'Estimate how long a battery will last under load',
+    description:
+      'Calculate estimated battery runtime in hours. Enter battery capacity (Wh or Ah + voltage) and load in watts. Optional efficiency factor.',
+    category: 'calculators',
+    tags: ['battery runtime', 'battery hours', 'battery calculator', 'ups runtime', 'battery backup'],
+    icon: 'battery',
+    featured: false,
+    popular: false,
+    relatedTools: ['battery-capacity-calculator', 'power-current-voltage-calculator', 'inverter-size-calculator'],
+    seo: {
+      title: 'Battery Runtime Calculator - Free UPS Battery Hours Estimator',
+      description:
+        'Estimate how long a battery will last under a specific load. Enter capacity in Wh or Ah + voltage and load in watts.',
+      keywords: ['battery runtime calculator', 'ups runtime', 'battery hours', 'battery backup calculator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How is runtime calculated?', answer: 'Runtime (hours) = (Battery Capacity × Efficiency) / Load. Higher efficiency and lower load mean longer runtime.' },
+      { question: 'What is a good runtime for UPS?', answer: 'Typical UPS runtime targets are 5–15 minutes for PCs and servers, longer for emergency backup systems.' },
+      { question: 'Does temperature affect runtime?', answer: 'Yes. Batteries lose capacity in extreme cold or heat. This calculator does not account for temperature effects.' },
+    ],
+  },
+  {
+    slug: 'battery-capacity-calculator',
+    name: 'Battery Capacity Calculator',
+    shortDescription: 'Calculate required battery capacity for your needs',
+    description:
+      'Calculate required battery capacity in Wh for a given load and desired runtime. Optional: convert to Ah with system voltage.',
+    category: 'calculators',
+    tags: ['battery capacity', 'battery size', 'wh calculator', 'battery bank', 'solar battery'],
+    icon: 'battery',
+    featured: false,
+    popular: false,
+    relatedTools: ['battery-runtime-calculator', 'solar-system-size-calculator', 'inverter-size-calculator'],
+    seo: {
+      title: 'Battery Capacity Calculator - Free Battery Size Estimator',
+      description:
+        'Calculate required battery capacity in Wh for your load and runtime needs. Optional conversion to Ah.',
+      keywords: ['battery capacity calculator', 'battery size', 'wh calculator', 'battery bank sizing'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How is capacity calculated?', answer: 'Capacity (Wh) = Load (W) × Hours × (1 + Losses%). Default losses are 20% to account for inverter and battery inefficiencies.' },
+      { question: 'Should I size for depth of discharge?', answer: 'Yes. Lead-acid batteries should not be discharged below 50%. LiFePO4 can handle 80–90% DOD. Size accordingly.' },
+      { question: 'What voltage should I use?', answer: 'Common system voltages are 12V, 24V, and 48V. Higher voltage means lower current and thinner cables.' },
+    ],
+  },
+  {
+    slug: 'inverter-size-calculator',
+    name: 'Inverter Size Calculator',
+    shortDescription: 'Calculate recommended inverter size for your loads',
+    description:
+      'Calculate recommended inverter size based on total load and safety margin. Includes warning about motor startup requirements.',
+    category: 'calculators',
+    tags: ['inverter size', 'inverter sizing', 'power inverter', 'solar inverter', 'off-grid'],
+    icon: 'zap',
+    featured: false,
+    popular: false,
+    relatedTools: ['battery-capacity-calculator', 'power-current-voltage-calculator', 'solar-system-size-calculator'],
+    seo: {
+      title: 'Inverter Size Calculator - Free Inverter Sizing Tool',
+      description:
+        'Calculate recommended inverter size based on total load. Includes safety margin and motor startup warning.',
+      keywords: ['inverter size calculator', 'inverter sizing', 'power inverter', 'solar inverter'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What safety margin is recommended?', answer: 'A 25% margin is default. This handles temporary overloads and ensures the inverter runs below max capacity.' },
+      { question: 'Why the motor warning?', answer: 'Motors and compressors need 3–7× their rated power at startup. If you have pumps, fridges, or AC, size up significantly.' },
+      { question: 'Pure sine wave or modified?', answer: 'This calculator does not choose inverter type. Sensitive electronics need pure sine wave. Simple loads work with modified.' },
+    ],
+  },
+  {
+    slug: 'voltage-drop-calculator',
+    name: 'Voltage Drop Calculator',
+    shortDescription: 'Calculate voltage drop in wire runs',
+    description:
+      'Calculate voltage drop and percentage in wire runs. Enter voltage, current, length, wire size, and material (copper/aluminum).',
+    category: 'calculators',
+    tags: ['voltage drop', 'wire drop', 'cable drop', 'electrical drop', 'voltage loss'],
+    icon: 'zap',
+    featured: false,
+    popular: false,
+    relatedTools: ['wire-size-calculator-basic', 'power-current-voltage-calculator', 'inverter-size-calculator'],
+    seo: {
+      title: 'Voltage Drop Calculator - Free Cable Drop Calculator',
+      description:
+        'Calculate voltage drop in wire runs. Enter voltage, current, length, wire size, and material (copper or aluminum).',
+      keywords: ['voltage drop calculator', 'wire drop', 'cable voltage drop', 'electrical drop'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What is a good voltage drop percentage?', answer: 'Most codes recommend 3% or less for branch circuits. Total drop from panel to farthest device should not exceed 5%.' },
+      { question: 'Copper or aluminum wire?', answer: 'Copper has lower resistivity (0.0168 vs 0.0282 Ω·mm²/m). Aluminum is cheaper but needs larger cross-section for same drop.' },
+      { question: 'Is this NEC compliant?', answer: 'No. This is a basic estimate only. Always follow your local electrical code and consult a licensed electrician.' },
+    ],
+  },
+  {
+    slug: 'wire-size-calculator-basic',
+    name: 'Wire Size Calculator Basic',
+    shortDescription: 'Find minimum wire cross-section for your circuit',
+    description:
+      'Find minimum wire cross-section (mm²) for a circuit based on current, length, voltage, and max acceptable voltage drop.',
+    category: 'calculators',
+    tags: ['wire size', 'cable size', 'wire gauge', 'wire cross-section', 'electrical wire'],
+    icon: 'zap',
+    featured: false,
+    popular: false,
+    relatedTools: ['voltage-drop-calculator', 'power-current-voltage-calculator', 'inverter-size-calculator'],
+    seo: {
+      title: 'Wire Size Calculator Basic - Free Minimum Wire Gauge Calculator',
+      description:
+        'Find minimum wire cross-section for your circuit. Enter current, length, voltage, and max voltage drop.',
+      keywords: ['wire size calculator', 'cable size', 'wire gauge', 'wire cross-section calculator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'What sizes are available?', answer: 'Standard sizes are 1.5, 2.5, 4, 6, 10, 16, 25, 35, and 50 mm².' },
+      { question: 'What if my length is very long?', answer: 'Long runs need larger wire to keep voltage drop within limits. This calculator finds the minimum size for your parameters.' },
+      { question: 'Is this for DC or AC?', answer: 'The formula works for both. DC systems (12V, 24V) are more sensitive to drop since percentage is higher at low voltage.' },
+    ],
+  },
+  {
+    slug: 'led-power-calculator',
+    name: 'LED Power Calculator',
+    shortDescription: 'Calculate LED strip total power and daily consumption',
+    description:
+      'Calculate total power consumption of LED strips or fixtures. Enter number of LEDs, watts per LED, and daily hours. Optional cost estimation.',
+    category: 'calculators',
+    tags: ['led power', 'led calculator', 'led strip', 'led consumption', 'lighting power'],
+    icon: 'zap',
+    featured: false,
+    popular: false,
+    relatedTools: ['energy-consumption-calculator', 'power-current-voltage-calculator', 'led-power-calculator'],
+    seo: {
+      title: 'LED Power Calculator - Free LED Strip Power Consumption Calculator',
+      description:
+        'Calculate total power and daily consumption of LED strips or fixtures. Enter number of LEDs, watts per LED, and hours of use.',
+      keywords: ['led power calculator', 'led strip power', 'led consumption', 'lighting power calculator'],
+    },
+    ads: { enabled: false, positions: [] },
+    faqs: [
+      { question: 'How is LED power calculated?', answer: 'Total Watts = Number of LEDs × Watts per LED. Daily kWh = Total Watts × Hours of use / 1000.' },
+      { question: 'What is typical wattage per LED?', answer: 'SMD 5050 LEDs are about 0.24W each. SMD 2835 can be 0.1–0.2W. Check your strip specifications.' },
+      { question: 'Can I estimate yearly cost?', answer: 'Yes. Enter your electricity price per kWh to get daily cost. Multiply by 365 for yearly estimates.' },
+    ],
+  },
 ];
 
 export function getToolBySlug(slug: string): Tool | undefined {

@@ -115,6 +115,16 @@ export const TOOL_COMPONENTS = {
   'favicon-generator': lazy(() => import('@/components/tools/FaviconGenerator').then((m) => ({ default: m.FaviconGenerator }))),
   'placeholder-image-generator': lazy(() => import('@/components/tools/PlaceholderImageGenerator').then((m) => ({ default: m.PlaceholderImageGenerator }))),
   'image-color-picker': lazy(() => import('@/components/tools/ImageColorPicker').then((m) => ({ default: m.ImageColorPicker }))),
+  'power-current-voltage-calculator': lazy(() => import('@/components/tools/PowerCurrentVoltageCalculator').then((m) => ({ default: m.PowerCurrentVoltageCalculator }))),
+  'energy-consumption-calculator': lazy(() => import('@/components/tools/EnergyConsumptionCalculator').then((m) => ({ default: m.EnergyConsumptionCalculator }))),
+  'solar-panel-output-calculator': lazy(() => import('@/components/tools/SolarPanelOutputCalculator').then((m) => ({ default: m.SolarPanelOutputCalculator }))),
+  'solar-system-size-calculator': lazy(() => import('@/components/tools/SolarSystemSizeCalculator').then((m) => ({ default: m.SolarSystemSizeCalculator }))),
+  'battery-runtime-calculator': lazy(() => import('@/components/tools/BatteryRuntimeCalculator').then((m) => ({ default: m.BatteryRuntimeCalculator }))),
+  'battery-capacity-calculator': lazy(() => import('@/components/tools/BatteryCapacityCalculator').then((m) => ({ default: m.BatteryCapacityCalculator }))),
+  'inverter-size-calculator': lazy(() => import('@/components/tools/InverterSizeCalculator').then((m) => ({ default: m.InverterSizeCalculator }))),
+  'voltage-drop-calculator': lazy(() => import('@/components/tools/VoltageDropCalculator').then((m) => ({ default: m.VoltageDropCalculator }))),
+  'wire-size-calculator-basic': lazy(() => import('@/components/tools/WireSizeCalculatorBasic').then((m) => ({ default: m.WireSizeCalculatorBasic }))),
+  'led-power-calculator': lazy(() => import('@/components/tools/LEDPowerCalculator').then((m) => ({ default: m.LEDPowerCalculator }))),
 } as const;
 
 export type ToolSlug = keyof typeof TOOL_COMPONENTS;

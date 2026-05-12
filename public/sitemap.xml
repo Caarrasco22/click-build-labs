@@ -581,6 +581,56 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://clickbuildlabs.com/tools/power-current-voltage-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/energy-consumption-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/solar-panel-output-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/solar-system-size-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/battery-runtime-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/battery-capacity-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/inverter-size-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/voltage-drop-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/wire-size-calculator-basic/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clickbuildlabs.com/tools/led-power-calculator/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://clickbuildlabs.com/categories/developer/</loc>
     <changefreq>daily</changefreq>
     <priority>0.8</priority>
