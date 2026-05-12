@@ -747,10 +747,29 @@ export const tools: Tool[] = [
       keywords: ['percentage calculator', 'percent calculator', 'calculate percentage', 'percentage change'],
     },
     ads: { enabled: false, positions: [] },
+    content: {
+      intro:
+        'Use this percentage calculator to find common percentage values quickly, such as a percent of a number, what percent one number is of another, or a simple percentage change.',
+      howToUse: [
+        'Choose the percentage calculation mode you need.',
+        'Enter the numbers requested by that mode.',
+        'Review the result and adjust the inputs if you want to compare another value.',
+      ],
+      example: {
+        title: 'Finding 15% of a price',
+        body:
+          'If an item costs 80 and you want to find 15% of it, enter 15 as the percentage and 80 as the total. The result is 12.',
+      },
+      logic: {
+        title: 'Basic percentage formulas',
+        body:
+          'For a percent of a number, the formula is X% of Y = Y x X / 100. To find what percent a part is of a whole, use Percentage = part / whole x 100.',
+      },
+    },
     faqs: [
-      { question: 'How do I calculate X% of Y?', answer: 'Select "X% of Y" mode, enter the percentage (X) and the total (Y), then click Calculate.' },
-      { question: 'How do I find what percentage X is of Y?', answer: 'Select "X is what % of Y" mode, enter the part (X) and the total (Y).' },
-      { question: 'How is percentage change calculated?', answer: 'Percentage change = ((new - old) / old) × 100%. Select "Change %" mode to calculate.' },
+      { question: 'How do I calculate X% of Y?', answer: 'Select the percent-of mode, enter the percentage as X and the total as Y, then calculate the result.' },
+      { question: 'How do I find what percentage one number is of another?', answer: 'Use the part and whole values. The calculator divides the part by the whole and multiplies by 100.' },
+      { question: 'Can this calculate percentage change?', answer: 'Yes. Use the percentage change mode when you want to compare an old value with a new value.' },
     ],
   },
   {
@@ -1485,10 +1504,29 @@ export const tools: Tool[] = [
       keywords: ['age calculator', 'calculate age', 'birthday calculator', 'age finder'],
     },
     ads: { enabled: false, positions: [] },
+    content: {
+      intro:
+        'Use this age calculator to calculate age from a birth date and compare it with today or another selected date.',
+      howToUse: [
+        'Enter the birth date you want to calculate from.',
+        'Choose the comparison date, or leave it set to today if available.',
+        'Read the age result in years, months, and days.',
+      ],
+      example: {
+        title: 'Checking an age on a specific date',
+        body:
+          'If someone was born on May 10, 1995, you can compare that birth date with a later date to see their age on that day in years, months, and days.',
+      },
+      logic: {
+        title: 'How age is calculated',
+        body:
+          'The calculator compares the birth date with the selected date and works through calendar years, months, and days based on the dates entered. It is a practical date calculation, not legal, medical, or administrative advice.',
+      },
+    },
     faqs: [
-      { question: 'Is my birth date stored?', answer: 'No. All calculations happen locally in your browser. Nothing is stored.' },
-      { question: 'Can I use future dates?', answer: 'No. Future birth dates are not allowed and will show an error.' },
-      { question: 'Is the calculation accurate?', answer: 'Yes. It accounts for leap years and varying month lengths.' },
+      { question: 'Can I calculate age for a past date?', answer: 'Yes. Use a selected comparison date to see the age on that specific day.' },
+      { question: 'Does the calculator include months and days?', answer: 'Yes. The result shows years, months, and days based on the dates you enter.' },
+      { question: 'Is my birth date stored?', answer: 'No. The calculation happens in your browser and the date is not stored by this page.' },
     ],
   },
   {
@@ -1557,10 +1595,29 @@ export const tools: Tool[] = [
       keywords: ['loan calculator', 'mortgage calculator', 'loan payment', 'amortization calculator'],
     },
     ads: { enabled: false, positions: [] },
+    content: {
+      intro:
+        'Use this loan calculator to estimate monthly payments, total repayment, and interest based on a loan amount, interest rate, and repayment term.',
+      howToUse: [
+        'Enter the loan amount, annual interest rate, and loan term.',
+        'Run the calculation to estimate the monthly payment.',
+        'Review the total paid and estimated interest to compare different scenarios.',
+      ],
+      example: {
+        title: 'Estimating a monthly payment',
+        body:
+          'For a 10,000 loan over 5 years at a fixed annual rate, enter the amount, rate, and term to estimate the monthly payment and total interest.',
+      },
+      logic: {
+        title: 'How loan payments are estimated',
+        body:
+          'The calculator uses a standard amortization approach where the annual rate is converted to a monthly rate and spread across the number of payments. Results are estimates for planning and are not financial advice or a promise of real bank terms.',
+      },
+    },
     faqs: [
-      { question: 'How is the monthly payment calculated?', answer: 'Uses the standard amortization formula: M = P × (r(1+r)^n) / ((1+r)^n - 1), where P is principal, r is monthly rate, n is number of payments.' },
-      { question: 'Is the interest rate annual?', answer: 'Yes. The annual interest rate is divided by 12 to get the monthly rate.' },
-      { question: 'Is this financial advice?', answer: 'No. These are estimates for informational purposes only. Consult a financial advisor for personalized advice.' },
+      { question: 'How is the monthly payment estimated?', answer: 'It uses the loan amount, monthly interest rate, and number of payments to estimate a fixed monthly payment.' },
+      { question: 'Is the interest rate annual?', answer: 'Yes. Enter the annual interest rate; the calculator converts it into a monthly rate for the payment estimate.' },
+      { question: 'Is this financial advice?', answer: 'No. The results are estimates for informational purposes only and are not financial advice or a bank offer.' },
     ],
   },
   {
