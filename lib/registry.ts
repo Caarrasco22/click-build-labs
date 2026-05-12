@@ -177,18 +177,37 @@ export const tools: Tool[] = [
       enabled: false,
       positions: [],
     },
+    content: {
+      intro:
+        'Use this UUID generator to create identifier strings for records, test data, application objects, and other places where a stable ID format is useful.',
+      howToUse: [
+        'Choose the UUID version you want to generate.',
+        'Click the generate button to create a new identifier.',
+        'Copy the UUID and use it in your database, code, test fixture, or document.',
+      ],
+      example: {
+        title: 'Creating an ID for a test record',
+        body:
+          'When you need a placeholder ID for a user or order in a test dataset, generate a UUID and paste it into the record as a unique-looking identifier.',
+      },
+      logic: {
+        title: 'How UUIDs are generated',
+        body:
+          'The tool creates strings in UUID format using the selected version. UUIDs are designed to make collisions unlikely for common use cases, but no client-side generator should be treated as a formal guarantee of global uniqueness in every system.',
+      },
+    },
     faqs: [
       {
-        question: 'What UUID versions are supported?',
-        answer: 'We support UUID v1 (timestamp-based), v4 (random), and v7 (Unix timestamp). Each has different use cases - v4 is most common for general identifiers.',
+        question: 'What can I use a UUID for?',
+        answer: 'UUIDs are commonly used as identifiers for database records, files, events, API objects, and test data.',
       },
       {
-        question: 'Are these RFC 4122 compliant?',
-        answer: 'Yes, all generated UUIDs follow the RFC 4122 specification for format and validity.',
+        question: 'Which UUID version should I choose?',
+        answer: 'UUID v4 is a common choice for random identifiers. Other versions may be useful when timestamp ordering or a specific format is needed.',
       },
       {
-        question: 'Is my data sent to any server?',
-        answer: 'No. All UUID generation happens entirely in your browser using JavaScript. Nothing is transmitted to our servers.',
+        question: 'Are generated UUIDs stored?',
+        answer: 'No. UUIDs are generated in your browser and are not saved by this page.',
       },
     ],
   },
@@ -214,18 +233,37 @@ export const tools: Tool[] = [
       enabled: false,
       positions: [],
     },
+    content: {
+      intro:
+        'Use this Base64 tool to encode plain text into Base64 or decode Base64 back into readable text. It is useful for data URLs, simple payloads, and debugging encoded strings.',
+      howToUse: [
+        'Choose whether you want to encode text or decode Base64.',
+        'Paste your text or Base64 string into the input area.',
+        'Review the output and copy it when it matches what you need.',
+      ],
+      example: {
+        title: 'Encoding a short text value',
+        body:
+          'The text hello becomes aGVsbG8= when encoded as Base64. Decoding aGVsbG8= returns hello.',
+      },
+      logic: {
+        title: 'What Base64 does',
+        body:
+          'Base64 represents text or binary data using a limited set of safe characters. It is an encoding format, not encryption, so it should not be used to hide secrets or protect sensitive data.',
+      },
+    },
     faqs: [
       {
-        question: 'What encoding types are supported?',
-        answer: 'We support standard Base64 encoding and decoding. The tool automatically detects if your input is valid Base64 and decodes it, or encodes plain text.',
+        question: 'Is Base64 encryption?',
+        answer: 'No. Base64 is only an encoding method. Anyone can decode it back to the original text if they have the encoded value.',
       },
       {
-        question: 'Is my data processed on servers?',
-        answer: 'No. All encoding and decoding happens in your browser. Your text never leaves your device.',
+        question: 'What kind of input can I encode?',
+        answer: 'This tool is intended for text input. For image files, use the Image to Base64 tool instead.',
       },
       {
-        question: 'Can I use this for URL-safe Base64?',
-        answer: 'Standard Base64 uses +, /, and = characters. For URL-safe Base64, use our URL Slug Generator tool instead.',
+        question: 'Is my text uploaded?',
+        answer: 'No. Encoding and decoding happen in your browser.',
       },
     ],
   },
@@ -565,10 +603,29 @@ export const tools: Tool[] = [
       keywords: ['character counter', 'letter counter', 'count characters', 'twitter character count'],
     },
     ads: { enabled: false, positions: [] },
+    content: {
+      intro:
+        'Use this character counter to measure text length for posts, captions, titles, snippets, forms, and other writing with length limits.',
+      howToUse: [
+        'Paste or type your text into the input area.',
+        'Check the live totals for characters, words, and lines.',
+        'Edit the text until the counts fit your target length or platform limit.',
+      ],
+      example: {
+        title: 'Checking a social caption',
+        body:
+          'If a caption needs to stay under a character limit, paste it into the counter and trim the text while watching the character total update.',
+      },
+      logic: {
+        title: 'How text length is counted',
+        body:
+          'The tool counts characters in the full text, can distinguish counts with and without spaces, and also estimates words and lines based on whitespace and line breaks.',
+      },
+    },
     faqs: [
-      { question: 'Does it count spaces?', answer: 'Yes, both with and without spaces.' },
-      { question: 'Can I use it for Twitter/X limits?', answer: 'Yes. Character count is useful for social media posts with character limits.' },
-      { question: 'Is my text stored?', answer: 'No. Everything is processed locally in your browser.' },
+      { question: 'Does the counter include spaces?', answer: 'Yes. The tool can show character totals with spaces and without spaces.' },
+      { question: 'How are lines counted?', answer: 'Lines are based on line breaks in the text, so each new line in the input adds to the line count.' },
+      { question: 'Is my text stored anywhere?', answer: 'No. The text is processed in your browser and is not stored by this page.' },
     ],
   },
   {
@@ -790,10 +847,29 @@ export const tools: Tool[] = [
       keywords: ['json validator', 'validate json', 'json syntax checker', 'json error'],
     },
     ads: { enabled: false, positions: [] },
+    content: {
+      intro:
+        'Use this JSON validator to check whether a JSON string can be parsed successfully. It helps catch common syntax mistakes before you paste JSON into code, configs, or API tools.',
+      howToUse: [
+        'Paste your JSON into the input area.',
+        'Run validation to check whether the JSON can be parsed.',
+        'If an error appears, review the message and fix the syntax in your input.',
+      ],
+      example: {
+        title: 'Finding a missing comma',
+        body:
+          'If an object has two properties without a comma between them, validation fails and the error message helps you locate the part of the JSON that needs attention.',
+      },
+      logic: {
+        title: 'What validation means here',
+        body:
+          'The validator checks whether the input can be parsed as JSON and reports basic syntax errors. It does not validate the data against a custom schema or business rules.',
+      },
+    },
     faqs: [
-      { question: 'Does this show error locations?', answer: 'Yes. When JSON is invalid, we show the exact line and column where the error occurred.' },
-      { question: 'Is my JSON sent to a server?', answer: 'No. All validation happens entirely in your browser. Your data never leaves your device.' },
-      { question: 'Can I format valid JSON?', answer: 'Yes. Use our JSON Formatter tool to beautify or minify your JSON.' },
+      { question: 'Does this validate against a JSON schema?', answer: 'No. This tool checks JSON syntax only and does not compare the data to a schema.' },
+      { question: 'What errors can it catch?', answer: 'It can catch parse errors such as missing commas, unquoted keys, invalid strings, and extra trailing characters.' },
+      { question: 'Is my JSON uploaded?', answer: 'No. Validation runs in your browser.' },
     ],
   },
   {
