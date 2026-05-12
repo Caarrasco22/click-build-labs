@@ -103,7 +103,7 @@ export function EquationSolver() {
           <input
             type="number"
             value={a}
-            onChange={(e) => setA(e.target.value)}
+            onChange={(e) => { setA(e.target.value); setResult(null); }}
             placeholder="a"
             className="w-20 px-3 py-2 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-center font-mono"
           />
@@ -111,7 +111,7 @@ export function EquationSolver() {
           <input
             type="number"
             value={b}
-            onChange={(e) => setB(e.target.value)}
+            onChange={(e) => { setB(e.target.value); setResult(null); }}
             placeholder="b"
             className="w-20 px-3 py-2 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-center font-mono"
           />
@@ -119,7 +119,7 @@ export function EquationSolver() {
           <input
             type="number"
             value={c}
-            onChange={(e) => setC(e.target.value)}
+            onChange={(e) => { setC(e.target.value); setResult(null); }}
             placeholder="c"
             className="w-20 px-3 py-2 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-center font-mono"
           />

@@ -48,7 +48,7 @@ export function CalendarWeekCalculator() {
           <input
             type="number"
             value={year}
-            onChange={(e) => setYear(e.target.value)}
+            onChange={(e) => { setYear(e.target.value); setResult(null); }}
             placeholder="2024"
             min="1900"
             max="2100"
@@ -60,7 +60,7 @@ export function CalendarWeekCalculator() {
           <input
             type="number"
             value={week}
-            onChange={(e) => setWeek(e.target.value)}
+            onChange={(e) => { setWeek(e.target.value); setResult(null); }}
             placeholder="1-53"
             min="1"
             max="53"

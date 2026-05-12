@@ -46,7 +46,7 @@ export function RatioCalculator() {
           <input
             type="number"
             value={a}
-            onChange={(e) => setA(e.target.value)}
+            onChange={(e) => { setA(e.target.value); setResult(null); }}
             placeholder="0"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
           />
@@ -56,7 +56,7 @@ export function RatioCalculator() {
           <input
             type="number"
             value={b}
-            onChange={(e) => setB(e.target.value)}
+            onChange={(e) => { setB(e.target.value); setResult(null); }}
             placeholder="0"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
           />

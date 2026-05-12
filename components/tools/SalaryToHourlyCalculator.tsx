@@ -30,7 +30,7 @@ export function SalaryToHourlyCalculator() {
         <input
           type="number"
           value={annualSalary}
-          onChange={(e) => setAnnualSalary(e.target.value)}
+          onChange={(e) => { setAnnualSalary(e.target.value); setResult(null); }}
           placeholder="0.00"
           className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
         />
@@ -42,7 +42,7 @@ export function SalaryToHourlyCalculator() {
           <input
             type="number"
             value={hoursPerWeek}
-            onChange={(e) => setHoursPerWeek(e.target.value)}
+            onChange={(e) => { setHoursPerWeek(e.target.value); setResult(null); }}
             min="1"
             max="168"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
@@ -53,7 +53,7 @@ export function SalaryToHourlyCalculator() {
           <input
             type="number"
             value={weeksPerYear}
-            onChange={(e) => setWeeksPerYear(e.target.value)}
+            onChange={(e) => { setWeeksPerYear(e.target.value); setResult(null); }}
             min="1"
             max="52"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"

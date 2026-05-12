@@ -37,7 +37,7 @@ export function WeekNumberCalculator() {
         <input
           type="date"
           value={date}
-          onChange={(e) => setDate(e.target.value)}
+          onChange={(e) => { setDate(e.target.value); setResult(null); }}
           className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
         />
       </div>

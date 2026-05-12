@@ -51,11 +51,11 @@ export function AspectRatioCalculator() {
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-2">
           <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Width</label>
-          <input type="number" value={width} onChange={(e) => setWidth(e.target.value)} placeholder="1920" min="1" className="w-full px-3 py-2 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900" />
+          <input type="number" value={width} onChange={(e) => { setWidth(e.target.value); setResult(null); }} placeholder="1920" min="1" className="w-full px-3 py-2 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900" />
         </div>
         <div className="space-y-2">
           <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Height</label>
-          <input type="number" value={height} onChange={(e) => setHeight(e.target.value)} placeholder="1080" min="1" className="w-full px-3 py-2 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900" />
+          <input type="number" value={height} onChange={(e) => { setHeight(e.target.value); setResult(null); }} placeholder="1080" min="1" className="w-full px-3 py-2 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900" />
         </div>
       </div>
 

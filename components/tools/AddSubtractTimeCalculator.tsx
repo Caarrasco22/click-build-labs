@@ -48,7 +48,7 @@ export function AddSubtractTimeCalculator() {
         <input
           type="time"
           value={time}
-          onChange={(e) => setTime(e.target.value)}
+          onChange={(e) => { setTime(e.target.value); setResult(''); }}
           className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
         />
       </div>
@@ -57,7 +57,7 @@ export function AddSubtractTimeCalculator() {
         <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Add or Subtract</label>
         <div className="flex gap-2">
           <button
-            onClick={() => setOperation('add')}
+            onClick={() => { setOperation('add'); setResult(''); }}
             className={`px-4 py-2 rounded-lg border ${
               operation === 'add'
                 ? 'bg-zinc-900 text-white dark:bg-zinc-50 dark:text-zinc-900'
@@ -68,7 +68,7 @@ export function AddSubtractTimeCalculator() {
             Add
           </button>
           <button
-            onClick={() => setOperation('subtract')}
+            onClick={() => { setOperation('subtract'); setResult(''); }}
             className={`px-4 py-2 rounded-lg border ${
               operation === 'subtract'
                 ? 'bg-zinc-900 text-white dark:bg-zinc-50 dark:text-zinc-900'
@@ -87,7 +87,7 @@ export function AddSubtractTimeCalculator() {
           <input
             type="number"
             value={hours}
-            onChange={(e) => setHours(e.target.value)}
+            onChange={(e) => { setHours(e.target.value); setResult(''); }}
             placeholder="0"
             min="0"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
@@ -98,7 +98,7 @@ export function AddSubtractTimeCalculator() {
           <input
             type="number"
             value={minutes}
-            onChange={(e) => setMinutes(e.target.value)}
+            onChange={(e) => { setMinutes(e.target.value); setResult(''); }}
             placeholder="0"
             min="0"
             max="59"

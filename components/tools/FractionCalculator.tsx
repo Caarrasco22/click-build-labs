@@ -108,7 +108,7 @@ export function FractionCalculator() {
         <input
           type="number"
           value={a.num}
-          onChange={(e) => setA({ ...a, num: e.target.value })}
+          onChange={(e) => { setA({ ...a, num: e.target.value }); setResult(null); }}
           placeholder="Num"
           className="px-3 py-2 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-center font-mono"
         />
@@ -116,13 +116,13 @@ export function FractionCalculator() {
         <input
           type="number"
           value={a.den}
-          onChange={(e) => setA({ ...a, den: e.target.value })}
+          onChange={(e) => { setA({ ...a, den: e.target.value }); setResult(null); }}
           placeholder="Den"
           className="px-3 py-2 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-center font-mono"
         />
         <select
           value={operation}
-          onChange={(e) => handleOperationChange(e.target.value as typeof operation)}
+          onChange={(e) => { handleOperationChange(e.target.value as typeof operation); setResult(null); }}
           className="px-2 py-2 rounded-md border border-zinc-200 dark:border-zinc-800 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-center font-bold"
         >
           <option value="add">+</option>
@@ -133,7 +133,7 @@ export function FractionCalculator() {
         <input
           type="number"
           value={b.num}
-          onChange={(e) => setB({ ...b, num: e.target.value })}
+          onChange={(e) => { setB({ ...b, num: e.target.value }); setResult(null); }}
           placeholder="Num"
           className="px-3 py-2 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-center font-mono"
         />
@@ -141,7 +141,7 @@ export function FractionCalculator() {
         <input
           type="number"
           value={b.den}
-          onChange={(e) => setB({ ...b, den: e.target.value })}
+          onChange={(e) => { setB({ ...b, den: e.target.value }); setResult(null); }}
           placeholder="Den"
           className="px-3 py-2 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-center font-mono"
         />

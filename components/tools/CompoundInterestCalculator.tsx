@@ -48,7 +48,7 @@ export function CompoundInterestCalculator() {
           <input
             type="number"
             value={principal}
-            onChange={(e) => setPrincipal(e.target.value)}
+            onChange={(e) => { setPrincipal(e.target.value); setResult(null); }}
             placeholder="0.00"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
           />
@@ -58,7 +58,7 @@ export function CompoundInterestCalculator() {
           <input
             type="number"
             value={rate}
-            onChange={(e) => setRate(e.target.value)}
+            onChange={(e) => { setRate(e.target.value); setResult(null); }}
             placeholder="0"
             min="0"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
@@ -69,7 +69,7 @@ export function CompoundInterestCalculator() {
           <input
             type="number"
             value={years}
-            onChange={(e) => setYears(e.target.value)}
+            onChange={(e) => { setYears(e.target.value); setResult(null); }}
             placeholder="0"
             min="0"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
@@ -83,7 +83,7 @@ export function CompoundInterestCalculator() {
           <input
             type="number"
             value={contribution}
-            onChange={(e) => setContribution(e.target.value)}
+            onChange={(e) => { setContribution(e.target.value); setResult(null); }}
             placeholder="0 (optional)"
             min="0"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
@@ -93,7 +93,7 @@ export function CompoundInterestCalculator() {
           <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Compounding</label>
           <select
             value={frequency}
-            onChange={(e) => setFrequency(e.target.value as 'yearly' | 'monthly')}
+            onChange={(e) => { setFrequency(e.target.value as 'yearly' | 'monthly'); setResult(null); }}
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
           >
             <option value="yearly">Yearly</option>

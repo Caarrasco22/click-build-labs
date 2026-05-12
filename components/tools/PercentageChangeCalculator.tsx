@@ -34,7 +34,7 @@ export function PercentageChangeCalculator() {
           <input
             type="number"
             value={initial}
-            onChange={(e) => setInitial(e.target.value)}
+            onChange={(e) => { setInitial(e.target.value); setResult(null); }}
             placeholder="0.00"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
           />
@@ -44,7 +44,7 @@ export function PercentageChangeCalculator() {
           <input
             type="number"
             value={final}
-            onChange={(e) => setFinal(e.target.value)}
+            onChange={(e) => { setFinal(e.target.value); setResult(null); }}
             placeholder="0.00"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
           />

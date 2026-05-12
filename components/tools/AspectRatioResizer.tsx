@@ -58,14 +58,14 @@ export function AspectRatioResizer() {
       <div className="grid grid-cols-2 gap-4">
         <div className="space-y-2">
           <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Calculate</label>
-          <select value={dimension} onChange={(e) => setDimension(e.target.value as 'width' | 'height')} className="w-full px-3 py-2 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
+          <select value={dimension} onChange={(e) => { setDimension(e.target.value as 'width' | 'height'); setResult(null); }} className="w-full px-3 py-2 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900">
             <option value="width">From Width</option>
             <option value="height">From Height</option>
           </select>
         </div>
         <div className="space-y-2">
           <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">{dimension === 'width' ? 'Width' : 'Height'}</label>
-          <input type="number" value={value} onChange={(e) => setValue(e.target.value)} placeholder={dimension === 'width' ? '1920' : '1080'} min="1" className="w-full px-3 py-2 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900" />
+          <input type="number" value={value} onChange={(e) => { setValue(e.target.value); setResult(null); }} placeholder={dimension === 'width' ? '1920' : '1080'} min="1" className="w-full px-3 py-2 rounded-md border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900" />
         </div>
       </div>
 

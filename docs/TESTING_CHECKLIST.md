@@ -29,6 +29,7 @@ After `npm run build`, confirm the static export exists in `out/`. Spot-check `o
 - [ ] Download buttons create files locally where applicable
 - [ ] Empty inputs do not show `NaN`, `Infinity`, or broken UI
 - [ ] Invalid inputs show a useful message or no result
+- [ ] After changing inputs, press Calculate/Convert/Generate again and verify the output updates
 - [ ] `/sitemap.xml` contains all tool URLs and valid category URLs
 - [ ] `/robots.txt` allows crawling and references the sitemap
 - [ ] SEO metadata is unique, honest, and not keyword-stuffed

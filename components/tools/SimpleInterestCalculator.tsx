@@ -35,7 +35,7 @@ export function SimpleInterestCalculator() {
           <input
             type="number"
             value={principal}
-            onChange={(e) => setPrincipal(e.target.value)}
+            onChange={(e) => { setPrincipal(e.target.value); setResult(null); }}
             placeholder="0.00"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
           />
@@ -45,7 +45,7 @@ export function SimpleInterestCalculator() {
           <input
             type="number"
             value={rate}
-            onChange={(e) => setRate(e.target.value)}
+            onChange={(e) => { setRate(e.target.value); setResult(null); }}
             placeholder="0"
             min="0"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
@@ -56,7 +56,7 @@ export function SimpleInterestCalculator() {
           <input
             type="number"
             value={years}
-            onChange={(e) => setYears(e.target.value)}
+            onChange={(e) => { setYears(e.target.value); setResult(null); }}
             placeholder="0"
             min="0"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"

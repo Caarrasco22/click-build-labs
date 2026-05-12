@@ -34,7 +34,7 @@ export function PricePerUnitCalculator() {
           <input
             type="number"
             value={totalPrice}
-            onChange={(e) => setTotalPrice(e.target.value)}
+            onChange={(e) => { setTotalPrice(e.target.value); setResult(null); }}
             placeholder="0.00"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
           />
@@ -44,7 +44,7 @@ export function PricePerUnitCalculator() {
           <input
             type="number"
             value={quantity}
-            onChange={(e) => setQuantity(e.target.value)}
+            onChange={(e) => { setQuantity(e.target.value); setResult(null); }}
             placeholder="0"
             min="0"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
@@ -57,7 +57,7 @@ export function PricePerUnitCalculator() {
         <input
           type="text"
           value={unit}
-          onChange={(e) => setUnit(e.target.value)}
+          onChange={(e) => { setUnit(e.target.value); setResult(null); }}
           placeholder="e.g., kg, oz, pcs"
           className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
         />

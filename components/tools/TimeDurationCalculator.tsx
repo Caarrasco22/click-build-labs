@@ -45,7 +45,7 @@ export function TimeDurationCalculator() {
           <input
             type="time"
             value={startTime}
-            onChange={(e) => setStartTime(e.target.value)}
+            onChange={(e) => { setStartTime(e.target.value); setResult(null); }}
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
           />
         </div>
@@ -54,7 +54,7 @@ export function TimeDurationCalculator() {
           <input
             type="time"
             value={endTime}
-            onChange={(e) => setEndTime(e.target.value)}
+            onChange={(e) => { setEndTime(e.target.value); setResult(null); }}
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
           />
         </div>

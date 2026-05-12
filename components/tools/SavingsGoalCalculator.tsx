@@ -43,7 +43,7 @@ export function SavingsGoalCalculator() {
         <input
           type="number"
           value={goal}
-          onChange={(e) => setGoal(e.target.value)}
+          onChange={(e) => { setGoal(e.target.value); setResult(null); }}
           placeholder="0.00"
           className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
         />
@@ -55,7 +55,7 @@ export function SavingsGoalCalculator() {
           <input
             type="number"
             value={initial}
-            onChange={(e) => setInitial(e.target.value)}
+            onChange={(e) => { setInitial(e.target.value); setResult(null); }}
             placeholder="0 (optional)"
             min="0"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
@@ -66,7 +66,7 @@ export function SavingsGoalCalculator() {
           <input
             type="number"
             value={monthly}
-            onChange={(e) => setMonthly(e.target.value)}
+            onChange={(e) => { setMonthly(e.target.value); setResult(null); }}
             placeholder="0"
             min="0"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"

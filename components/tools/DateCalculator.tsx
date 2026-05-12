@@ -58,7 +58,7 @@ export function DateCalculator() {
           <input
             type="date"
             value={startDate}
-            onChange={(e) => setStartDate(e.target.value)}
+            onChange={(e) => { setStartDate(e.target.value); setResult(''); }}
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
           />
         </div>
@@ -74,7 +74,7 @@ export function DateCalculator() {
             <input
               type="number"
               value={value}
-              onChange={(e) => setValue(e.target.value)}
+              onChange={(e) => { setValue(e.target.value); setResult(''); }}
               placeholder="Amount"
               min="0"
               className="w-full px-4 py-2 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
@@ -87,7 +87,7 @@ export function DateCalculator() {
         <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Unit</label>
         <select
           value={unit}
-          onChange={(e) => setUnit(e.target.value)}
+          onChange={(e) => { setUnit(e.target.value); setResult(''); }}
           className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
         >
           <option value="days">Days</option>

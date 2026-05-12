@@ -38,7 +38,7 @@ export function SplitBillCalculator() {
         <input
           type="number"
           value={total}
-          onChange={(e) => setTotal(e.target.value)}
+          onChange={(e) => { setTotal(e.target.value); setResult(null); }}
           placeholder="0.00"
           className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
         />
@@ -50,7 +50,7 @@ export function SplitBillCalculator() {
           <input
             type="number"
             value={people}
-            onChange={(e) => setPeople(e.target.value)}
+            onChange={(e) => { setPeople(e.target.value); setResult(null); }}
             min="1"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
           />
@@ -60,7 +60,7 @@ export function SplitBillCalculator() {
           <input
             type="number"
             value={tipPercent}
-            onChange={(e) => setTipPercent(e.target.value)}
+            onChange={(e) => { setTipPercent(e.target.value); setResult(null); }}
             placeholder="0"
             min="0"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
@@ -71,7 +71,7 @@ export function SplitBillCalculator() {
           <input
             type="number"
             value={taxPercent}
-            onChange={(e) => setTaxPercent(e.target.value)}
+            onChange={(e) => { setTaxPercent(e.target.value); setResult(null); }}
             placeholder="0"
             min="0"
             className="w-full px-4 py-3 rounded-lg border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900"
