@@ -25,6 +25,19 @@ export interface FaqItem {
   answer: string;
 }
 
+export interface ToolContentSection {
+  intro: string;
+  howToUse: string[];
+  example: {
+    title: string;
+    body: string;
+  };
+  logic: {
+    title: string;
+    body: string;
+  };
+}
+
 export interface Tool {
   slug: string;
   name: string;
@@ -38,5 +51,6 @@ export interface Tool {
   relatedTools: string[];
   seo: SeoMetadata;
   ads: AdConfig;
+  content?: ToolContentSection;
   faqs?: FaqItem[];
 }

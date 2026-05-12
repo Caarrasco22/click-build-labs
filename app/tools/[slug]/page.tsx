@@ -9,7 +9,7 @@ import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { ToolCard } from '@/components/tools/ToolCard';
 import { AdSlot } from '@/components/ads/AdSlot';
-import { getToolBySlug, getRelatedTools, CATEGORY_LABELS, tools } from '@/lib/registry';
+import { getToolBySlug, getRelatedTools, tools } from '@/lib/registry';
 import { TOOL_COMPONENTS, hasToolComponent } from '@/lib/components';
 import { createToolJsonLd, createBreadcrumbJsonLd, createFaqJsonLd } from '@/lib/seo';
 
@@ -53,7 +53,7 @@ export async function generateMetadata({ params }: ToolPageProps): Promise<Metad
     openGraph: {
       title: tool.seo.title,
       description: tool.seo.description,
-      url: `https://clickbuildlabs.com/tools/${tool.slug}`,
+      url: `https://clickbuildlabs.com/tools/${tool.slug}/`,
       siteName: 'Click & Build Labs',
       type: 'website',
     },
@@ -63,7 +63,7 @@ export async function generateMetadata({ params }: ToolPageProps): Promise<Metad
       description: tool.seo.description,
     },
     alternates: {
-      canonical: `https://clickbuildlabs.com/tools/${tool.slug}`,
+      canonical: `https://clickbuildlabs.com/tools/${tool.slug}/`,
     },
   };
 }
@@ -76,6 +76,64 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
       </h3>
       <p className="pb-4 text-sm text-zinc-600 dark:text-zinc-400">{answer}</p>
     </div>
+  );
+}
+
+function ToolSeoContent({
+  content,
+}: {
+  content: NonNullable<ReturnType<typeof getToolBySlug>>['content'];
+}) {
+  if (!content) return null;
+
+  return (
+    <section className="mb-12 space-y-8">
+      <div>
+        <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50">
+          About this tool
+        </h2>
+        <p className="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400 max-w-3xl">
+          {content.intro}
+        </p>
+      </div>
+
+      <div className="grid gap-8 md:grid-cols-3">
+        <div>
+          <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+            How to use
+          </h2>
+          <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+            {content.howToUse.map((step) => (
+              <li key={step}>{step}</li>
+            ))}
+          </ol>
+        </div>
+
+        <div>
+          <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+            Example
+          </h2>
+          <h3 className="mt-3 text-sm font-medium text-zinc-900 dark:text-zinc-100">
+            {content.example.title}
+          </h3>
+          <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+            {content.example.body}
+          </p>
+        </div>
+
+        <div>
+          <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
+            How it works
+          </h2>
+          <h3 className="mt-3 text-sm font-medium text-zinc-900 dark:text-zinc-100">
+            {content.logic.title}
+          </h3>
+          <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
+            {content.logic.body}
+          </p>
+        </div>
+      </div>
+    </section>
   );
 }
 
@@ -195,6 +253,8 @@ export default async function ToolPage({ params }: ToolPageProps) {
             <ToolContent slug={tool.slug} />
           </div>
         </Card>
+
+        <ToolSeoContent content={tool.content} />
 
         {tool.faqs && tool.faqs.length > 0 && (
           <section className="mb-12">

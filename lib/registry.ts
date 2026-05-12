@@ -251,18 +251,37 @@ export const tools: Tool[] = [
       enabled: false,
       positions: [],
     },
+    content: {
+      intro:
+        'Use this password generator to create random passwords with the length and character types you choose. It runs in your browser and is useful when you need a fresh password for an account, test user, or temporary credential.',
+      howToUse: [
+        'Choose the password length that fits the account or system requirements.',
+        'Select whether to include uppercase letters, lowercase letters, numbers, and symbols.',
+        'Generate a password, review it, then copy it when you are ready to use it.',
+      ],
+      example: {
+        title: 'Creating a stronger account password',
+        body:
+          'If a site asks for at least 16 characters with numbers and symbols, set the length to 16 or more and enable all character groups before generating a new password.',
+      },
+      logic: {
+        title: 'How characters are selected',
+        body:
+          'The generator builds a pool from the character groups you enable, then picks random characters until it reaches the selected length. More length and more character variety can make guessing harder, but no generator can guarantee absolute security for every situation.',
+      },
+    },
     faqs: [
       {
-        question: 'How secure are the generated passwords?',
-        answer: 'We use cryptographically secure random number generation (crypto.getRandomValues) for maximum security. Each character position is truly random.',
+        question: 'How should I choose a password length?',
+        answer: 'Longer passwords are generally harder to guess. A length of 16 characters or more is a practical starting point when the service allows it.',
       },
       {
-        question: 'Can I customize the password length?',
-        answer: 'Yes. You can generate passwords from 8 to 64 characters long, with full control over which character types to include.',
+        question: 'Should I include symbols?',
+        answer: 'Include symbols when the account supports them. Symbols add variety, but length and uniqueness are also important.',
       },
       {
-        question: 'Are passwords stored or transmitted?',
-        answer: 'Never. Passwords are generated client-side and never sent to any server. Always copy immediately after generation.',
+        question: 'Are generated passwords stored?',
+        answer: 'No. The password is generated in your browser and is not saved by this page. Copy it to your password manager or another safe place.',
       },
     ],
   },
@@ -295,18 +314,37 @@ export const tools: Tool[] = [
       enabled: false,
       positions: [],
     },
+    content: {
+      intro:
+        'Use this JSON formatter to make valid JSON easier to read, inspect, and share. Paste JSON into the tool to format it with indentation, minify it, or check for basic syntax errors.',
+      howToUse: [
+        'Paste your JSON object, array, or value into the input area.',
+        'Choose whether you want to beautify, minify, or validate the JSON.',
+        'Review the formatted output or error message, then copy the result if needed.',
+      ],
+      example: {
+        title: 'Formatting a compact API response',
+        body:
+          'A compact string like {"name":"Alex","active":true} can be expanded into readable, indented JSON so keys and values are easier to scan.',
+      },
+      logic: {
+        title: 'What the formatter checks',
+        body:
+          'The tool parses the input as JSON. If parsing succeeds, it can output an indented version or a minified version. If parsing fails, it reports a basic syntax error from the browser JSON parser.',
+      },
+    },
     faqs: [
       {
-        question: 'Does this validate JSON syntax?',
-        answer: 'Yes. The Validate mode checks if your JSON is syntactically correct and reports any parsing errors with line and column information.',
+        question: 'What counts as valid JSON?',
+        answer: 'Valid JSON must use double quotes for strings, proper commas between items, and supported values such as objects, arrays, strings, numbers, booleans, and null.',
       },
       {
-        question: 'Is my JSON sent to a server?',
-        answer: 'No. All parsing, formatting, and validation happens entirely in your browser. Your data never leaves your device.',
+        question: 'Can this fix invalid JSON automatically?',
+        answer: 'No. It can show that parsing failed, but you still need to correct the invalid syntax in the input.',
       },
       {
-        question: 'What formatting options are available?',
-        answer: 'Beautify outputs pretty-printed JSON with 2-space indentation. Minify compresses JSON to a single line. Validate checks syntax without outputting.',
+        question: 'Is my JSON uploaded?',
+        answer: 'No. Formatting, minifying, and basic validation happen in your browser.',
       },
     ],
   },
@@ -483,10 +521,29 @@ export const tools: Tool[] = [
       keywords: ['word counter', 'character counter', 'count words', 'reading time', 'text analysis'],
     },
     ads: { enabled: false, positions: [] },
+    content: {
+      intro:
+        'Use this word counter to measure the length of drafts, posts, essays, notes, and other text. It shows useful writing stats such as word count, character count, sentence count, paragraph count, and estimated reading time.',
+      howToUse: [
+        'Paste or type your text into the input area.',
+        'Review the live counts for words, characters, sentences, paragraphs, and reading time.',
+        'Edit the text and watch the numbers update as the content changes.',
+      ],
+      example: {
+        title: 'Checking a short article draft',
+        body:
+          'If your draft has 800 words, the reading time estimate is about 4 minutes using the default 200 words per minute reading speed.',
+      },
+      logic: {
+        title: 'How counts are estimated',
+        body:
+          'Words are counted from text separated by whitespace, characters can be shown with or without spaces, and reading time is estimated from the word count using an approximate reading speed of 200 words per minute.',
+      },
+    },
     faqs: [
-      { question: 'Does it count spaces?', answer: 'Yes. We show both character counts: with spaces and without spaces.' },
-      { question: 'How is reading time calculated?', answer: 'Reading time is estimated at 200 words per minute, a standard reading speed.' },
-      { question: 'Is my text sent anywhere?', answer: 'No. All processing happens in your browser. Your text never leaves your device.' },
+      { question: 'Does the character count include spaces?', answer: 'The tool shows character counts with spaces and without spaces so you can use the number that matches your requirement.' },
+      { question: 'How is reading time estimated?', answer: 'Reading time is calculated from the word count using an approximate speed of 200 words per minute.' },
+      { question: 'Is my text uploaded?', answer: 'No. The counts are calculated in your browser, and the text is not sent to a server.' },
     ],
   },
   {
