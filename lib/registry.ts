@@ -153,7 +153,7 @@ export const tools: Tool[] = [
     name: 'UUID Generator',
     shortDescription: 'Generate unique identifiers instantly',
     description:
-      'Generate RFC 4122 compliant UUID v4, v1, and v7 identifiers for your applications. Free, fast, and client-side. No data sent to any server.',
+      'Generate UUID v4, v1, and v7 formatted identifiers for your applications. Free, fast, and client-side. No data sent to any server.',
     category: 'generator',
     tags: ['uuid', 'guid', 'unique id', 'generator', 'v4', 'v1', 'v7'],
     icon: 'hash',
@@ -163,7 +163,7 @@ export const tools: Tool[] = [
     seo: {
       title: 'UUID Generator - Free Online UUID v4, v1, v7 Generator',
       description:
-        'Generate RFC 4122 compliant UUID v4, v1, and v7 identifiers instantly. Free, secure, client-side UUID generator. No signup required.',
+        'Generate UUID v4, v1, and v7 formatted identifiers instantly. Free client-side UUID generator. No signup required.',
       keywords: [
         'uuid generator',
         'guid generator',
@@ -216,7 +216,7 @@ export const tools: Tool[] = [
     name: 'Base64 Encoder',
     shortDescription: 'Encode and decode Base64 instantly',
     description:
-      'Encode text to Base64 and decode Base64 back to text. Secure client-side processing, no data sent to servers. Toggle between encode and decode modes.',
+      'Encode text to Base64 and decode Base64 back to text. Client-side processing, no data sent to servers. Toggle between encode and decode modes.',
     category: 'converter',
     tags: ['base64', 'encode', 'decode', 'encoder', 'decoder'],
     icon: 'lock',
@@ -226,7 +226,7 @@ export const tools: Tool[] = [
     seo: {
       title: 'Base64 Encoder - Free Online Base64 Encode/Decode Tool',
       description:
-        'Encode text to Base64 and decode Base64 back to text instantly. Free, secure, client-side Base64 encoder and decoder.',
+        'Encode text to Base64 and decode Base64 back to text instantly. Free client-side Base64 encoder and decoder.',
       keywords: ['base64 encoder', 'base64 decoder', 'encode base64', 'decode base64'],
     },
     ads: {
@@ -852,7 +852,7 @@ export const tools: Tool[] = [
     name: 'JSON Validator',
     shortDescription: 'Validate JSON syntax instantly',
     description:
-      'Validate JSON syntax and get detailed error messages with line and column information. Free, fast, and 100% client-side.',
+      'Validate JSON syntax and get parser error messages for invalid input. Free, fast, and 100% client-side.',
     category: 'dev',
     tags: ['json', 'validator', 'json validator', 'validate json', 'json syntax'],
     icon: 'check-circle',
@@ -862,7 +862,7 @@ export const tools: Tool[] = [
     seo: {
       title: 'JSON Validator - Free Online JSON Syntax Validator',
       description:
-        'Validate JSON syntax instantly with detailed error messages. Free online JSON validator with line and column info.',
+        'Validate JSON syntax instantly with parser error messages. Free online JSON validator for basic syntax checks.',
       keywords: ['json validator', 'validate json', 'json syntax checker', 'json error'],
     },
     ads: { enabled: false, positions: [] },
@@ -1491,7 +1491,7 @@ export const tools: Tool[] = [
     name: 'Age Calculator',
     shortDescription: 'Calculate age from birth date',
     description:
-      'Calculate your exact age in years, months, and days. See days until your next birthday.',
+      'Calculate your age in years, months, and days from a birth date. See days until your next birthday.',
     category: 'calculators',
     tags: ['age calculator', 'calculate age', 'birthday calculator', 'age finder'],
     icon: 'calendar',
@@ -1500,31 +1500,31 @@ export const tools: Tool[] = [
     relatedTools: ['date-difference-calculator', 'timestamp-converter', 'percentage-calculator'],
     seo: {
       title: 'Age Calculator - Free Online Age Calculator',
-      description: 'Calculate your exact age from birth date. See years, months, days and days until birthday.',
+      description: 'Calculate your age from a birth date. See years, months, days and days until your next birthday.',
       keywords: ['age calculator', 'calculate age', 'birthday calculator', 'age finder'],
     },
     ads: { enabled: false, positions: [] },
     content: {
       intro:
-        'Use this age calculator to calculate age from a birth date and compare it with today or another selected date.',
+        'Use this age calculator to calculate age from a birth date and compare it with today.',
       howToUse: [
         'Enter the birth date you want to calculate from.',
-        'Choose the comparison date, or leave it set to today if available.',
+        'Review the calculated age based on today.',
         'Read the age result in years, months, and days.',
       ],
       example: {
-        title: 'Checking an age on a specific date',
+        title: 'Checking an age from a birthday',
         body:
-          'If someone was born on May 10, 1995, you can compare that birth date with a later date to see their age on that day in years, months, and days.',
+          'If someone was born on May 10, 1995, enter that birth date to see their current age in years, months, and days.',
       },
       logic: {
         title: 'How age is calculated',
         body:
-          'The calculator compares the birth date with the selected date and works through calendar years, months, and days based on the dates entered. It is a practical date calculation, not legal, medical, or administrative advice.',
+          'The calculator compares the birth date with today and works through calendar years, months, and days based on the dates entered. It is a practical date calculation, not legal, medical, or administrative advice.',
       },
     },
     faqs: [
-      { question: 'Can I calculate age for a past date?', answer: 'Yes. Use a selected comparison date to see the age on that specific day.' },
+      { question: 'Can I calculate age from any birth date?', answer: 'Yes. Enter a past birth date to calculate age from that date to today.' },
       { question: 'Does the calculator include months and days?', answer: 'Yes. The result shows years, months, and days based on the dates you enter.' },
       { question: 'Is my birth date stored?', answer: 'No. The calculation happens in your browser and the date is not stored by this page.' },
     ],
