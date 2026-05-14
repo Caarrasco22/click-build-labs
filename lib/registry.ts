@@ -3110,6 +3110,8 @@ export const tools: Tool[] = [
     shortDescription: 'Generate CSS clamp() for fluid typography',
     description:
       'Create CSS clamp() values for fluid typography that scales responsively. Generate min, preferred, and max values.',
+    quickAnswer:
+      'A CSS clamp generator creates clamp() values that scale between a minimum and maximum size across viewport widths. Use it for responsive font sizes, spacing, padding, and layout values that need to grow fluidly while staying within sensible limits.',
     category: 'dev',
     tags: ['css clamp', 'fluid typography', 'clamp generator', 'responsive font size', 'css maker'],
     icon: 'type',
@@ -3123,10 +3125,31 @@ export const tools: Tool[] = [
       keywords: ['css clamp generator', 'fluid typography', 'responsive font size', 'clamp css'],
     },
     ads: { enabled: false, positions: [] },
+    content: {
+      intro:
+        'CSS clamp() lets you set a minimum value, a flexible preferred value, and a maximum value in one CSS expression.',
+      howToUse: [
+        'Enter the minimum and maximum values you want the property to use.',
+        'Set the preferred responsive value, often based on viewport width.',
+        'Copy the generated clamp() value into your CSS and test it in the real layout.',
+      ],
+      example: {
+        title: 'Fluid type and spacing',
+        body:
+          'Use clamp() when a heading, section padding, card gap, or layout size should scale smoothly on different screens without jumping at every breakpoint.',
+      },
+      logic: {
+        title: 'How clamp() keeps values controlled',
+        body:
+          'The browser uses the preferred value while it stays between the minimum and maximum. If the preferred value gets too small or too large, clamp() holds it at the limit, so the generated CSS should still be checked in the actual design.',
+      },
+    },
     faqs: [
       { question: 'What does clamp() do?', answer: 'Clamp lets you set a value that scales between a minimum and maximum based on a preferred value.' },
+      { question: 'Can I use clamp() for font sizes?', answer: 'Yes. Font sizes are one of the most common uses for clamp(), especially for fluid typography that scales between small and large screens.' },
       { question: 'What is the preferred value for?', answer: 'Typically uses vw units (viewport width) for responsive scaling.' },
       { question: 'Is this for font-size only?', answer: 'No. clamp() works for any CSS property, but this tool focuses on typography use case.' },
+      { question: 'Does clamp() replace media queries?', answer: 'Not always. clamp() can reduce the need for some breakpoint-based sizing, but media queries are still useful when the layout or design needs to change more significantly.' },
     ],
   },
   {
