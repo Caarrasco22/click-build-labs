@@ -570,12 +570,14 @@ export const tools: Tool[] = [
     shortDescription: 'Count words, characters, and reading time',
     description:
       'Count words, characters, sentences, paragraphs, and estimated reading time. Useful for essays, articles, and social media posts. Free and instant.',
+    quickAnswer:
+      'The Word Counter measures words, characters, sentences, paragraphs, and estimated reading time directly in your browser. Paste your text to get live writing stats for drafts, essays, articles, captions, and other content without uploading it.',
     category: 'text',
     tags: ['word counter', 'character counter', 'count words', 'reading time', 'text analysis'],
     icon: 'type',
     featured: false,
     popular: true,
-    relatedTools: ['character-counter', 'case-converter'],
+    relatedTools: ['character-counter', 'case-converter', 'reading-speed-calculator'],
     seo: {
       title: 'Word Counter - Free Online Word & Character Counter',
       description:
@@ -605,6 +607,7 @@ export const tools: Tool[] = [
     faqs: [
       { question: 'Does the character count include spaces?', answer: 'The tool shows character counts with spaces and without spaces so you can use the number that matches your requirement.' },
       { question: 'How is reading time estimated?', answer: 'Reading time is calculated from the word count using an approximate speed of 200 words per minute.' },
+      { question: 'How does punctuation affect the word count?', answer: 'Words are counted by splitting the text on whitespace. Punctuation attached to a word does not usually create a separate word.' },
       { question: 'Is the text processed locally?', answer: 'Yes. The counts are calculated in your browser, and the text is not sent to a server by this page.' },
     ],
   },
