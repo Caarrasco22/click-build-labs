@@ -43,6 +43,7 @@ export interface Tool {
   name: string;
   shortDescription: string;
   description: string;
+  quickAnswer?: string;
   category: ToolCategory;
   tags: string[];
   icon: string;

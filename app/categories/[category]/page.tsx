@@ -5,6 +5,7 @@ import { Container } from '@/components/ui/Container';
 import { Card } from '@/components/ui/Card';
 import { ToolCard } from '@/components/tools/ToolCard';
 import { CATEGORY_LABELS, CATEGORY_INFO, tools, type ToolCategory } from '@/lib/registry';
+import { createAbsoluteUrl, createBreadcrumbJsonLd, createFaqJsonLd } from '@/lib/seo';
 
 const VALID_CATEGORIES: ToolCategory[] = ['dev', 'converter', 'calculators', 'generator', 'text', 'utility', 'image'];
 
@@ -26,13 +27,15 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
     return { title: 'Category Not Found | Click & Build Labs' };
   }
 
+  const url = createAbsoluteUrl(`/categories/${category}`);
+
   return {
     title: info.seoTitle,
     description: info.seoDescription,
     openGraph: {
       title: info.seoTitle,
       description: info.seoDescription,
-      url: `https://clickbuildlabs.com/categories/${category}`,
+      url,
       siteName: 'Click & Build Labs',
       type: 'website',
     },
@@ -42,7 +45,7 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
       description: info.seoDescription,
     },
     alternates: {
-      canonical: `https://clickbuildlabs.com/categories/${category}`,
+      canonical: url,
     },
   };
 }
@@ -76,25 +79,12 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   const categoryTools = tools.filter((t) => t.category === category);
   const categoryLabel = CATEGORY_LABELS[category as ToolCategory] || category;
 
-  const breadcrumbJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://clickbuildlabs.com/' },
-      { '@type': 'ListItem', position: 2, name: 'Tools', item: 'https://clickbuildlabs.com/tools/' },
-      { '@type': 'ListItem', position: 3, name: categoryLabel, item: `https://clickbuildlabs.com/categories/${category}/` },
-    ],
-  };
-
-  const faqJsonLd = info.faqs.length > 0 ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: info.faqs.map((faq) => ({
-      '@type': 'Question',
-      name: faq.question,
-      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
-    })),
-  } : null;
+  const breadcrumbJsonLd = createBreadcrumbJsonLd([
+    { name: 'Home', url: createAbsoluteUrl() },
+    { name: 'Tools', url: createAbsoluteUrl('/tools') },
+    { name: categoryLabel, url: createAbsoluteUrl(`/categories/${category}`) },
+  ]);
+  const faqJsonLd = info.faqs.length > 0 ? createFaqJsonLd(info.faqs) : null;
 
   return (
     <>
@@ -151,7 +141,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
         {info.faqs.length > 0 && (
           <section className="mb-12">
             <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-4">
-              Frequently Asked Questions
+              {categoryLabel} FAQ
             </h2>
             <Card>
               {info.faqs.map((faq, index) => (

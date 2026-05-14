@@ -6,7 +6,7 @@ const SITE_NAME = 'Click & Build Labs';
 const SITE_DESCRIPTION =
   'Free online tools, converters, calculators, text utilities, and developer tools. Fast, browser-based, no signup required.';
 
-function createAbsoluteUrl(path: string = '') {
+export function createAbsoluteUrl(path: string = '') {
   const normalizedPath = path ? `/${path.replace(/^\/+|\/+$/g, '')}` : '';
   return `${SITE_URL}${normalizedPath}/`;
 }
@@ -173,5 +173,37 @@ export function createFaqJsonLd(
         text: faq.answer,
       },
     })),
+  };
+}
+
+export function createAboutPageJsonLd() {
+  const aboutUrl = createAbsoluteUrl('/about');
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      {
+        '@type': 'AboutPage',
+        name: 'About Click & Build Labs',
+        description:
+          'Click & Build Labs is a free collection of online tools, calculators, converters, and developer utilities.',
+        url: aboutUrl,
+        isPartOf: {
+          '@type': 'WebSite',
+          name: SITE_NAME,
+          url: createAbsoluteUrl(),
+        },
+        about: {
+          '@id': `${aboutUrl}#creator`,
+        },
+      },
+      {
+        '@type': 'Person',
+        '@id': `${aboutUrl}#creator`,
+        name: 'Pablo Carrasco',
+        alternateName: 'Click & Build',
+        url: createAbsoluteUrl(),
+      },
+    ],
   };
 }

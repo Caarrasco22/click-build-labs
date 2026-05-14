@@ -11,7 +11,7 @@ import { ToolCard } from '@/components/tools/ToolCard';
 import { AdSlot } from '@/components/ads/AdSlot';
 import { getToolBySlug, getRelatedTools, tools } from '@/lib/registry';
 import { TOOL_COMPONENTS, hasToolComponent } from '@/lib/components';
-import { createToolJsonLd, createBreadcrumbJsonLd, createFaqJsonLd } from '@/lib/seo';
+import { createAbsoluteUrl, createToolJsonLd, createBreadcrumbJsonLd, createFaqJsonLd } from '@/lib/seo';
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   hash: Hash,
@@ -79,18 +79,24 @@ function FaqItem({ question, answer }: { question: string; answer: string }) {
   );
 }
 
+function getQuickAnswer(tool: NonNullable<ReturnType<typeof getToolBySlug>>) {
+  return tool.quickAnswer ?? `${tool.name} is a free online tool that helps you ${tool.shortDescription.toLowerCase()}. ${tool.description}`;
+}
+
 function ToolSeoContent({
-  content,
+  tool,
 }: {
-  content: NonNullable<ReturnType<typeof getToolBySlug>>['content'];
+  tool: NonNullable<ReturnType<typeof getToolBySlug>>;
 }) {
+  const { content } = tool;
+
   if (!content) return null;
 
   return (
     <section className="mb-12 space-y-8">
       <div>
         <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-50">
-          About this tool
+          What is a {tool.name}?
         </h2>
         <p className="mt-3 text-sm leading-6 text-zinc-600 dark:text-zinc-400 max-w-3xl">
           {content.intro}
@@ -100,7 +106,7 @@ function ToolSeoContent({
       <div className="grid gap-8 md:grid-cols-3">
         <div>
           <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
-            How to use
+            How do you use {tool.name}?
           </h2>
           <ol className="mt-3 list-decimal space-y-2 pl-5 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
             {content.howToUse.map((step) => (
@@ -111,7 +117,7 @@ function ToolSeoContent({
 
         <div>
           <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
-            Example
+            What does {tool.name} help with?
           </h2>
           <h3 className="mt-3 text-sm font-medium text-zinc-900 dark:text-zinc-100">
             {content.example.title}
@@ -123,7 +129,7 @@ function ToolSeoContent({
 
         <div>
           <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">
-            How it works
+            How does {tool.name} work?
           </h2>
           <h3 className="mt-3 text-sm font-medium text-zinc-900 dark:text-zinc-100">
             {content.logic.title}
@@ -174,11 +180,12 @@ export default async function ToolPage({ params }: ToolPageProps) {
   }
 
   const relatedTools = getRelatedTools(slug);
+  const toolUrl = createAbsoluteUrl(`/tools/${tool.slug}`);
   const jsonLd = createToolJsonLd(tool);
   const breadcrumbJsonLd = createBreadcrumbJsonLd([
-    { name: 'Home', url: 'https://clickbuildlabs.com/' },
-    { name: 'Tools', url: 'https://clickbuildlabs.com/tools/' },
-    { name: tool.name, url: `https://clickbuildlabs.com/tools/${tool.slug}/` },
+    { name: 'Home', url: createAbsoluteUrl() },
+    { name: 'Tools', url: createAbsoluteUrl('/tools') },
+    { name: tool.name, url: toolUrl },
   ]);
   const faqJsonLd = tool.faqs && tool.faqs.length > 0 ? createFaqJsonLd(tool.faqs) : null;
 
@@ -248,18 +255,27 @@ export default async function ToolPage({ params }: ToolPageProps) {
           </div>
         )}
 
+        <section className="mb-8 rounded-lg border border-zinc-200 bg-zinc-50/60 p-5 dark:border-zinc-800 dark:bg-zinc-900/40">
+          <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
+            Quick answer
+          </h2>
+          <p className="mt-2 max-w-3xl text-sm leading-6 text-zinc-700 dark:text-zinc-300">
+            {getQuickAnswer(tool)}
+          </p>
+        </section>
+
         <Card className="mb-12">
           <div className="p-6 sm:p-8">
             <ToolContent slug={tool.slug} />
           </div>
         </Card>
 
-        <ToolSeoContent content={tool.content} />
+        <ToolSeoContent tool={tool} />
 
         {tool.faqs && tool.faqs.length > 0 && (
           <section className="mb-12">
             <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50 mb-4">
-              Frequently Asked Questions
+              {tool.name} FAQ
             </h2>
             <Card>
               {tool.faqs.map((faq, index) => (

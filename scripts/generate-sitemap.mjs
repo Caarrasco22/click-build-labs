@@ -68,6 +68,7 @@ async function main() {
   const urls = uniqueUrls([
     absoluteUrl(),
     absoluteUrl('/tools'),
+    absoluteUrl('/about'),
     ...tools.map((tool) => absoluteUrl(`/tools/${tool.slug}`)),
     ...categoriesWithTools.map((category) => absoluteUrl(`/categories/${category}`)),
     absoluteUrl('/privacy'),

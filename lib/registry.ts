@@ -1,4 +1,4 @@
-import type { Tool, ToolCategory, FaqItem } from './types';
+import type { Tool, ToolCategory } from './types';
 
 export { type Tool, type ToolCategory, type FaqItem } from './types';
 
@@ -154,6 +154,8 @@ export const tools: Tool[] = [
     shortDescription: 'Generate unique identifiers instantly',
     description:
       'Generate UUID v4, v1, and v7 formatted identifiers for your applications. Free, fast, and client-side. No data sent to any server.',
+    quickAnswer:
+      'A UUID generator creates unique-looking identifier strings for apps, databases, files, and test data. ClickBuildLabs can generate UUID v4, v1, and v7 values directly in your browser, so generated IDs are not uploaded or stored by this page.',
     category: 'generator',
     tags: ['uuid', 'guid', 'unique id', 'generator', 'v4', 'v1', 'v7'],
     icon: 'hash',
@@ -209,6 +211,10 @@ export const tools: Tool[] = [
         question: 'Are generated UUIDs stored?',
         answer: 'No. UUIDs are generated in your browser and are not saved by this page.',
       },
+      {
+        question: 'Can I generate multiple UUIDs for test data?',
+        answer: 'Yes. Generate as many identifiers as you need, then copy them into your code, database seed data, or test fixtures.',
+      },
     ],
   },
   {
@@ -217,6 +223,8 @@ export const tools: Tool[] = [
     shortDescription: 'Encode and decode Base64 instantly',
     description:
       'Encode text to Base64 and decode Base64 back to text. Client-side processing, no data sent to servers. Toggle between encode and decode modes.',
+    quickAnswer:
+      'A Base64 encoder converts readable text into Base64 and can decode Base64 back to text. ClickBuildLabs handles encoding and decoding in your browser, making it useful for debugging payloads, data strings, and simple web development tasks without uploading the text.',
     category: 'converter',
     tags: ['base64', 'encode', 'decode', 'encoder', 'decoder'],
     icon: 'lock',
@@ -262,8 +270,12 @@ export const tools: Tool[] = [
         answer: 'This tool is intended for text input. For image files, use the Image to Base64 tool instead.',
       },
       {
-        question: 'Is my text uploaded?',
-        answer: 'No. Encoding and decoding happen in your browser.',
+        question: 'Does Base64 encoding happen in my browser?',
+        answer: 'Yes. Encoding and decoding run in your browser, so the text is not uploaded by this page.',
+      },
+      {
+        question: 'Why does Base64 output sometimes end with equals signs?',
+        answer: 'Equals signs are padding characters. They help the encoded value fit the Base64 format and are normal at the end of many Base64 strings.',
       },
     ],
   },
@@ -273,6 +285,8 @@ export const tools: Tool[] = [
     shortDescription: 'Generate secure passwords',
     description:
       'Generate cryptographically secure passwords with customizable length and character sets. Client-side only, no data transmitted.',
+    quickAnswer:
+      'A password generator creates random passwords using the length and character types you choose. ClickBuildLabs generates passwords client-side in your browser, so the generated password is not transmitted or stored by this page.',
     category: 'generator',
     tags: ['password', 'generator', 'secure', 'random', 'password generator'],
     icon: 'shield',
@@ -321,6 +335,10 @@ export const tools: Tool[] = [
         question: 'Are generated passwords stored?',
         answer: 'No. The password is generated in your browser and is not saved by this page. Copy it to your password manager or another safe place.',
       },
+      {
+        question: 'Should I reuse a generated password?',
+        answer: 'No. Use a unique password for each account, preferably stored in a trusted password manager.',
+      },
     ],
   },
   {
@@ -329,12 +347,14 @@ export const tools: Tool[] = [
     shortDescription: 'Format, validate and beautify JSON',
     description:
       'Format, validate, and beautify JSON data. Minify for production or pretty-print for readability. Instant client-side processing with syntax highlighting.',
+    quickAnswer:
+      'A JSON formatter turns minified or messy JSON into readable, indented JSON. ClickBuildLabs formats, validates, and minifies JSON directly in your browser, so your JSON is not uploaded or stored by this page.',
     category: 'dev',
     tags: ['json', 'formatter', 'validator', 'beautify', 'minify', 'prettify'],
     icon: 'code',
     featured: true,
     popular: true,
-    relatedTools: ['base64-encode', 'slug-generator', 'hash-generator'],
+    relatedTools: ['json-validator', 'json-minifier', 'json-to-csv'],
     seo: {
       title: 'JSON Formatter - Free Online JSON Validator & Beautifier',
       description:
@@ -381,8 +401,12 @@ export const tools: Tool[] = [
         answer: 'No. It can show that parsing failed, but you still need to correct the invalid syntax in the input.',
       },
       {
-        question: 'Is my JSON uploaded?',
+        question: 'Is formatted JSON sent anywhere?',
         answer: 'No. Formatting, minifying, and basic validation happen in your browser.',
+      },
+      {
+        question: 'Can I minify JSON with this tool?',
+        answer: 'Yes. Use the minify option to remove unnecessary whitespace and produce compact JSON for copying or production use.',
       },
     ],
   },
@@ -581,7 +605,7 @@ export const tools: Tool[] = [
     faqs: [
       { question: 'Does the character count include spaces?', answer: 'The tool shows character counts with spaces and without spaces so you can use the number that matches your requirement.' },
       { question: 'How is reading time estimated?', answer: 'Reading time is calculated from the word count using an approximate speed of 200 words per minute.' },
-      { question: 'Is my text uploaded?', answer: 'No. The counts are calculated in your browser, and the text is not sent to a server.' },
+      { question: 'Is the text processed locally?', answer: 'Yes. The counts are calculated in your browser, and the text is not sent to a server by this page.' },
     ],
   },
   {
@@ -659,6 +683,8 @@ export const tools: Tool[] = [
     shortDescription: 'Encode and decode URLs instantly',
     description:
       'Encode URLs for safe transmission or decode encoded URLs back to readable text. Essential for web development and API work. Free and instant.',
+    quickAnswer:
+      'A URL encoder and decoder converts special characters into safe percent-encoded URL text and converts encoded URLs back to readable form. ClickBuildLabs runs the conversion in your browser for quick web, API, and query string debugging.',
     category: 'dev',
     tags: ['url encode', 'url decode', 'encode url', 'decode url', 'percent encoding', 'url encoding'],
     icon: 'link',
@@ -676,6 +702,7 @@ export const tools: Tool[] = [
       { question: 'Why encode URLs?', answer: 'Special characters in URLs must be encoded to ensure they transmit correctly over the internet.' },
       { question: 'Is my data sent to servers?', answer: 'No. All encoding and decoding happens in your browser.' },
       { question: 'What characters are encoded?', answer: 'Characters like spaces, &, #, %, and non-ASCII characters are encoded as %XX hex values.' },
+      { question: 'Can I decode query strings with this tool?', answer: 'Yes. Paste an encoded URL or query string to convert percent-encoded characters back into readable text.' },
     ],
   },
   {
@@ -709,6 +736,8 @@ export const tools: Tool[] = [
     shortDescription: 'Convert Unix timestamps to dates',
     description:
       'Convert Unix timestamps to human-readable dates and vice versa. Supports both seconds and milliseconds. Shows local time and UTC. Free and instant.',
+    quickAnswer:
+      'A timestamp converter changes Unix timestamps into readable dates and can convert dates back into timestamps. ClickBuildLabs supports seconds and milliseconds and shows both local time and UTC for debugging logs, APIs, and database values.',
     category: 'dev',
     tags: ['timestamp', 'unix timestamp', 'epoch', 'convert timestamp', 'date converter'],
     icon: 'clock',
@@ -726,6 +755,7 @@ export const tools: Tool[] = [
       { question: 'What is a Unix timestamp?', answer: 'A Unix timestamp is the number of seconds (or milliseconds) since January 1, 1970 UTC. It is used to represent dates in computing.' },
       { question: 'Seconds or milliseconds?', answer: 'Our tool supports both. Toggle between seconds and milliseconds using the button above the input field.' },
       { question: 'What time zones are shown?', answer: 'Both your local time and UTC (Coordinated Universal Time) are displayed.' },
+      { question: 'Why does the same timestamp show different local times?', answer: 'The timestamp represents one UTC moment, but the local display changes based on your device time zone.' },
     ],
   },
   {
@@ -739,9 +769,9 @@ export const tools: Tool[] = [
     icon: 'percent',
     featured: false,
     popular: false,
-    relatedTools: ['word-counter', 'character-counter'],
+    relatedTools: ['discount-calculator', 'tip-calculator', 'vat-calculator'],
     seo: {
-      title: 'Percentage Calculator - Free Online Percentage Calculator',
+      title: 'Percentage Calculator - Calculate Percentages Online',
       description:
         'Calculate percentages instantly: find X% of Y, what percentage X is of Y, and percentage change. Free and simple.',
       keywords: ['percentage calculator', 'percent calculator', 'calculate percentage', 'percentage change'],
@@ -888,7 +918,7 @@ export const tools: Tool[] = [
     faqs: [
       { question: 'Does this validate against a JSON schema?', answer: 'No. This tool checks JSON syntax only and does not compare the data to a schema.' },
       { question: 'What errors can it catch?', answer: 'It can catch parse errors such as missing commas, unquoted keys, invalid strings, and extra trailing characters.' },
-      { question: 'Is my JSON uploaded?', answer: 'No. Validation runs in your browser.' },
+      { question: 'Does validation upload JSON data?', answer: 'No. Validation runs in your browser and does not upload JSON data from this page.' },
     ],
   },
   {
@@ -972,6 +1002,8 @@ export const tools: Tool[] = [
     shortDescription: 'Decode JWT tokens client-side',
     description:
       'Decode JWT tokens to view the header, payload, and signature. Perfect for debugging and inspecting tokens. Does NOT verify signatures.',
+    quickAnswer:
+      'A JWT decoder lets you inspect a JSON Web Token by showing its header, payload, and signature sections. ClickBuildLabs decodes JWTs in your browser for debugging, but it does not verify signatures or prove that a token is trustworthy.',
     category: 'dev',
     tags: ['jwt', 'decoder', 'jwt decoder', 'decode jwt', 'json web token', 'jwt viewer'],
     icon: 'key',
@@ -989,6 +1021,7 @@ export const tools: Tool[] = [
       { question: 'Does this verify JWT signatures?', answer: 'No. This tool only DECODES the token for inspection. It does NOT verify the signature. Do not use for security purposes.' },
       { question: 'What parts of a JWT are shown?', answer: 'The header (algorithm), payload (claims), and signature (Base64 encoded).' },
       { question: 'Is my JWT stored?', answer: 'No. All decoding happens locally in your browser. Your token is never transmitted.' },
+      { question: 'Can I use this with production tokens?', answer: 'Avoid pasting sensitive production tokens into any tool unless you understand the risk. This page decodes locally, but tokens can still contain private claims.' },
     ],
   },
   {
@@ -997,6 +1030,8 @@ export const tools: Tool[] = [
     shortDescription: 'Test regular expressions instantly',
     description:
       'Test regular expressions against sample text with real-time matching. Supports JavaScript regex syntax with flags.',
+    quickAnswer:
+      'A regex tester checks a regular expression against sample text and highlights matches. ClickBuildLabs uses JavaScript regular expression syntax, so it is useful for testing patterns, flags, and capture groups before using them in web code.',
     category: 'dev',
     tags: ['regex', 'regex tester', 'regular expression', 'pattern matching', 'test regex'],
     icon: 'regex',
@@ -1014,6 +1049,7 @@ export const tools: Tool[] = [
       { question: 'What regex flags are supported?', answer: 'We support g (global), i (case insensitive), and m (multiline) flags.' },
       { question: 'Can I see match groups?', answer: 'Yes. Parenthesized groups are captured and displayed separately.' },
       { question: 'Is this compatible with JavaScript regex?', answer: 'Yes. We use JavaScript regex engine, so the syntax is compatible with JS regex patterns.' },
+      { question: 'Is my sample text uploaded?', answer: 'No. Pattern testing happens in your browser and the sample text is not uploaded by this page.' },
     ],
   },
   {
@@ -1499,7 +1535,7 @@ export const tools: Tool[] = [
     popular: true,
     relatedTools: ['date-difference-calculator', 'timestamp-converter', 'percentage-calculator'],
     seo: {
-      title: 'Age Calculator - Free Online Age Calculator',
+      title: 'Age Calculator - Calculate Age in Years, Months and Days',
       description: 'Calculate your age from a birth date. See years, months, days and days until your next birthday.',
       keywords: ['age calculator', 'calculate age', 'birthday calculator', 'age finder'],
     },
@@ -3075,6 +3111,8 @@ export const tools: Tool[] = [
     shortDescription: 'Compress images in browser',
     description:
       'Compress images locally in your browser. Adjust quality level and reduce file size. Download compressed image.',
+    quickAnswer:
+      'An image compressor reduces image file size by re-encoding the image at a chosen quality level. ClickBuildLabs compresses images locally in your browser and outputs a downloadable JPEG, so the selected image is not uploaded by this page.',
     category: 'image',
     tags: ['image compressor', 'compress image', 'reduce image size', 'image optimizer'],
     icon: 'minimize-2',
@@ -3092,6 +3130,7 @@ export const tools: Tool[] = [
       { question: 'Is compression done on a server?', answer: 'No. The compression uses browser Canvas API and happens entirely locally.' },
       { question: 'How much can I compress?', answer: 'Results vary based on original format and quality setting. JPEG images typically compress well.' },
       { question: 'What format is the output?', answer: 'Output is JPEG format with the quality level you select.' },
+      { question: 'Will compression reduce image quality?', answer: 'Usually yes. Lower quality settings make smaller files but can introduce visible artifacts, especially around sharp edges and text.' },
     ],
   },
   {
@@ -3350,6 +3389,8 @@ export const tools: Tool[] = [
     shortDescription: 'Estimate PV array daily and monthly output',
     description:
       'Estimate solar panel energy output from panel wattage, panel count, peak sun hours, and system efficiency.',
+    quickAnswer:
+      'A solar panel output calculator estimates daily and monthly energy production from panel wattage, panel count, peak sun hours, and system efficiency. ClickBuildLabs gives a planning estimate for PV arrays, but real output depends on location, shading, weather, and installation details.',
     category: 'calculators',
     tags: ['solar panel', 'solar output', 'solar energy', 'photovoltaic', 'solar calculator', 'renewable energy'],
     icon: 'sun',
@@ -3367,6 +3408,7 @@ export const tools: Tool[] = [
       { question: 'What are peak sun hours?', answer: 'Peak sun hours (PSH) are the equivalent hours of full sunlight a location receives per day. Typical planning values are often around 3 to 6 hours.' },
       { question: 'What does efficiency include?', answer: 'Efficiency can represent wiring, inverter, temperature, soiling, and other system losses. Adjust it for your planning assumptions.' },
       { question: 'Is this accurate for my location?', answer: 'No. Results are estimates only. Actual output depends on location, orientation, shading, weather, inverter clipping, and installation details.' },
+      { question: 'How is daily solar output estimated?', answer: 'Daily output is estimated as panel watts x panel count x peak sun hours x system efficiency, then converted from watt-hours to kilowatt-hours.' },
     ],
   },
   {

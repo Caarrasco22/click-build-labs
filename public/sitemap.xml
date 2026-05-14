@@ -11,6 +11,11 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://clickbuildlabs.com/about/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  <url>
     <loc>https://clickbuildlabs.com/tools/uuid-generator/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
