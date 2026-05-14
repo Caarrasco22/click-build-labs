@@ -2806,12 +2806,14 @@ export const tools: Tool[] = [
     shortDescription: 'Repeat text multiple times',
     description:
       'Repeat any text a specified number of times with optional separator between repetitions.',
+    quickAnswer:
+      'A text repeater duplicates a word, phrase, sentence, or block of text a chosen number of times. This tool can repeat the full input up to 1000 times and lets you add an optional separator between each repetition.',
     category: 'text',
     tags: ['text repeater', 'repeat text', 'duplicate text', 'text generator', 'repeat characters'],
     icon: 'copy',
     featured: false,
     popular: false,
-    relatedTools: ['remove-duplicate-lines', 'prefix-suffix-lines', 'lorem-ipsum'],
+    relatedTools: ['word-counter', 'character-counter', 'prefix-suffix-lines'],
     seo: {
       title: 'Text Repeater - Free Online Text Repetition Generator',
       description:
@@ -2819,10 +2821,31 @@ export const tools: Tool[] = [
       keywords: ['text repeater', 'repeat text', 'duplicate text', 'text generator', 'repeat characters'],
     },
     ads: { enabled: false, positions: [] },
+    content: {
+      intro:
+        'A text repeater creates repeated copies of the same text so you do not have to duplicate words, phrases, sentences, or examples by hand.',
+      howToUse: [
+        'Enter the word, phrase, sentence, or block of text you want to repeat.',
+        'Choose how many repetitions to generate and add an optional separator if needed.',
+        'Review the output before using it in a message, document, template, or test file.',
+      ],
+      example: {
+        title: 'Creating quick repeated text',
+        body:
+          'Use repeated text for placeholders, examples, formatting experiments, template drafts, quick test data, or checking how a layout behaves with repeated words or phrases.',
+      },
+      logic: {
+        title: 'Use repeated text responsibly',
+        body:
+          'This tool is meant for practical editing, testing, and formatting tasks. It is not intended for spam, abusive automation, or sending repeated messages to people who did not ask for them.',
+      },
+    },
     faqs: [
       { question: 'How many repetitions are allowed?', answer: 'Maximum 1000 repetitions to prevent browser overload.' },
-      { question: 'What is the separator for?', answer: 'A separator is added between each repetition. Use a newline to stack text vertically.' },
+      { question: 'What is the separator for?', answer: 'A separator is added between each repetition. Common separators include a space, comma, dash, or any short text you want between copies.' },
       { question: 'Can I repeat multiple lines?', answer: 'Yes. The entire input text is treated as one unit for repetition.' },
+      { question: 'Can I repeat full sentences or paragraphs?', answer: 'Yes. You can repeat a single word, a phrase, a full sentence, or a larger block of text.' },
+      { question: 'Should I use repeated text for spam?', answer: 'No. The tool is for editing, examples, templates, test data, and formatting experiments, not for spam or abusive repeated messages.' },
     ],
   },
   {
