@@ -2881,12 +2881,14 @@ export const tools: Tool[] = [
     shortDescription: 'Extract URLs from text',
     description:
       'Find and extract all HTTP and HTTPS URLs from any text. Automatically removes duplicate URLs.',
+    quickAnswer:
+      'A URL extractor finds HTTP and HTTPS links inside pasted text and lists them separately. Use it to collect links from emails, documents, HTML snippets, logs, notes, or copied content without manually scanning each line.',
     category: 'text',
     tags: ['extract urls', 'find urls', 'url extractor', 'link finder', 'parse urls'],
     icon: 'link',
     featured: false,
     popular: true,
-    relatedTools: ['extract-emails', 'remove-duplicate-lines', 'word-counter'],
+    relatedTools: ['url-parser', 'url-encoder-decoder', 'query-string-builder'],
     seo: {
       title: 'Extract URLs - Free Online URL Extractor',
       description:
@@ -2894,10 +2896,31 @@ export const tools: Tool[] = [
       keywords: ['extract urls', 'find urls', 'url extractor', 'link finder', 'parse urls'],
     },
     ads: { enabled: false, positions: [] },
+    content: {
+      intro:
+        'A URL extractor scans text and pulls out links so they can be reviewed, copied, cleaned, or reused separately from the surrounding content.',
+      howToUse: [
+        'Paste text that may contain URLs, such as notes, logs, emails, or an HTML snippet.',
+        'Review the extracted HTTP and HTTPS links.',
+        'Copy the results and check them manually before using them in another document, audit, or workflow.',
+      ],
+      example: {
+        title: 'Collecting links from copied text',
+        body:
+          'If you copy a document, email thread, log file, or HTML snippet with several links mixed into the text, the extractor helps turn those links into a clean list.',
+      },
+      logic: {
+        title: 'What the extractor does not do',
+        body:
+          'This tool finds URLs that already appear in the pasted text. It does not crawl websites, follow links, verify destinations, or guarantee that every extracted URL is still active, so the results should be reviewed manually.',
+      },
+    },
     faqs: [
       { question: 'What URL formats are supported?', answer: 'HTTP and HTTPS URLs starting with http:// or https:// are extracted.' },
       { question: 'Are duplicate URLs removed?', answer: 'Yes. Each URL is shown only once even if it appears multiple times in the text.' },
       { question: 'Can I copy the results?', answer: 'Yes. Click Copy to get all URLs as a newline-separated list.' },
+      { question: 'Can this extract links from HTML?', answer: 'Yes. If the HTML snippet contains visible http:// or https:// URLs, the tool can extract those links from the pasted text.' },
+      { question: 'Does this tool crawl websites?', answer: 'No. It only scans the text you paste into the page. It does not visit pages, follow links, or discover URLs from a live website.' },
     ],
   },
   {
