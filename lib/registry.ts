@@ -953,6 +953,8 @@ export const tools: Tool[] = [
     shortDescription: 'Minify JSON for production',
     description:
       'Minify JSON by removing whitespace and newlines for production use. Free, fast, and 100% client-side.',
+    quickAnswer:
+      'A JSON minifier removes unnecessary whitespace, indentation, and line breaks from valid JSON. The result is smaller JSON that is easier to use in production files, API payloads, config files, or embedded data while keeping the actual data values unchanged.',
     category: 'dev',
     tags: ['json', 'minifier', 'minify json', 'compress json', 'json optimizer'],
     icon: 'minimize-2',
@@ -966,10 +968,31 @@ export const tools: Tool[] = [
       keywords: ['json minifier', 'minify json', 'compress json', 'json optimizer'],
     },
     ads: { enabled: false, positions: [] },
+    content: {
+      intro:
+        'JSON minification compresses formatting by removing spaces, tabs, and newlines that are not needed for the JSON data to work.',
+      howToUse: [
+        'Paste valid JSON into the minifier.',
+        'Run the tool to remove unnecessary formatting whitespace.',
+        'Copy the compact output for production, API, config, or build file use.',
+      ],
+      example: {
+        title: 'Preparing JSON for production',
+        body:
+          'A readable JSON file is easier to edit, but a minified version can be smaller and cleaner to send in an API request, embed in a page, or include in a production config.',
+      },
+      logic: {
+        title: 'What changes during minification',
+        body:
+          'Minification changes the formatting, not the data. Keys, values, arrays, and objects should stay the same, but the output is harder to edit by hand, so keep a readable copy when you expect to make manual changes.',
+      },
+    },
     faqs: [
       { question: 'What whitespace is removed?', answer: 'All unnecessary spaces, tabs, newlines, and indentation are removed.' },
       { question: 'Will this change my data?', answer: 'No. Minification only removes formatting whitespace, not actual JSON content.' },
       { question: 'Is this reversible?', answer: 'Yes. Use our JSON Formatter to beautify the minified JSON back to readable format.' },
+      { question: 'Should I validate JSON before minifying it?', answer: 'Yes. Minification works best with valid JSON. If you are unsure, validate the JSON first so syntax errors can be fixed before creating a compact version.' },
+      { question: 'Is minified JSON harder to edit?', answer: 'Yes. Minified JSON is compact but less readable. Keep a formatted copy when you need to review, edit, or debug the data manually.' },
     ],
   },
   {
