@@ -1182,6 +1182,8 @@ export const tools: Tool[] = [
     shortDescription: 'Build URL query strings easily',
     description:
       'Build URL query strings by adding key-value pairs. See the resulting URL and copy it for use in your applications.',
+    quickAnswer:
+      'A query string builder creates URL query strings from key-value parameters and encodes them for safe use in links, API requests, tracking URLs, and web development. Add parameters, review the generated URL, and copy the result without manually typing separators or encoded characters.',
     category: 'utility',
     tags: ['query string', 'url params', 'build url', 'query builder', 'url builder'],
     icon: 'plus-square',
@@ -1195,10 +1197,31 @@ export const tools: Tool[] = [
       keywords: ['query string builder', 'url params', 'build url query', 'query builder'],
     },
     ads: { enabled: false, positions: [] },
+    content: {
+      intro:
+        'A query string is the part of a URL after the question mark that passes parameters such as search terms, filters, page numbers, or campaign values.',
+      howToUse: [
+        'Add each parameter as a key and value pair.',
+        'Review the generated query string or full URL.',
+        'Copy the encoded result for a link, API request, filter URL, pagination URL, or campaign link.',
+      ],
+      example: {
+        title: 'Building a filtered URL',
+        body:
+          'For a search page, parameters can hold the search term, category, sort order, and page number. The builder helps combine them into a valid URL without missing ampersands or question marks.',
+      },
+      logic: {
+        title: 'Why encoding matters',
+        body:
+          'Spaces, symbols, and special characters can break URLs when they are not encoded correctly. Encoding converts those characters into URL-safe text so query parameters can be read reliably by browsers, APIs, and web applications.',
+      },
+    },
     faqs: [
       { question: 'How do I add parameters?', answer: 'Click "Add Parameter" to add a key-value pair. The query string updates automatically.' },
       { question: 'Can I remove parameters?', answer: 'Yes. Click the X button next to any parameter to remove it.' },
       { question: 'How are special characters handled?', answer: 'Values are automatically URL-encoded to ensure they are safe in URLs.' },
+      { question: 'What is a query string?', answer: 'A query string is the part of a URL after the question mark. It stores parameters such as filters, search terms, tracking values, page numbers, or API options.' },
+      { question: 'Can I use this for API URLs?', answer: 'Yes. You can use it to build query parameters for API requests, as long as the receiving API expects values in the URL query string.' },
     ],
   },
   {
