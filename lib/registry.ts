@@ -3631,6 +3631,8 @@ export const tools: Tool[] = [
     shortDescription: 'Estimate required battery capacity',
     description:
       'Estimate required nominal battery capacity from load, runtime, depth of discharge, efficiency, and optional system voltage.',
+    quickAnswer:
+      'A battery capacity calculator estimates the nominal battery size needed for a load and desired runtime. Enter the load in watts, runtime in hours, depth of discharge, efficiency, and optional system voltage to estimate required watt-hours and, when voltage is provided, amp-hours.',
     category: 'calculators',
     tags: ['battery capacity', 'battery size', 'wh calculator', 'battery bank', 'solar battery'],
     icon: 'battery',
@@ -3644,10 +3646,31 @@ export const tools: Tool[] = [
       keywords: ['battery capacity calculator', 'battery size', 'wh calculator', 'battery bank sizing'],
     },
     ads: { enabled: false, positions: [] },
+    content: {
+      intro:
+        'Battery capacity describes how much energy a battery can store and how long it may support a device, load, or small power system.',
+      howToUse: [
+        'Enter the load in watts and the desired runtime in hours.',
+        'Adjust depth of discharge and system efficiency if you know them, or use the defaults for a rough estimate.',
+        'Add system voltage when you also want an amp-hour estimate for a battery bank.',
+      ],
+      example: {
+        title: 'Sizing a portable or backup battery',
+        body:
+          'Use this calculator for rough planning around power banks, laptops, portable devices, electronics projects, UPS backup, solar setups, or small off-grid loads.',
+      },
+      logic: {
+        title: 'Why real runtime can differ',
+        body:
+          'The calculator estimates watt-hours from load and runtime, then adjusts for depth of discharge and efficiency. Actual runtime can be lower because of battery age, temperature, inverter losses, changing device power draw, and manufacturer limits.',
+      },
+    },
     faqs: [
       { question: 'How is capacity calculated?', answer: 'Required nominal Wh = load W x hours / (depth of discharge x efficiency). Required Ah = required Wh / system voltage.' },
       { question: 'Should I include depth of discharge?', answer: 'Yes. Depth of discharge changes the nominal battery capacity needed for the same usable energy target.' },
       { question: 'What voltage should I use?', answer: 'Common small system voltages are 12V, 24V, and 48V. Higher voltage usually means lower current for the same power.' },
+      { question: 'What is the difference between Ah and Wh?', answer: 'Amp-hours measure charge at a specific voltage, while watt-hours measure energy. Wh is often easier to compare across batteries because it includes voltage.' },
+      { question: 'Is the estimated runtime exact?', answer: 'No. It is a planning estimate. Real battery life depends on efficiency, battery condition, temperature, load changes, and how deeply the battery can safely discharge.' },
     ],
   },
   {
