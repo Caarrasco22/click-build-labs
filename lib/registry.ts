@@ -294,7 +294,7 @@ export const tools: Tool[] = [
     popular: true,
     relatedTools: ['uuid-generator', 'hash-generator'],
     seo: {
-      title: 'Password Generator - Free Secure Password Generator',
+      title: 'Password Generator - Free Random Secure Passwords',
       description:
         'Generate cryptographically secure passwords instantly. Free password generator with customizable options.',
       keywords: ['password generator', 'secure password', 'random password'],
@@ -2412,6 +2412,8 @@ export const tools: Tool[] = [
     shortDescription: 'Plan your study schedule',
     description:
       'Plan how many hours per day you need to study based on total hours needed and days available. Helps with study planning.',
+    quickAnswer:
+      'A study time calculator helps estimate how much study time you need and break it into a practical daily plan. Enter your total study goal and either the days available or hours per day to see a simple study estimate you can adjust around your pace, breaks, and deadline.',
     category: 'calculators',
     tags: ['study time calculator', 'study planning', 'hours per day', 'study schedule', 'learning planner'],
     icon: 'clock',
@@ -2425,10 +2427,31 @@ export const tools: Tool[] = [
       keywords: ['study time calculator', 'study planning', 'hours per day', 'study schedule planner'],
     },
     ads: { enabled: false, positions: [] },
+    content: {
+      intro:
+        'Use this study time calculator to turn a total study goal into a simple daily plan for an exam, course, deadline, or project.',
+      howToUse: [
+        'Enter the total number of study hours you think the work will take.',
+        'Add the number of days available to calculate hours per day, or enter hours per day to estimate how many days you need.',
+        'Review the result and adjust it for topic difficulty, breaks, revision time, and your personal pace.',
+      ],
+      example: {
+        title: 'Planning before an exam',
+        body:
+          'If you estimate that exam preparation needs 30 hours and you have 10 days left, the calculator gives a simple daily target so you can spread the work instead of guessing each day.',
+      },
+      logic: {
+        title: 'How the estimate is calculated',
+        body:
+          'The calculator divides total study hours by days available, or divides total hours by your preferred daily study time. The result is a planning estimate, not a guarantee, so it should be adjusted for harder material, rest, and review sessions.',
+      },
+    },
     faqs: [
       { question: 'How is the calculation done?', answer: 'If you enter days available, it calculates hours/day = Total Hours / Days.' },
       { question: 'Can I set a specific hours per day?', answer: 'Yes. Enter hours per day to see how many days you need.' },
       { question: 'Is this for any subject?', answer: 'Yes. Enter your total study hours goal regardless of subject.' },
+      { question: 'Are the study hours exact?', answer: 'No. The result is an estimate for planning. You may need more or less time depending on the subject difficulty, your pace, breaks, and how much review you need.' },
+      { question: 'Should I include breaks in my study plan?', answer: 'Yes. If you want a realistic schedule, include break time, review time, and buffer time when choosing your total study hours or daily study target.' },
     ],
   },
   {
