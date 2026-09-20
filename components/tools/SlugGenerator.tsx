@@ -2,19 +2,17 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/Button';
-import { Copy, Check, RefreshCw, ArrowRightLeft } from 'lucide-react';
+import { Copy, Check, RefreshCw } from 'lucide-react';
 
 export function SlugGenerator() {
   const [input, setInput] = useState('');
-  const [slug, setSlug] = useState('');
   const [copied, setCopied] = useState(false);
   const [lowercase, setLowercase] = useState(true);
   const [trim, setTrim] = useState(true);
 
   const generateSlug = (text: string) => {
     if (!text.trim()) {
-      setSlug('');
-      return;
+      return '';
     }
 
     let result = text;
@@ -23,20 +21,16 @@ export function SlugGenerator() {
       result = result.trim();
     }
 
-    result = result.toLowerCase();
-
     result = result.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
     result = result.replace(/[^\w\s-]/g, '');
 
     result = result.replace(/[\s_-]+/g, '-');
 
-    result = result.replace(/^-+|-+$/g, '');
+    if (trim) result = result.replace(/^-+|-+$/g, '');
 
     if (lowercase) {
       result = result.toLowerCase();
-    } else {
-      result = result.replace(/-([a-z])/g, (_, char) => `-${char.toUpperCase()}`);
     }
 
     return result;
@@ -44,8 +38,9 @@ export function SlugGenerator() {
 
   const handleInputChange = (value: string) => {
     setInput(value);
-    setSlug(generateSlug(value) || '');
   };
+
+  const slug = generateSlug(input);
 
   const copySlug = async () => {
     if (slug) {
@@ -76,7 +71,6 @@ export function SlugGenerator() {
             checked={lowercase}
             onChange={(e) => {
               setLowercase(e.target.checked);
-              setSlug(generateSlug(input) || '');
             }}
             className="rounded border-zinc-300 dark:border-zinc-600 text-zinc-900 focus:ring-zinc-500"
           />
@@ -88,7 +82,6 @@ export function SlugGenerator() {
             checked={trim}
             onChange={(e) => {
               setTrim(e.target.checked);
-              setSlug(generateSlug(input) || '');
             }}
             className="rounded border-zinc-300 dark:border-zinc-600 text-zinc-900 focus:ring-zinc-500"
           />

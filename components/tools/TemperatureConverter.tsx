@@ -38,6 +38,8 @@ function convert(value: number, from: TempUnit, to: TempUnit): number | null {
     case 'k': celsius = kelvinToCelsius(value); break;
   }
 
+  if (celsius < -273.15) return null;
+
   switch (to) {
     case 'c': return celsius;
     case 'f': return celsiusToFahrenheit(celsius);

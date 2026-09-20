@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import { Container } from '@/components/ui/Container';
 import { createPageMetadata } from '@/lib/seo';
 
@@ -14,6 +15,7 @@ export default function TermsPage() {
       <h1 className="text-3xl font-bold text-zinc-900 dark:text-zinc-50">
         Terms of Service
       </h1>
+      <p className="mt-3 text-sm text-zinc-500">Last updated: September 20, 2026</p>
 
       <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
         <section>
@@ -51,7 +53,9 @@ export default function TermsPage() {
             Limitation of Liability
           </h2>
           <p className="mt-2">
-            We are not liable for any damages arising from the use of our tools.
+            To the extent permitted by applicable law, we are not liable for losses
+            arising from reliance on the tools. Nothing in these terms excludes
+            rights or liability that cannot lawfully be excluded.
           </p>
         </section>
 
@@ -62,6 +66,14 @@ export default function TermsPage() {
           <p className="mt-2">
             We may update these terms at any time. Continued use constitutes acceptance.
           </p>
+        </section>
+        <section>
+          <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">Results and limitations</h2>
+          <p className="mt-2">Check the instructions and limitations on each tool page and verify important results independently. Financial, health and electrical calculators provide general estimates and are not a substitute for qualified advice. You are responsible for having permission to process the material you enter.</p>
+        </section>
+        <section>
+          <h2 className="text-lg font-semibold text-zinc-900 dark:text-zinc-50">Project and contact</h2>
+          <p className="mt-2">Click &amp; Build Labs is maintained by Pablo Carrasco. See <Link href="/contact/" className="underline">Contact</Link> to report a problem and our <Link href="/privacy/" className="underline">Privacy Policy</Link> for information about data handling.</p>
         </section>
       </div>
     </Container>

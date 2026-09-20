@@ -5,6 +5,10 @@ import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import { Header } from '@/components/marketing/Header';
 import { Footer } from '@/components/marketing/Footer';
 import { siteMetadata } from '@/lib/seo';
+import { getAdSenseConfig } from '@/lib/adsense.mjs';
+import { AdSenseScript } from '@/components/ads/AdSenseScript';
+
+const adsense = getAdSenseConfig();
 
 const inter = Inter({
   subsets: ['latin'],
@@ -18,6 +22,8 @@ export const metadata: Metadata = {
   },
   description: siteMetadata.description,
   metadataBase: new URL(siteMetadata.url),
+  referrer: 'strict-origin-when-cross-origin',
+  other: adsense.publisherId ? { 'google-adsense-account': adsense.publisherId } : {},
   openGraph: {
     type: 'website',
     siteName: siteMetadata.name,
@@ -58,6 +64,7 @@ export default function RootLayout({
             <Footer />
           </div>
         </ThemeProvider>
+        <AdSenseScript />
       </body>
     </html>
   );

@@ -22,7 +22,7 @@ export function PercentageCalculator() {
       case 'what-percent':
         return n2 === 0 ? 'Error' : ((n1 / n2) * 100).toFixed(2) + '%';
       case 'change':
-        return n2 === 0 ? 'Error' : (((n1 - n2) / n2) * 100).toFixed(2) + '%';
+        return n1 === 0 ? 'Error' : (((n2 - n1) / n1) * 100).toFixed(2) + '%';
     }
   };
 

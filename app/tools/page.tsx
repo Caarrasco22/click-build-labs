@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import { Container } from '@/components/ui/Container';
 import { ToolCard } from '@/components/tools/ToolCard';
 import { tools } from '@/lib/registry';
@@ -36,7 +37,9 @@ export default async function ToolsPage() {
         </p>
       </div>
 
-      <ToolsFilterClient />
+      <Suspense fallback={<p className="mb-8 text-sm text-zinc-500">Loading filters…</p>}>
+        <ToolsFilterClient />
+      </Suspense>
 
       <div id="tools-grid" className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {tools.map((tool) => (

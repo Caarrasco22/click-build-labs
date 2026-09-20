@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import { getAdSenseConfig } from '@/lib/adsense.mjs';
+import { PrivacySettings } from '@/components/ads/PrivacySettings';
 import { MessageSquare } from 'lucide-react';
 
 function GitHubIcon({ className }: { className?: string }) {
@@ -33,7 +35,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-sm text-zinc-500 dark:text-zinc-400 max-w-xs">
-              Free online tools for developers and creators. All processing
+              Free online tools for developers and creators. Tool processing
               happens in your browser. No signup required.
             </p>
           </div>
@@ -84,6 +86,8 @@ export function Footer() {
               >
                 Terms
               </Link>
+              <Link href="/contact/" className="text-sm text-zinc-500 hover:text-zinc-700 dark:text-zinc-400 dark:hover:text-zinc-300">Contact</Link>
+              {getAdSenseConfig().enabled && <PrivacySettings />}
             </nav>
           </div>
         </div>
@@ -95,7 +99,7 @@ export function Footer() {
 
           <div className="flex items-center gap-4">
             <a
-              href="https://github.com"
+              href="https://github.com/Caarrasco22/click-build-labs"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 text-xs text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300"
@@ -104,7 +108,7 @@ export function Footer() {
               GitHub
             </a>
             <a
-              href="#"
+              href="/contact/"
               className="flex items-center gap-1.5 text-xs text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-300"
             >
               <MessageSquare className="h-3.5 w-3.5" />

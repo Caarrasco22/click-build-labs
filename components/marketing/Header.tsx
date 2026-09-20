@@ -53,7 +53,7 @@ export function Header() {
 
         <div className="flex items-center gap-2">
           <a
-            href="https://github.com"
+            href="https://github.com/Caarrasco22/click-build-labs"
             target="_blank"
             rel="noopener noreferrer"
             className="hidden md:flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50 transition-colors"
@@ -66,6 +66,8 @@ export function Header() {
 
           <button
             className="md:hidden p-2 text-zinc-600 dark:text-zinc-400"
+            aria-label={isOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isOpen}
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
@@ -98,7 +100,7 @@ export function Header() {
               Converters
             </Link>
             <a
-              href="https://github.com"
+              href="https://github.com/Caarrasco22/click-build-labs"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 text-sm font-medium text-zinc-600 py-2.5 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-50"

@@ -66,7 +66,7 @@ export function Base64Encoder() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center gap-4">
+      <div className="flex flex-wrap items-center gap-4">
         <div className="flex rounded-lg border border-zinc-200 dark:border-zinc-800 p-0.5">
           <button
             onClick={() => { setMode('encode'); setInput(''); setOutput(''); setError(''); }}

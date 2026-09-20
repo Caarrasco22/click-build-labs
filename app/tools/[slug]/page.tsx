@@ -8,7 +8,6 @@ import { Badge } from '@/components/ui/Badge';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
 import { ToolCard } from '@/components/tools/ToolCard';
-import { AdSlot } from '@/components/ads/AdSlot';
 import { getToolBySlug, getRelatedTools, tools } from '@/lib/registry';
 import { TOOL_COMPONENTS, hasToolComponent } from '@/lib/components';
 import { createAbsoluteUrl, createToolJsonLd, createBreadcrumbJsonLd, createFaqJsonLd } from '@/lib/seo';
@@ -249,12 +248,6 @@ export default async function ToolPage({ params }: ToolPageProps) {
           </p>
         </header>
 
-        {tool.ads.enabled && tool.ads.positions.includes('top') && (
-          <div className="flex justify-center mb-6">
-            <AdSlot position="top" variant="auto" />
-          </div>
-        )}
-
         <section className="mb-8 rounded-lg border border-zinc-200 bg-zinc-50/60 p-5 dark:border-zinc-800 dark:bg-zinc-900/40">
           <h2 className="text-sm font-semibold uppercase tracking-wide text-zinc-500 dark:text-zinc-400">
             Quick answer
@@ -265,7 +258,7 @@ export default async function ToolPage({ params }: ToolPageProps) {
         </section>
 
         <Card className="mb-12">
-          <div className="p-6 sm:p-8">
+          <div className="p-0 sm:p-8">
             <ToolContent slug={tool.slug} />
           </div>
         </Card>
@@ -283,12 +276,6 @@ export default async function ToolPage({ params }: ToolPageProps) {
               ))}
             </Card>
           </section>
-        )}
-
-        {tool.ads.enabled && tool.ads.positions.includes('inline') && (
-          <div className="flex justify-center mb-12">
-            <AdSlot position="inline" variant="auto" />
-          </div>
         )}
 
         {relatedTools.length > 0 && (

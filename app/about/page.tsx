@@ -51,7 +51,7 @@ export default function AboutPage() {
               Browser-based
             </h2>
             <p className="mt-2 text-sm leading-6 text-zinc-600 dark:text-zinc-400">
-              Many tools run client-side in your browser, especially formatters,
+              The tools process their inputs in your browser, including formatters,
               converters, generators, and common utility tools.
             </p>
           </Card>
@@ -98,6 +98,8 @@ export default function AboutPage() {
           <div className="mt-4 flex flex-wrap gap-2">
             {[
               { href: '/', label: 'Home' },
+              { href: '/contact/', label: 'Contact and feedback' },
+              { href: '/privacy/', label: 'Privacy policy' },
               { href: '/tools', label: 'All tools' },
               { href: '/categories/dev', label: 'Developer tools' },
               { href: '/categories/calculators', label: 'Calculators' },

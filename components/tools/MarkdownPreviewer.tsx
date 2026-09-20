@@ -1,33 +1,18 @@
 'use client';
 
 import { useState } from 'react';
+import { marked } from 'marked';
+import DOMPurify from 'dompurify';
 import { Copy, Check, RefreshCw } from 'lucide-react';
 
 function parseMarkdown(text: string): string {
-  let html = text;
-
-  html = html.replace(/^### (.+)$/gm, '<h3>$1</h3>');
-  html = html.replace(/^## (.+)$/gm, '<h2>$1</h2>');
-  html = html.replace(/^# (.+)$/gm, '<h1>$1</h1>');
-
-  html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
-  html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
-  html = html.replace(/`(.+?)`/g, '<code>$1</code>');
-
-  html = html.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2">$1</a>');
-
-  html = html.replace(/^(\d+)\. (.+)$/gm, '<li>$2</li>');
-  html = html.replace(/^[-*] (.+)$/gm, '<li>$1</li>');
-  html = html.replace(/(<li>[\s\S]*?<\/li>)/g, '<ol>$1</ol>');
-
-  html = html.replace(/\n\n/g, '</p><p>');
-  html = '<p>' + html + '</p>';
-  html = html.replace(/<p><\/p>/g, '');
-  html = html.replace(/<p>(<[hoOl][^>]*>)/g, '$1');
-  html = html.replace(/(<\/h[123]>)<\/p>/g, '$1');
-  html = html.replace(/(<\/li>)<\/p>/g, '$1');
-
-  return html;
+  if (!text) return '';
+  return DOMPurify.sanitize(marked.parse(text, { async: false }), {
+    ALLOWED_TAGS: ['p', 'br', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'strong', 'em', 'del', 'blockquote', 'pre', 'code', 'ul', 'ol', 'li', 'a', 'hr', 'table', 'thead', 'tbody', 'tr', 'th', 'td'],
+    ALLOWED_ATTR: ['href', 'title'],
+    ALLOWED_URI_REGEXP: /^(?:https?:|mailto:|#)/i,
+    ALLOW_DATA_ATTR: false,
+  });
 }
 
 export function MarkdownPreviewer() {
@@ -44,6 +29,7 @@ export function MarkdownPreviewer() {
 
   return (
     <div className="space-y-4">
+      <p className="text-xs text-zinc-500">Supports headings, lists, links and fenced code blocks. Embedded images, scripts and other active HTML are removed; external links open only when you select them.</p>
       <div className="grid gap-4 lg:grid-cols-2">
         <div className="space-y-2">
           <label className="text-sm font-medium text-zinc-700 dark:text-zinc-300">Markdown</label>

@@ -69,6 +69,7 @@ async function main() {
     absoluteUrl(),
     absoluteUrl('/tools'),
     absoluteUrl('/about'),
+    absoluteUrl('/contact'),
     ...tools.map((tool) => absoluteUrl(`/tools/${tool.slug}`)),
     ...categoriesWithTools.map((category) => absoluteUrl(`/categories/${category}`)),
     absoluteUrl('/privacy'),

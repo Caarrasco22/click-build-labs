@@ -43,6 +43,13 @@ The project includes:
 - No ads yet
 - SEO improvements in progress
 
+## AdSense preparation
+
+See [the setup and verification guide](docs/ADSENSE_SETUP.md). The supplied public
+publisher ID is centralized in `lib/adsense.mjs`; the build emits verification
+metadata and `out/ads.txt`. Advertising remains disabled until explicitly configured
+with Google's certified CMP. Run the full `npm run build` command for deployment.
+
 ---
 
 ## Current focus

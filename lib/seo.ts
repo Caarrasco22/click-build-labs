@@ -117,12 +117,7 @@ export function createToolJsonLd(tool: Tool) {
       price: '0',
       priceCurrency: 'USD',
     },
-    browserRequirements: 'Any',
-    interactionStatistic: {
-      '@type': 'InteractionCounter',
-      interactionType: { '@type': 'UseAction' },
-      userInteractionCount: 'Unknown',
-    },
+    browserRequirements: 'JavaScript enabled; a modern browser is required.',
   };
 }
 

@@ -55,11 +55,11 @@ export const CATEGORY_INFO: Record<ToolCategory, {
       },
       {
         question: 'Is my code sent to any server?',
-        answer: 'No. All processing happens entirely in your browser. Your code and data never leave your device.',
+        answer: 'No. All processing happens entirely in your browser. Tool inputs are not uploaded by the processing code. See the Privacy Policy for hosting and external services.',
       },
       {
         question: 'What formats are supported?',
-        answer: 'We support JSON, URL, Base64, JWT, HTML, CSS, XML, YAML and many other common development formats.',
+        answer: 'The collection includes JSON, URL, Base64, JWT, HTML, CSS and JavaScript utilities. See each tool for its supported inputs.',
       },
     ],
     relatedCategories: ['generator', 'converter', 'utility'],
@@ -93,7 +93,7 @@ export const CATEGORY_INFO: Record<ToolCategory, {
       },
       {
         question: 'Is my financial data safe?',
-        answer: 'Yes, all calculations happen locally in your browser. No data is transmitted or stored anywhere.',
+        answer: 'Yes, all calculations happen locally in your browser. The calculation code does not upload your inputs. Hosting and external services are described in the Privacy Policy.',
       },
     ],
     relatedCategories: ['converter', 'utility', 'generator'],
@@ -132,7 +132,7 @@ export const CATEGORY_INFO: Record<ToolCategory, {
     faqs: [
       {
         question: 'What utilities are available?',
-        answer: 'We offer color converters, QR code generators, timezone converters and other practical utilities.',
+        answer: 'We offer query string, color, date and time utilities. Browse the tools list for the current selection.',
       },
     ],
     relatedCategories: ['dev', 'converter', 'calculators'],
@@ -195,7 +195,7 @@ export const tools: Tool[] = [
       logic: {
         title: 'How UUIDs are generated',
         body:
-          'The tool creates strings in UUID format using the selected version. UUIDs are designed to make collisions unlikely for common use cases, but no client-side generator should be treated as a formal guarantee of global uniqueness in every system.',
+          'The uuid library generates RFC 9562 identifiers using browser cryptographic randomness. Version 4 is random; v1 uses a Gregorian timestamp and a random node identifier, not your MAC address; v7 includes Unix time in milliseconds. Timestamp-based IDs reveal time information and are not secret authentication tokens. Collisions are unlikely, not impossible.',
       },
     },
     faqs: [
@@ -872,8 +872,14 @@ export const tools: Tool[] = [
       keywords: ['markdown previewer', 'markdown editor', 'preview markdown', 'readme generator'],
     },
     ads: { enabled: false, positions: [] },
+    content: {
+      intro: 'Preview Markdown structure before copying HTML into documentation. Formatting is parsed with Marked and sanitized with DOMPurify in your browser.',
+      howToUse: ['Paste or type Markdown in the editor.', 'Separate paragraphs with a blank line; use triple backticks around a code block.', 'Check the preview and select Copy HTML to copy the sanitized result.'],
+      example: { title: 'A short README section', body: 'Start with # Installation, then add a blank line and a list using - before each step. Put commands inside a fenced code block so their punctuation remains literal.' },
+      logic: { title: 'Safe preview limitations', body: 'Headings, lists, tables and code are supported. Embedded images, scripts, styles and event handlers are removed. Links are limited to HTTP, HTTPS, mailto and page fragments. This preview does not load remote images or execute pasted code; styling can differ from GitHub.' },
+    },
     faqs: [
-      { question: 'What Markdown syntax is supported?', answer: 'Headings (# ## ###), bold (**text**), italic (*text*), lists (- item), links [text](url), and inline code (`code`).' },
+      { question: 'What Markdown syntax is supported?', answer: 'Headings, bold, italic, lists, links, inline code, fenced code blocks and tables are supported. The preview removes active HTML and embedded images to avoid executing pasted code or loading external resources.' },
       { question: 'Is my Markdown saved?', answer: 'No. Your Markdown is processed locally and is not saved anywhere.' },
       { question: 'Can I copy the HTML output?', answer: 'Yes. Click the "Copy HTML" button to copy the rendered HTML to your clipboard.' },
     ],
@@ -1154,7 +1160,7 @@ export const tools: Tool[] = [
   {
     slug: 'javascript-minifier',
     name: 'JavaScript Minifier',
-    shortDescription: 'Minify JavaScript for production',
+    shortDescription: 'Minify JavaScript locally with Terser',
     description:
       'Minify JavaScript by removing whitespace, comments, and unnecessary characters. Reduce JS file size for faster page loads.',
     category: 'dev',
@@ -1166,14 +1172,20 @@ export const tools: Tool[] = [
     seo: {
       title: 'JavaScript Minifier - Free Online JS Minification Tool',
       description:
-        'Minify JavaScript for production by removing whitespace. Free online JS minifier.',
+        'Minify JavaScript locally with the Terser parser. Preserve strings and license comments, without executing code or renaming variables.',
       keywords: ['javascript minifier', 'minify js', 'compress javascript', 'js optimizer'],
     },
     ads: { enabled: false, positions: [] },
+    content: {
+      intro: 'Remove unnecessary JavaScript formatting with a syntax-aware parser. Terser is loaded locally with the page assets only when you first select Minify JS.',
+      howToUse: ['Paste valid JavaScript, not JSX or TypeScript.', 'Select Minify JS. If parsing fails, correct the syntax shown in the error.', 'Copy the result and test it with the application that will run it.'],
+      example: { title: 'Preserving a URL inside a string', body: 'const url = "https://example.com/a"; keeps its complete URL. The // inside a quoted string is part of the value, whereas a // comment outside a string can be removed.' },
+      logic: { title: 'Formatting without executing code', body: 'Terser parses strings, regular expressions, template literals and statement boundaries. Compression and variable renaming are disabled, and important license comments are preserved. This tool does not execute your code, bundle imports, produce source maps or prove that the program is correct.' },
+    },
     faqs: [
-      { question: 'What is removed during minification?', answer: 'Whitespace, newlines, and comments between statements are removed.' },
-      { question: 'Does it rename variables?', answer: 'No. Variable renaming (obfuscation) requires a proper build tool like Terser or UglifyJS.' },
-      { question: 'Is minified JS safe for production?', answer: 'Yes. Our basic minification is safe. For production sites, use bundlers like webpack or esbuild for full optimization.' },
+      { question: 'What is removed during minification?', answer: 'Unnecessary formatting and ordinary comments are removed. Important license comments are retained. Strings, regular expressions and template literals are parsed as JavaScript.' },
+      { question: 'Does it rename variables?', answer: 'No. This tool uses Terser with variable mangling and compression disabled.' },
+      { question: 'Is minified JS safe for production?', answer: 'Test the result with your application before deploying it. This tool accepts JavaScript, not TypeScript or JSX, and does not bundle dependencies or generate source maps.' },
     ],
   },
   {

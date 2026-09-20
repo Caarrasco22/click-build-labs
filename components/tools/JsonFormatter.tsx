@@ -59,8 +59,8 @@ export function JsonFormatter() {
 
   return (
     <div className="space-y-4">
-      <div className="flex items-center gap-2">
-        <div className="flex rounded-lg border border-zinc-200 dark:border-zinc-800 p-0.5">
+      <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap rounded-lg border border-zinc-200 dark:border-zinc-800 p-0.5">
           {[
             { key: 'beautify', icon: ArrowDownAZ, label: 'Beautify' },
             { key: 'minify', icon: Minimize2, label: 'Minify' },
